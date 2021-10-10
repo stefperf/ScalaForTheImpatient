@@ -1,0 +1,1004 @@
+"/Applications/IntelliJ IDEA CE.app/Contents/jbr/Contents/Home/bin/java" -javaagent:/Applications/IntelliJ IDEA CE.app/Contents/lib/idea_rt.jar=58022:/Applications/IntelliJ IDEA CE.app/Contents/bin -Dfile.encoding=UTF-8 -classpath /Users/sperfetti/IdeaProjects/ScalaForTheImpatient/target/scala-2.12/classes:/Users/sperfetti/.sbt/boot/scala-2.12.14/lib/scala-library.jar ScalaForTheImpatient.AllBook
+========================================================================================================================
+=== Chapter 1. The Basics ==============================================================================================
+
+Most exercises of this chapter are skipped here as they are just theory questions or REPL exercises.
+
+--- Exercise # 2 -------------------------------------------------------------------------------------------------------
+3 - (3 ^ 0.5) ^ 2 = 4.440892098500626E-16
+
+--- Exercise # 6 -------------------------------------------------------------------------------------------------------
+2 ^1024 = 179769313486231590772930519078902473361797697894230657273430081157732675805500963132708477322407536021120113879871393357658789768814416622492847430639474124377767893424865485276302219601246094119453082952085005768838150682342462881473913110540827237163350510684586298239947245938479716304835356329624224137216
+
+--- Exercise # 7 -------------------------------------------------------------------------------------------------------
+1004630367969656811842190418447
+
+--- Exercise # 8 -------------------------------------------------------------------------------------------------------
+10 random charachers in range [a-z0-9]: 1160jcz9v6
+
+--- Exercise # 9 -------------------------------------------------------------------------------------------------------
+First and last characters of string 'Hello!': 'H', '!'
+
+
+
+========================================================================================================================
+=== Chapter 2. Control Structures and Functions ========================================================================
+
+--- Exercise # 1 -------------------------------------------------------------------------------------------------------
+0
+
+--- Exercises # 4, 5 together ------------------------------------------------------------------------------------------
+10
+9
+8
+7
+6
+5
+4
+3
+2
+1
+0
+
+--- Exercise # 6 -------------------------------------------------------------------------------------------------------
+9415087488
+
+--- Exercises # 7, 8 together ------------------------------------------------------------------------------------------
+9415087488
+
+--- Exercise # 9 -------------------------------------------------------------------------------------------------------
+9415087488
+
+--- Exercise # 10 ------------------------------------------------------------------------------------------------------
+(2.718281828459045,0.25,1000.0)
+
+--- Exercise # 11 ------------------------------------------------------------------------------------------------------
+2021-09-25
+
+
+
+
+========================================================================================================================
+=== Chapter 3. Working with Arrays =====================================================================================
+
+--- Exercise # 1 -------------------------------------------------------------------------------------------------------
+(0, 0, 0)
+(2, 7, 3, 0, 1, 6, 5, 4)
+
+--- Exercise # 2 -------------------------------------------------------------------------------------------------------
+(2, 1, 4, 3, 5)
+
+--- Exercise # 3 -------------------------------------------------------------------------------------------------------
+(2, 1, 4, 3, 5)
+(2, 1, 4, 3, 5)
+
+--- Exercise # 4 -------------------------------------------------------------------------------------------------------
+(4, 5, 4, 2, 0, -2, -7, -1, -1, -7)
+
+--- Exercise # 5 -------------------------------------------------------------------------------------------------------
+27.75
+
+--- Exercise # 6 -------------------------------------------------------------------------------------------------------
+(5, 4, 3, 2, 1)
+(5, 4, 3, 2, 1)
+(5, 4, 3, 2, 1)
+(5, 4, 3, 2, 1)
+
+--- Exercise # 7 -------------------------------------------------------------------------------------------------------
+(4, 4, 5, 2, 0, 5, 1, 3, 2, 0, 2, 0, 0, 5, 3, 3, 0, 2, 2, 5)
+(4, 5, 2, 0, 1, 3)
+
+--- Exercise # 8 -------------------------------------------------------------------------------------------------------
+(4, 2, -3, -6, 6, 7, -5)
+(4, 2, -3, 6, 7)
+
+--- Exercise # 9 -------------------------------------------------------------------------------------------------------
+(4, 2, -3, -6, 6, 7, -5) => (4, 2, -3, 6, 7, 7, -5)
+() => ()
+(-1, -2, -3, -4) => (-1, -2, -3, -4)
+(1, 2, 3, 4) => (1, 2, 3, 4)
+(1, 2, 3, -4, -5) => (1, 2, 3, -4, -5)
+(-1, -2, -3, 4, 5) => (-1, 4, 5, 4, 5)
+
+--- Exercise # 10 ------------------------------------------------------------------------------------------------------
+Adak
+Anchorage
+Anguilla
+Antigua
+Araguaina
+Argentina/Buenos_Aires
+Argentina/Catamarca
+Argentina/ComodRivadavia
+Argentina/Cordoba
+Argentina/Jujuy
+Argentina/La_Rioja
+Argentina/Mendoza
+Argentina/Rio_Gallegos
+Argentina/Salta
+Argentina/San_Juan
+Argentina/San_Luis
+Argentina/Tucuman
+Argentina/Ushuaia
+Aruba
+Asuncion
+Atikokan
+Atka
+Bahia
+Bahia_Banderas
+Barbados
+Belem
+Belize
+Blanc-Sablon
+Boa_Vista
+Bogota
+Boise
+Buenos_Aires
+Cambridge_Bay
+Campo_Grande
+Cancun
+Caracas
+Catamarca
+Cayenne
+Cayman
+Chicago
+Chihuahua
+Coral_Harbour
+Cordoba
+Costa_Rica
+Creston
+Cuiaba
+Curacao
+Danmarkshavn
+Dawson
+Dawson_Creek
+Denver
+Detroit
+Dominica
+Edmonton
+Eirunepe
+El_Salvador
+Ensenada
+Fort_Nelson
+Fort_Wayne
+Fortaleza
+Glace_Bay
+Godthab
+Goose_Bay
+Grand_Turk
+Grenada
+Guadeloupe
+Guatemala
+Guayaquil
+Guyana
+Halifax
+Havana
+Hermosillo
+Indiana/Indianapolis
+Indiana/Knox
+Indiana/Marengo
+Indiana/Petersburg
+Indiana/Tell_City
+Indiana/Vevay
+Indiana/Vincennes
+Indiana/Winamac
+Indianapolis
+Inuvik
+Iqaluit
+Jamaica
+Jujuy
+Juneau
+Kentucky/Louisville
+Kentucky/Monticello
+Knox_IN
+Kralendijk
+La_Paz
+Lima
+Los_Angeles
+Louisville
+Lower_Princes
+Maceio
+Managua
+Manaus
+Marigot
+Martinique
+Matamoros
+Mazatlan
+Mendoza
+Menominee
+Merida
+Metlakatla
+Mexico_City
+Miquelon
+Moncton
+Monterrey
+Montevideo
+Montreal
+Montserrat
+Nassau
+New_York
+Nipigon
+Nome
+Noronha
+North_Dakota/Beulah
+North_Dakota/Center
+North_Dakota/New_Salem
+Nuuk
+Ojinaga
+Panama
+Pangnirtung
+Paramaribo
+Phoenix
+Port-au-Prince
+Port_of_Spain
+Porto_Acre
+Porto_Velho
+Puerto_Rico
+Punta_Arenas
+Rainy_River
+Rankin_Inlet
+Recife
+Regina
+Resolute
+Rio_Branco
+Rosario
+Santa_Isabel
+Santarem
+Santiago
+Santo_Domingo
+Sao_Paulo
+Scoresbysund
+Shiprock
+Sitka
+St_Barthelemy
+St_Johns
+St_Kitts
+St_Lucia
+St_Thomas
+St_Vincent
+Swift_Current
+Tegucigalpa
+Thule
+Thunder_Bay
+Tijuana
+Toronto
+Tortola
+US/Alaska
+US/Aleutian
+US/Arizona
+US/Central
+US/East-Indiana
+US/Eastern
+US/Hawaii
+US/Indiana-Starke
+US/Michigan
+US/Mountain
+US/Pacific
+US/Samoa
+Vancouver
+Virgin
+Whitehorse
+Winnipeg
+Yakutat
+Yellowknife
+
+--- Exercise # 11 ------------------------------------------------------------------------------------------------------
+val nativesForImageFlavor = Map[DataFlavor, String](
+  (java.awt.datatransfer.DataFlavor[mimetype=image/x-java-image;representationclass=java.awt.Image] => PNG)
+)
+
+
+
+========================================================================================================================
+=== Chapter 4. Maps and Tuples =========================================================================================
+
+--- Exercise # 1 -------------------------------------------------------------------------------------------------------
+discountedPRices =
+(
+  (product1 => 90.0),
+  (product2 => 180.0),
+  (product3 => 44.99),
+  (product4 => 17999.91)
+)
+
+--- Exercise # 2 -------------------------------------------------------------------------------------------------------
+Top 5 most frequent 'words' in this file:
+(
+  (word => 32),
+  (val => 30),
+  (wordCounts => 17),
+  (Int => 16),
+  (in => 16)
+)
+
+--- Exercise # 3 -------------------------------------------------------------------------------------------------------
+Top 5 most frequent 'words' in this file:
+(
+  (word => 32),
+  (val => 30),
+  (wordCounts => 17),
+  (in => 16),
+  (Int => 16)
+)
+
+--- Exercise # 4 -------------------------------------------------------------------------------------------------------
+(
+  (Array => 4),
+  (Boolean => 2),
+  (Calendar => 8),
+  (Chapter => 6),
+  (Char => 1),
+  (CollectionConverters => 1),
+  (Double => 1),
+  (FRIDAY => 1),
+  (File => 4),
+  (Friday => 1),
+  (Hello => 4),
+  (Int => 16),
+  (JavaConversions => 2),
+  (LinkedHashMap => 1),
+  (ListMap => 2),
+  (MONDAY => 1),
+  (Map => 6),
+  (Maps => 1),
+  (Monday => 1),
+  (SATURDAY => 1),
+  (SUNDAY => 1),
+  (Saturday => 1),
+  (Scala => 4),
+  (ScalaForTheImpatient => 5),
+  (Scanner => 4),
+  (SortedMap => 1),
+  (Stefano => 1),
+  (String => 14),
+  (Sunday => 1),
+  (System => 1),
+  (THURSDAY => 1),
+  (TUESDAY => 1),
+  (Thursday => 1),
+  (Top => 2),
+  (TreeMap => 2),
+  (Tuesday => 1),
+  (Tuples => 1),
+  (Unit => 1),
+  (Use => 1),
+  (WEDNESDAY => 1),
+  (Wednesday => 1),
+  (Words => 3),
+  (World => 1),
+  (Z => 4),
+  (a => 4),
+  (and => 6),
+  (arr => 6),
+  (array => 2),
+  (arrmax => 4),
+  (arrmin => 4),
+  (as => 1),
+  (asScala => 1),
+  (at => 1),
+  (case => 4),
+  (caseSensitive => 6),
+  (charAggregate => 8),
+  (collection => 5),
+  (contain => 1),
+  (counts => 1),
+  (cs => 4),
+  (def => 4),
+  (discountPerc => 2),
+  (discountedPRices => 1),
+  (discountedPrices => 2),
+  (drop => 1),
+  (element => 1),
+  (else => 5),
+  (eq => 3),
+  (equal => 1),
+  (exercise => 10),
+  (extends => 1),
+  (f => 9),
+  (false => 2),
+  (file => 2),
+  (findAllMatchIn => 4),
+  (findOverlaps => 2),
+  (finding => 1),
+  (for => 10),
+  (foreach => 1),
+  (frequent => 2),
+  (fullPrices => 2),
+  (get => 1),
+  (getOrElse => 4),
+  (getProperties => 1),
+  (greater => 1),
+  (gt => 3),
+  (hasNext => 4),
+  (have => 3),
+  (hollow => 2),
+  (i => 2),
+  (if => 11),
+  (immutable => 4),
+  (import => 5),
+  (in => 16),
+  (io => 4),
+  (isEmpty => 1),
+  (java => 11),
+  (jdk => 1),
+  (k => 7),
+  (keys => 1),
+  (largest => 1),
+  (least => 1),
+  (length => 3),
+  (less => 1),
+  (let => 5),
+  (letter => 7),
+  (letters => 1),
+  (line => 2),
+  (lt => 3),
+  (lteqgt => 2),
+  (main => 4),
+  (map => 4),
+  (max => 2),
+  (maxNameLength => 4),
+  (min => 1),
+  (minmax => 2),
+  (most => 2),
+  (must => 1),
+  (mutable => 5),
+  (n => 8),
+  (new => 10),
+  (next => 4),
+  (no => 1),
+  (nr => 1),
+  (object => 1),
+  (of => 1),
+  (or => 1),
+  (overlap => 2),
+  (overlapping => 1),
+  (overlaps => 5),
+  (package => 1),
+  (pathname => 8),
+  (pos => 2),
+  (position => 4),
+  (printOverlaps => 5),
+  (println => 15),
+  (printmap => 6),
+  (product => 4),
+  (propertiesAsScalaMap => 1),
+  (props => 3),
+  (r => 4),
+  (raw => 4),
+  (replace => 1),
+  (require => 1),
+  (round => 1),
+  (same => 6),
+  (scala => 14),
+  (seq => 2),
+  (size => 1),
+  (smallest => 1),
+  (sortBy => 3),
+  (src => 4),
+  (take => 2),
+  (than => 2),
+  (the => 3),
+  (these => 1),
+  (this => 3),
+  (to => 1),
+  (toMap => 1),
+  (toSeq => 3),
+  (toString => 4),
+  (toUpperCase => 2),
+  (true => 1),
+  (util => 7),
+  (v => 13),
+  (va => 3),
+  (val => 30),
+  (value => 1),
+  (values => 8),
+  (var => 6),
+  (w => 6),
+  (weekdayToCode => 9),
+  (while => 4),
+  (with => 1),
+  (without => 1),
+  (word => 32),
+  (wordCounts => 17),
+  (wordRegex => 8),
+  (words => 2),
+  (yield => 2),
+  (zA => 4),
+  (zip => 1),
+  (zipWithIndex => 1)
+)
+
+--- Exercise # 5 -------------------------------------------------------------------------------------------------------
+(
+  (Array => 4),
+  (Boolean => 2),
+  (Calendar => 8),
+  (Chapter => 6),
+  (Char => 1),
+  (CollectionConverters => 1),
+  (Double => 1),
+  (FRIDAY => 1),
+  (File => 4),
+  (Friday => 1),
+  (Hello => 4),
+  (Int => 16),
+  (JavaConversions => 2),
+  (LinkedHashMap => 1),
+  (ListMap => 2),
+  (MONDAY => 1),
+  (Map => 6),
+  (Maps => 1),
+  (Monday => 1),
+  (SATURDAY => 1),
+  (SUNDAY => 1),
+  (Saturday => 1),
+  (Scala => 4),
+  (ScalaForTheImpatient => 5),
+  (Scanner => 4),
+  (SortedMap => 1),
+  (Stefano => 1),
+  (String => 14),
+  (Sunday => 1),
+  (System => 1),
+  (THURSDAY => 1),
+  (TUESDAY => 1),
+  (Thursday => 1),
+  (Top => 2),
+  (TreeMap => 2),
+  (Tuesday => 1),
+  (Tuples => 1),
+  (Unit => 1),
+  (Use => 1),
+  (WEDNESDAY => 1),
+  (Wednesday => 1),
+  (Words => 3),
+  (World => 1),
+  (Z => 4),
+  (a => 4),
+  (and => 6),
+  (arr => 6),
+  (array => 2),
+  (arrmax => 4),
+  (arrmin => 4),
+  (as => 1),
+  (asScala => 1),
+  (at => 1),
+  (case => 4),
+  (caseSensitive => 6),
+  (charAggregate => 8),
+  (collection => 5),
+  (contain => 1),
+  (counts => 1),
+  (cs => 4),
+  (def => 4),
+  (discountPerc => 2),
+  (discountedPRices => 1),
+  (discountedPrices => 2),
+  (drop => 1),
+  (element => 1),
+  (else => 5),
+  (eq => 3),
+  (equal => 1),
+  (exercise => 10),
+  (extends => 1),
+  (f => 9),
+  (false => 2),
+  (file => 2),
+  (findAllMatchIn => 4),
+  (findOverlaps => 2),
+  (finding => 1),
+  (for => 10),
+  (foreach => 1),
+  (frequent => 2),
+  (fullPrices => 2),
+  (get => 1),
+  (getOrElse => 4),
+  (getProperties => 1),
+  (greater => 1),
+  (gt => 3),
+  (hasNext => 4),
+  (have => 3),
+  (hollow => 2),
+  (i => 2),
+  (if => 11),
+  (immutable => 4),
+  (import => 5),
+  (in => 16),
+  (io => 4),
+  (isEmpty => 1),
+  (java => 11),
+  (jdk => 1),
+  (k => 7),
+  (keys => 1),
+  (largest => 1),
+  (least => 1),
+  (length => 3),
+  (less => 1),
+  (let => 5),
+  (letter => 7),
+  (letters => 1),
+  (line => 2),
+  (lt => 3),
+  (lteqgt => 2),
+  (main => 4),
+  (map => 4),
+  (max => 2),
+  (maxNameLength => 4),
+  (min => 1),
+  (minmax => 2),
+  (most => 2),
+  (must => 1),
+  (mutable => 5),
+  (n => 8),
+  (new => 10),
+  (next => 4),
+  (no => 1),
+  (nr => 1),
+  (object => 1),
+  (of => 1),
+  (or => 1),
+  (overlap => 2),
+  (overlapping => 1),
+  (overlaps => 5),
+  (package => 1),
+  (pathname => 8),
+  (pos => 2),
+  (position => 4),
+  (printOverlaps => 5),
+  (println => 15),
+  (printmap => 6),
+  (product => 4),
+  (propertiesAsScalaMap => 1),
+  (props => 3),
+  (r => 4),
+  (raw => 4),
+  (replace => 1),
+  (require => 1),
+  (round => 1),
+  (same => 6),
+  (scala => 14),
+  (seq => 2),
+  (size => 1),
+  (smallest => 1),
+  (sortBy => 3),
+  (src => 4),
+  (take => 2),
+  (than => 2),
+  (the => 3),
+  (these => 1),
+  (this => 3),
+  (to => 1),
+  (toMap => 1),
+  (toSeq => 3),
+  (toString => 4),
+  (toUpperCase => 2),
+  (true => 1),
+  (util => 7),
+  (v => 13),
+  (va => 3),
+  (val => 30),
+  (value => 1),
+  (values => 8),
+  (var => 6),
+  (w => 6),
+  (weekdayToCode => 9),
+  (while => 4),
+  (with => 1),
+  (without => 1),
+  (word => 32),
+  (wordCounts => 17),
+  (wordRegex => 8),
+  (words => 2),
+  (yield => 2),
+  (zA => 4),
+  (zip => 1),
+  (zipWithIndex => 1)
+)
+
+--- Exercise # 6 -------------------------------------------------------------------------------------------------------
+(
+  (Monday => 2),
+  (Tuesday => 3),
+  (Wednesday => 4),
+  (Thursday => 5),
+  (Friday => 6),
+  (Saturday => 7),
+  (Sunday => 1)
+)
+
+--- Exercise # 7 -------------------------------------------------------------------------------------------------------
+awt.toolkit                     | sun.lwawt.macosx.LWCToolkit
+file.encoding                   | UTF-8
+file.separator                  | /
+ftp.nonProxyHosts               | local|*.local|169.254/16|*.169.254/16
+gopherProxySet                  | false
+http.nonProxyHosts              | local|*.local|169.254/16|*.169.254/16
+java.awt.graphicsenv            | sun.awt.CGraphicsEnvironment
+java.awt.printerjob             | sun.lwawt.macosx.CPrinterJob
+java.class.path                 | /Users/sperfetti/IdeaProjects/ScalaForTheImpatient/target/scala-2.12/classes:/Users/sperfetti/.sbt/boot/scala-2.12.14/lib/scala-library.jar
+java.class.version              | 55.0
+java.home                       | /Applications/IntelliJ IDEA CE.app/Contents/jbr/Contents/Home
+java.io.tmpdir                  | /var/folders/b4/y8tt5y9s1bz7n2nnyhpbs62ncls3b8/T/
+java.library.path               | /Users/sperfetti/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.
+java.runtime.name               | OpenJDK Runtime Environment
+java.runtime.version            | 11.0.12+7-b1504.28
+java.specification.name         | Java Platform API Specification
+java.specification.vendor       | Oracle Corporation
+java.specification.version      | 11
+java.vendor                     | JetBrains s.r.o.
+java.vendor.url                 | https://openjdk.java.net/
+java.vendor.url.bug             | https://bugreport.java.com/bugreport/
+java.vendor.version             | JBR-11.0.12.7-1504.28-jcef
+java.version                    | 11.0.12
+java.version.date               | 2021-07-20
+java.vm.compressedOopsMode      | Zero based
+java.vm.info                    | mixed mode
+java.vm.name                    | OpenJDK 64-Bit Server VM
+java.vm.specification.name      | Java Virtual Machine Specification
+java.vm.specification.vendor    | Oracle Corporation
+java.vm.specification.version   | 11
+java.vm.vendor                  | JetBrains s.r.o.
+java.vm.version                 | 11.0.12+7-b1504.28
+jdk.debug                       | release
+line.separator                  | \n
+os.arch                         | x86_64
+os.name                         | Mac OS X
+os.version                      | 11.5
+path.separator                  | :
+socksNonProxyHosts              | local|*.local|169.254/16|*.169.254/16
+sun.arch.data.model             | 64
+sun.awt.enableExtraMouseButtons | true
+sun.boot.library.path           | /Applications/IntelliJ IDEA CE.app/Contents/jbr/Contents/Home/lib
+sun.cpu.endian                  | little
+sun.cpu.isalist                 |
+sun.font.fontmanager            | sun.font.CFontManager
+sun.io.unicode.encoding         | UnicodeBig
+sun.java.command                | ScalaForTheImpatient.AllBook
+sun.java.launcher               | SUN_STANDARD
+sun.jnu.encoding                | UTF-8
+sun.management.compiler         | HotSpot 64-Bit Tiered Compilers
+sun.os.patch.level              | unknown
+user.country                    | US
+user.dir                        | /Users/sperfetti/IdeaProjects/ScalaForTheImpatient
+user.home                       | /Users/sperfetti
+user.language                   | en
+user.name                       | sperfetti
+user.timezone                   | Europe/Zurich
+
+--- Exercise # 8 -------------------------------------------------------------------------------------------------------
+(1, 4, 8, 2, 5, 0, 7, 4, 5) => (0,8)
+
+--- Exercise # 9 -------------------------------------------------------------------------------------------------------
+(1, 4, 8, 2, 5, 0, 7, 4, 5) => (3,2,4)
+
+--- Exercise # 10 ------------------------------------------------------------------------------------------------------
+Use case: finding overlapping letters in the same position, with or without the same letter case.
+
+Words 'Hello' and 'Stefano' have no same-position letter overlap.
+
+Words 'Hello' and 'World' have this same-position letter overlap:
+'L' as letter nr. 4
+
+Words 'Hello' and 'hollow' have these same-position letter overlaps:
+'H' as letter nr. 1
+'L' as letter nr. 3
+'L' as letter nr. 4
+'O' as letter nr. 5
+
+Words 'Hello' and 'hollow' have these same-position, same-case letter overlaps:
+'l' as letter nr. 3
+'l' as letter nr. 4
+'o' as letter nr. 5
+
+
+
+========================================================================================================================
+=== Chapter 5. Classes =================================================================================================
+
+--- Exercise # 1 -------------------------------------------------------------------------------------------------------
+saferCounter.increment() threw: 'integer overflow prevented'
+counter -> -2147483648, saferCounter -> 2147483647
+
+--- Exercise # 2 -------------------------------------------------------------------------------------------------------
+current bank account balance = 6000.0
+
+--- Exercise # 3 -------------------------------------------------------------------------------------------------------
+09:45 before 10:05 => true
+
+--- Exercise # 4 -------------------------------------------------------------------------------------------------------
+09:45 before 10:05 => true
+
+--- Exercise # 5 -------------------------------------------------------------------------------------------------------
+13
+
+--- Exercise # 6 -------------------------------------------------------------------------------------------------------
+Person(inputAge = -3).age = 0
+
+--- Exercise # 7 -------------------------------------------------------------------------------------------------------
+first name = Stefano
+last name = Perfetti
+
+--- Exercise # 8 -------------------------------------------------------------------------------------------------------
+Tesla Model T -1
+Tesla Model T 2021
+Tesla Model T -1 1234567
+Tesla Model T 2021 1234567
+
+--- Exercise # 10 ------------------------------------------------------------------------------------------------------
+e: name = John Q. Public, salary = 0.0
+e: name = Stefano, salary = 10000.0
+
+
+
+========================================================================================================================
+=== Chapter 6. Objects =================================================================================================
+
+--- Exercise # 1 -------------------------------------------------------------------------------------------------------
+100.0 mile = 160.934 kilometer
+12.5 gallon = 47.317625 liter
+42.0 inch = 106.68 centimeter
+
+--- Exercise # 2 -------------------------------------------------------------------------------------------------------
+100.0 mile = 160.934 kilometer
+12.5 gallon = 47.317625 liter
+42.0 inch = 106.68 centimeter
+
+--- Exercise # 3 -------------------------------------------------------------------------------------------------------
+Origin = (x=3, y=4
+
+--- Exercise # 4 -------------------------------------------------------------------------------------------------------
+new Point(3, 4) = (x=3.0, y=4.0)
+Point(3, 4) = (x=3.0, y=4.0)
+
+--- Exercise # 5 -------------------------------------------------------------------------------------------------------
+reverse to arguments
+
+--- Exercise # 6 -------------------------------------------------------------------------------------------------------
+card suit = ♥, Unicode codepoint = \u2665
+card suit = ♦, Unicode codepoint = \u2666
+card suit = ♣, Unicode codepoint = \u2663
+card suit = ♠, Unicode codepoint = \u2660
+
+--- Exercise # 7 -------------------------------------------------------------------------------------------------------
+card suit ♥ is red
+card suit ♦ is red
+card suit ♣ is black
+card suit ♠ is black
+
+--- Exercise # 8 -------------------------------------------------------------------------------------------------------
+black, 0x0
+blue, 0xff
+green, 0xff00
+cyan, 0xffff
+red, 0xff0000
+magenta, 0xff00ff
+yellow, 0xffff00
+white, 0xffffff
+
+
+
+========================================================================================================================
+=== Chapter 7. Packages and Imports ====================================================================================
+
+--- Exercise # 1 -------------------------------------------------------------------------------------------------------
+Object Chapter7Exercise1A can see both com.horstmann and com.horstmann.impatient members:
+This is class com.horstmann.Something.
+This is class com.horstmann.impatient.Something.
+
+Object Chapter7Exercise1B cannot see com.horstmann members, but only com.horstmann.impatient members:
+This is class com.horstmann.impatient.Something.
+
+
+--- Exercise # 2 -------------------------------------------------------------------------------------------------------
+This block sees _root_.ScalaForTheImpatient.com.horstmann instead of _root_.com.horstmann:
+This is class ScalaForTheImpatient.com.horstmann.Something.
+
+--- Exercise # 3 -------------------------------------------------------------------------------------------------------
+5 random integers: 129832950 323330443 2140339228 -1447076999 -871087822
+5 random doubles in [-1, +1]: -0.399 -0.304 0.236 0.508 -0.872
+
+--- Exercise # 4 -------------------------------------------------------------------------------------------------------
+(theory answer) Package objects are a Scala 2 workaround no longer needed in Scala 3.
+
+--- Exercise # 5 -------------------------------------------------------------------------------------------------------
+(theory answer) private[com] makes a member visible in package com and all its contained packages.
+That is not useful, since com is usually the top-level package containing all others.
+
+--- Exercises # 6, 7 together ------------------------------------------------------------------------------------------
+Java HashMap = (
+  (one => 1),
+  (two => 2),
+  (three => 3)
+)
+Scala HashMap = (
+  (one => 1),
+  (three => 3),
+  (two => 2),
+  (zero => 0)
+)
+
+--- Exercise # 8 -------------------------------------------------------------------------------------------------------
+(theory answer) "import java._; import javax._" import lots of members.
+That is a bad idea because it probably causes lots of name conflicts.
+
+--- Exercise # 9 -------------------------------------------------------------------------------------------------------
+sperfetti, type the password: > secret
+Welcome, sperfetti!
+
+--- Exercise # 10 ------------------------------------------------------------------------------------------------------
+The package scala overrides the following members of the package java.lang:
+Boolean
+Byte
+Cloneable
+deprecated
+Double
+Exception
+Float
+Long
+Process
+ProcessBuilder
+Short
+StringBuilder
+Source: https://docs.google.com/spreadsheets/d/1xyToGau13ZEQXTQh1sgbPUJNc3-NBYcrQxLigbwDU1E/edit?usp=sharing
+
+
+
+========================================================================================================================
+=== Chapter 8. Inheritance =============================================================================================
+
+--- Exercise # 1 -------------------------------------------------------------------------------------------------------
+After 3 operations:
+- the checking account balance is 7997.0
+- the fee total received by the bank is 3.0
+
+--- Exercise # 3 -------------------------------------------------------------------------------------------------------
+Source: https://www.tutorialspoint.com/cplusplus/cpp_inheritance.htm (not a great example, in truth)
+Total area: 35
+
+--- Exercise # 4 -------------------------------------------------------------------------------------------------------
+The bundle 'mouse + keyboard + mouse pad' costs 99.70 CHF.
+
+--- Exercise # 5 -------------------------------------------------------------------------------------------------------
+Point(3.0, 4.0)
+LabeledPoint('Black Thursday', 1929.0, 230.07)
+
+--- Exercise # 6 -------------------------------------------------------------------------------------------------------
+Rectangle(topLeftCorner=Point(3.0, 4.0), width=7.0, height=10.0) => centerPoint(6.5, 9.0).
+Rectangle(centerPoint=Point(5.0, 5.0), radius=5.0) => centerPoint(5.0, 5.0).
+
+--- Exercise # 7 -------------------------------------------------------------------------------------------------------
+new Square(new Point(3, 4), 5) => Square(topLeftCorner=Point(3, 4), side=5)
+new Square(5) => Square(topLeftCorner=Point(0, 0), side=5)
+new Square() => Square(topLeftCorner=Point(0, 0), side=0)
+
+--- Exercise # 8 -------------------------------------------------------------------------------------------------------
+(bytecode reverse engineering exercise) the name field is duplicated, the getter method is overridden.
+
+--- Exercise # 9 -------------------------------------------------------------------------------------------------------
+new AntWithVal().env = (), unwanted!
+new AntWithDef().env = (0, 0), as desired.
+The 2nd case works correctly because it is de facto a static method, so it needs no initialization.
+
+--- Exercise # 10 ------------------------------------------------------------------------------------------------------
+(theory answer)
+A 'protected' constructor can be called only by this class (+companion object) and its subclasses.
+
+--- Exercise # 11 ------------------------------------------------------------------------------------------------------
+Point(x = -3, y = -4)
+Point(x = -3, y = 2)
+Point(x = 5, y = -4)
+Point(x = 5, y = 2)
+
+
+
+========================================================================================================================
+=== Chapters executed: =================================================================================================
+Chapter 1. The Basics
+Chapter 2. Control Structures and Functions
+Chapter 3. Working with Arrays
+Chapter 4. Maps and Tuples
+Chapter 5. Classes
+Chapter 6. Objects
+Chapter 7. Packages and Imports
+Chapter 8. Inheritance
+
+Process finished with exit code 0
