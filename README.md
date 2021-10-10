@@ -5,3 +5,4 @@ Notes:
 - This is ongoing work; I will publish more exercises as I do them.
 - In some exercises, I deliberately exceed the requirements by using concepts that are dealt with in later chapters.
 - Every chapter is an executable App in itself, but you can also execute all chapters together - or just command-line specified chapters - with the App Main.
+- All exercise outputs, chapter by chapter, are visible [here](https://github.com/stefperf/ScalaForTheImpatient/blob/master/output/AllBook.txt).
