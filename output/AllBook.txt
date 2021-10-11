@@ -889,8 +889,8 @@ This is class com.horstmann.impatient.Something.
 
 
 --- Exercise # 2 -------------------------------------------------------------------------------------------------------
-This block sees _root_.ScalaForTheImpatient.com.horstmann instead of _root_.com.horstmann:
-This is class ScalaForTheImpatient.com.horstmann.Something.
+This block sees _root_.ScalaForTheImpatient.chapter07.horstmann instead of _root_.com.horstmann:
+This is class ScalaForTheImpatient.chapter07.horstmann.Something.
 
 --- Exercise # 3 -------------------------------------------------------------------------------------------------------
 5 random integers: 129832950 323330443 2140339228 -1447076999 -871087822
