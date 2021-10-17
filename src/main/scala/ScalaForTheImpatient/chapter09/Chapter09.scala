@@ -13,11 +13,12 @@ object Chapter09 extends Chapter(9, "Files and Regular Expressions", {
     val ext = ".txt"
     val input = Source.fromFile(dir + inFileName + ext)
     println(s"-- File $inFileName$ext contains:")
-    println(Source.fromFile(dir + inFileName + ext).mkString)
+    println(input.mkString)
     val output = new PrintWriter(dir + outFileName + ext)
     input.getLines.toArray.reverse.foreach {
-      output.println(_)
+      output.println
     }
+    input.close()
     output.close()
     println(s"-- File $outFileName$ext contains:")
     println(Source.fromFile(dir + outFileName + ext).mkString)
@@ -39,12 +40,13 @@ object Chapter09 extends Chapter(9, "Files and Regular Expressions", {
     val inFileName = "Chapter09Exercise02"
     val outFileName = inFileName + "TabsVisualized"
     val ext = ".txt"
-    println("(deliberately changing the specs for convenience' sake)")
-    println(s"-- File $inFileName$ext contains:")
-    println(Source.fromFile(dir + inFileName + ext).mkString)
     val input = Source.fromFile(dir + inFileName + ext)
     val output = new PrintWriter(dir + outFileName + ext)
+    println("(deliberately changing the specs for convenience' sake)")
+    println(s"-- File $inFileName$ext contains:")
+    println(input.mkString)
     for (line <- input.getLines) output.println(untab(line, filler = '.'))
+    input.close()
     output.close()
     println(s"-- File $outFileName$ext contains:")
     println(Source.fromFile(dir + outFileName + ext).mkString)
@@ -72,10 +74,10 @@ object Chapter09 extends Chapter(9, "Files and Regular Expressions", {
     }
     if (numbers.nonEmpty) {
       val results = new scala.collection.mutable.ListMap[String, Double]()
-      results("sum") = numbers.reduce(_ + _)
+      results("sum") = numbers.sum
       results("avg") = results("sum") / numbers.length
-      results("min") = numbers.reduce(_ min _)
-      results("max") = numbers.reduce(_ max _)
+      results("min") = numbers.min
+      results("max") = numbers.max
       println("-- Stats:")
       for ((k, v) <- results) println(f"$k = $v%.3f")
     }
@@ -99,7 +101,7 @@ object Chapter09 extends Chapter(9, "Files and Regular Expressions", {
     println(Source.fromFile(filename).mkString)
   }
 
-  exercise(6) {
+  exercise(6){
     val pattern = """""|"\\""|"([^\\"]*|([^\\]{1}\\")*)*"|"[^"]*([^\\]\\\\){1}"""".r
     val filename = "./src/main/scala/ScalaForTheImpatient/Chapter09/Chapter09Exercise06.txt" + ""  // empty str as test
     println("Quoted strings found in file:")
@@ -107,6 +109,64 @@ object Chapter09 extends Chapter(9, "Files and Regular Expressions", {
       println(s"$quoted")
   }
 
-  println("WORK IN PROGRESS...")
+  exercise(7) {
+    val floatPattern = """[-+]?(\d+(.\d*)?|.\d+)([Ee]{1}[-+]?\d+)?"""
+    val text = Source.fromFile("./src/main/scala/ScalaForTheImpatient/Chapter09/Chapter09Exercise07.txt").mkString
+    for (token <- text.split("[\\n\\s]") if token.nonEmpty && ! token.matches(floatPattern))
+      println(token)
+  }
+
+  exercise(8) {
+    val url = "https://horstmann.com/scala"
+    val text = Source.fromURL(url).mkString
+    val imgPattern = """<img .*src="(.*?)".*>""".r("src")
+    println(s"Image sources on page $url:")
+    for (img <- imgPattern.findAllMatchIn(text)) println("- " + img.group("src"))
+  }
+
+  exercise(9) {
+    import java.nio.file._
+    val dirname = "./src/main/scala"
+    val ext = ".scala"  // for convenience' sake, searching .scala instead of .class
+    val entries = Files.walk(Paths.get(dirname))
+    try {
+      val count = entries.filter(_.toString.takeRight(ext.length) == ext).toArray.length
+      println(s"$count files with extension $ext were found in $dirname.")
+    }
+    catch {
+      case _: Throwable =>
+        println(s"Some problem happened wile counting files with extension $ext in $dirname.")
+    }
+    finally {
+      entries.close()
+    }
+  }
+
+  exercise(10) {
+    import scala.collection.mutable.ArrayBuffer
+    class Person(val name: String) extends Serializable {
+      private val _friends = new ArrayBuffer[Person]
+      def friends: ArrayBuffer[Person] = _friends.sortBy(_.name)
+      def befriends(other: Person) { this._friends += other; other._friends += this }
+      override def toString: String = name
+    }
+    val a = new Person("Alfred")
+    val b = new Person("Boris")
+    val c = new Person("Carlo")
+    val persons = Array(a, b, c)
+    b befriends c
+    a befriends b
+    println("- Before serialization:")
+    for (p <- persons) println(s"${p.name}'s friends: ${p.friends.mkString(", ")}.")
+    import java.io._
+    val out = new ObjectOutputStream(new FileOutputStream("/tmp/test.obj"))
+    out.writeObject(persons)
+    out.close()
+    val in = new ObjectInputStream(new FileInputStream("/tmp/test.obj"))
+    val saved_persons = in.readObject().asInstanceOf[Array[Person]]
+    in.close()
+    println("- After serialization:")
+    for (p <- saved_persons) println(s"${p.name}'s friends: ${p.friends.mkString(", ")}.")
+  }
 })
 

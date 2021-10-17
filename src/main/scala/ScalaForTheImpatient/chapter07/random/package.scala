@@ -1,5 +1,5 @@
 package ScalaForTheImpatient
-
+package chapter07
 package object random {
 
   import scala.math.pow

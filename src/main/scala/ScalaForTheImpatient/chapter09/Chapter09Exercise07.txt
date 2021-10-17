@@ -1,0 +1,10 @@
+these +.1 are not
+-1. floating point
+numbers 2
+3.14these
+are-15E-2
+3.53eNOT+03
+.1 float1.ing    2PoInT3.14		15E-02
+
+numbers
+			  3.53e03

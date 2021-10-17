@@ -1,4 +1,4 @@
-"/Applications/IntelliJ IDEA CE.app/Contents/jbr/Contents/Home/bin/java" -javaagent:/Applications/IntelliJ IDEA CE.app/Contents/lib/idea_rt.jar=58022:/Applications/IntelliJ IDEA CE.app/Contents/bin -Dfile.encoding=UTF-8 -classpath /Users/sperfetti/IdeaProjects/ScalaForTheImpatient/target/scala-2.12/classes:/Users/sperfetti/.sbt/boot/scala-2.12.14/lib/scala-library.jar ScalaForTheImpatient.AllBook
+"/Applications/IntelliJ IDEA CE.app/Contents/jbr/Contents/Home/bin/java" -javaagent:/Applications/IntelliJ IDEA CE.app/Contents/lib/idea_rt.jar=56447:/Applications/IntelliJ IDEA CE.app/Contents/bin -Dfile.encoding=UTF-8 -classpath /Users/sperfetti/IdeaProjects/ScalaForTheImpatient/target/scala-2.12/classes:/Users/sperfetti/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/scala-library/2.12.14/scala-library-2.12.14.jar ScalaForTheImpatient.AllBook
 ========================================================================================================================
 === Chapter 1. The Basics ==============================================================================================
 
@@ -11,10 +11,10 @@ Most exercises of this chapter are skipped here as they are just theory question
 2 ^1024 = 179769313486231590772930519078902473361797697894230657273430081157732675805500963132708477322407536021120113879871393357658789768814416622492847430639474124377767893424865485276302219601246094119453082952085005768838150682342462881473913110540827237163350510684586298239947245938479716304835356329624224137216
 
 --- Exercise # 7 -------------------------------------------------------------------------------------------------------
-1004630367969656811842190418447
+1244415117113489021520804440657
 
 --- Exercise # 8 -------------------------------------------------------------------------------------------------------
-10 random charachers in range [a-z0-9]: 1160jcz9v6
+10 random charachers in range [a-z0-9]: q3lwhjo22h
 
 --- Exercise # 9 -------------------------------------------------------------------------------------------------------
 First and last characters of string 'Hello!': 'H', '!'
@@ -62,8 +62,8 @@ First and last characters of string 'Hello!': 'H', '!'
 === Chapter 3. Working with Arrays =====================================================================================
 
 --- Exercise # 1 -------------------------------------------------------------------------------------------------------
-(0, 0, 0)
-(2, 7, 3, 0, 1, 6, 5, 4)
+(1, 1, 1)
+(5, 4, 1, 4, 5, 3, 6, 2)
 
 --- Exercise # 2 -------------------------------------------------------------------------------------------------------
 (2, 1, 4, 3, 5)
@@ -85,8 +85,8 @@ First and last characters of string 'Hello!': 'H', '!'
 (5, 4, 3, 2, 1)
 
 --- Exercise # 7 -------------------------------------------------------------------------------------------------------
-(4, 4, 5, 2, 0, 5, 1, 3, 2, 0, 2, 0, 0, 5, 3, 3, 0, 2, 2, 5)
-(4, 5, 2, 0, 1, 3)
+(4, 5, 2, 1, 3, 1, 4, 3, 1, 3, 0, 1, 2, 1, 0, 2, 4, 2, 1, 4)
+(4, 5, 2, 1, 3, 0)
 
 --- Exercise # 8 -------------------------------------------------------------------------------------------------------
 (4, 2, -3, -6, 6, 7, -5)
@@ -325,7 +325,7 @@ Top 5 most frequent 'words' in this file:
   (Array => 4),
   (Boolean => 2),
   (Calendar => 8),
-  (Chapter => 6),
+  (Chapter => 7),
   (Char => 1),
   (CollectionConverters => 1),
   (Double => 1),
@@ -345,7 +345,7 @@ Top 5 most frequent 'words' in this file:
   (SUNDAY => 1),
   (Saturday => 1),
   (Scala => 4),
-  (ScalaForTheImpatient => 5),
+  (ScalaForTheImpatient => 6),
   (Scanner => 4),
   (SortedMap => 1),
   (Stefano => 1),
@@ -377,6 +377,7 @@ Top 5 most frequent 'words' in this file:
   (at => 1),
   (case => 4),
   (caseSensitive => 6),
+  (chapter => 5),
   (charAggregate => 8),
   (collection => 5),
   (contain => 1),
@@ -391,7 +392,7 @@ Top 5 most frequent 'words' in this file:
   (else => 5),
   (eq => 3),
   (equal => 1),
-  (exercise => 10),
+  (exercise => 11),
   (extends => 1),
   (f => 9),
   (false => 2),
@@ -414,7 +415,7 @@ Top 5 most frequent 'words' in this file:
   (i => 2),
   (if => 11),
   (immutable => 4),
-  (import => 5),
+  (import => 6),
   (in => 16),
   (io => 4),
   (isEmpty => 1),
@@ -429,7 +430,7 @@ Top 5 most frequent 'words' in this file:
   (let => 5),
   (letter => 7),
   (letters => 1),
-  (line => 2),
+  (line => 3),
   (lt => 3),
   (lteqgt => 2),
   (main => 4),
@@ -458,7 +459,7 @@ Top 5 most frequent 'words' in this file:
   (position => 4),
   (printOverlaps => 5),
   (println => 15),
-  (printmap => 6),
+  (printmap => 7),
   (product => 4),
   (propertiesAsScalaMap => 1),
   (props => 3),
@@ -469,7 +470,7 @@ Top 5 most frequent 'words' in this file:
   (round => 1),
   (same => 6),
   (scala => 14),
-  (seq => 2),
+  (seq => 3),
   (size => 1),
   (smallest => 1),
   (sortBy => 3),
@@ -512,7 +513,7 @@ Top 5 most frequent 'words' in this file:
   (Array => 4),
   (Boolean => 2),
   (Calendar => 8),
-  (Chapter => 6),
+  (Chapter => 7),
   (Char => 1),
   (CollectionConverters => 1),
   (Double => 1),
@@ -532,7 +533,7 @@ Top 5 most frequent 'words' in this file:
   (SUNDAY => 1),
   (Saturday => 1),
   (Scala => 4),
-  (ScalaForTheImpatient => 5),
+  (ScalaForTheImpatient => 6),
   (Scanner => 4),
   (SortedMap => 1),
   (Stefano => 1),
@@ -564,6 +565,7 @@ Top 5 most frequent 'words' in this file:
   (at => 1),
   (case => 4),
   (caseSensitive => 6),
+  (chapter => 5),
   (charAggregate => 8),
   (collection => 5),
   (contain => 1),
@@ -578,7 +580,7 @@ Top 5 most frequent 'words' in this file:
   (else => 5),
   (eq => 3),
   (equal => 1),
-  (exercise => 10),
+  (exercise => 11),
   (extends => 1),
   (f => 9),
   (false => 2),
@@ -601,7 +603,7 @@ Top 5 most frequent 'words' in this file:
   (i => 2),
   (if => 11),
   (immutable => 4),
-  (import => 5),
+  (import => 6),
   (in => 16),
   (io => 4),
   (isEmpty => 1),
@@ -616,7 +618,7 @@ Top 5 most frequent 'words' in this file:
   (let => 5),
   (letter => 7),
   (letters => 1),
-  (line => 2),
+  (line => 3),
   (lt => 3),
   (lteqgt => 2),
   (main => 4),
@@ -645,7 +647,7 @@ Top 5 most frequent 'words' in this file:
   (position => 4),
   (printOverlaps => 5),
   (println => 15),
-  (printmap => 6),
+  (printmap => 7),
   (product => 4),
   (propertiesAsScalaMap => 1),
   (props => 3),
@@ -656,7 +658,7 @@ Top 5 most frequent 'words' in this file:
   (round => 1),
   (same => 6),
   (scala => 14),
-  (seq => 2),
+  (seq => 3),
   (size => 1),
   (smallest => 1),
   (sortBy => 3),
@@ -714,7 +716,7 @@ gopherProxySet                  | false
 http.nonProxyHosts              | local|*.local|169.254/16|*.169.254/16
 java.awt.graphicsenv            | sun.awt.CGraphicsEnvironment
 java.awt.printerjob             | sun.lwawt.macosx.CPrinterJob
-java.class.path                 | /Users/sperfetti/IdeaProjects/ScalaForTheImpatient/target/scala-2.12/classes:/Users/sperfetti/.sbt/boot/scala-2.12.14/lib/scala-library.jar
+java.class.path                 | /Users/sperfetti/IdeaProjects/ScalaForTheImpatient/target/scala-2.12/classes:/Users/sperfetti/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/scala-library/2.12.14/scala-library-2.12.14.jar
 java.class.version              | 55.0
 java.home                       | /Applications/IntelliJ IDEA CE.app/Contents/jbr/Contents/Home
 java.io.tmpdir                  | /var/folders/b4/y8tt5y9s1bz7n2nnyhpbs62ncls3b8/T/
@@ -921,8 +923,9 @@ Scala HashMap = (
 That is a bad idea because it probably causes lots of name conflicts.
 
 --- Exercise # 9 -------------------------------------------------------------------------------------------------------
-sperfetti, type the password: > secret
-Welcome, sperfetti!
+sperfetti, type the password: > vfsdv
+Printed 'wrong password' on the standard error stream.
+wrong password
 
 --- Exercise # 10 ------------------------------------------------------------------------------------------------------
 The package scala overrides the following members of the package java.lang:
@@ -991,6 +994,123 @@ Point(x = 5, y = 2)
 
 
 ========================================================================================================================
+=== Chapter 9. Files and Regular Expressions ===========================================================================
+
+--- Exercise # 1 -------------------------------------------------------------------------------------------------------
+-- File Chapter09Exercise01.txt contains:
+reordered.
+to be
+a sentence
+is
+This
+-- File Chapter09Exercise01LineReversed.txt contains:
+
+
+--- Exercise # 2 -------------------------------------------------------------------------------------------------------
+(deliberately changing the specs for convenience' sake)
+-- File Chapter09Exercise02.txt contains:
+gtsegfsez	dfgdf	d			g
+			dvdf	gb
+
+		end
+-- File Chapter09Exercise02TabsVisualized.txt contains:
+
+
+--- Exercise # 3 -------------------------------------------------------------------------------------------------------
+-- Words with 12+ chars:
+ScalaForTheImpatient
+deliberately
+requirements
+ScalaForTheImpatient
+
+--- Exercise # 4 -------------------------------------------------------------------------------------------------------
+-- Numbers found in file:
+#1: +.1 = 0.1
+#2: -1. = -1.0
+#3: 2 = 2.0
+#4: 3.14
+#5: -15E-2 = -0.15
+#6: 3.53e+03 = 3530.0
+#7: .1 = 0.1
+#8: 1. = 1.0
+#9: 2 = 2.0
+#10: 3.14
+#11: 15E-02 = 0.15
+#12: 3.53e03 = 3530.0
+-- Stats:
+max = 3530.000
+avg = 589.207
+sum = 7070.480
+min = -1.000
+
+--- Exercise # 5 -------------------------------------------------------------------------------------------------------
+-- File contents:
+      1          1.0
+      2          0.5
+      4          0.25
+      8          0.125
+     16          0.0625
+     32          0.03125
+     64          0.015625
+    128          0.0078125
+    256          0.00390625
+    512          0.001953125
+   1024          9.765625E-4
+   2048          4.8828125E-4
+   4096          2.44140625E-4
+   8192          1.220703125E-4
+  16384          6.103515625E-5
+  32768          3.0517578125E-5
+  65536          1.52587890625E-5
+ 131072          7.62939453125E-6
+ 262144          3.814697265625E-6
+ 524288          1.9073486328125E-6
+1048576          9.5367431640625E-7
+
+
+--- Exercise # 6 -------------------------------------------------------------------------------------------------------
+Quoted strings found in file:
+"Hello, World!"
+""
+"\""
+"a\"b"
+"cd\\"
+
+--- Exercise # 7 -------------------------------------------------------------------------------------------------------
+these
+are
+not
+floating
+point
+numbers
+3.14these
+are-15E-2
+3.53eNOT+03
+float1.ing
+2PoInT3.14
+numbers
+
+--- Exercise # 8 -------------------------------------------------------------------------------------------------------
+Image sources on page https://horstmann.com/scala:
+- images/cover.png
+- http://ad.linksynergy.com/fs-bin/show?id=R/ODEl37NHE&amp;bids=163217.2476823&amp;type=2&amp;subid=0
+
+--- Exercise # 9 -------------------------------------------------------------------------------------------------------
+17 files with extension .scala were found in ./src/main/scala.
+
+--- Exercise # 10 ------------------------------------------------------------------------------------------------------
+- Before serialization:
+Alfred's friends: Boris.
+Boris's friends: Alfred, Carlo.
+Carlo's friends: Boris.
+- After serialization:
+Alfred's friends: Boris.
+Boris's friends: Alfred, Carlo.
+Carlo's friends: Boris.
+
+
+
+========================================================================================================================
 === Chapters executed: =================================================================================================
 Chapter 1. The Basics
 Chapter 2. Control Structures and Functions
@@ -1000,5 +1120,6 @@ Chapter 5. Classes
 Chapter 6. Objects
 Chapter 7. Packages and Imports
 Chapter 8. Inheritance
+Chapter 9. Files and Regular Expressions
 
 Process finished with exit code 0
