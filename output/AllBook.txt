@@ -1,4 +1,4 @@
-"/Applications/IntelliJ IDEA CE.app/Contents/jbr/Contents/Home/bin/java" -javaagent:/Applications/IntelliJ IDEA CE.app/Contents/lib/idea_rt.jar=56447:/Applications/IntelliJ IDEA CE.app/Contents/bin -Dfile.encoding=UTF-8 -classpath /Users/sperfetti/IdeaProjects/ScalaForTheImpatient/target/scala-2.12/classes:/Users/sperfetti/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/scala-library/2.12.14/scala-library-2.12.14.jar ScalaForTheImpatient.AllBook
+"/Applications/IntelliJ IDEA CE.app/Contents/jbr/Contents/Home/bin/java" -javaagent:/Applications/IntelliJ IDEA CE.app/Contents/lib/idea_rt.jar=60243:/Applications/IntelliJ IDEA CE.app/Contents/bin -Dfile.encoding=UTF-8 -classpath /Users/sperfetti/repos/ScalaForTheImpatient/target/scala-2.12/classes:/Users/sperfetti/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/scala-library/2.12.14/scala-library-2.12.14.jar com.stefperf.impatient.AllBook
 ========================================================================================================================
 === Chapter 1. The Basics ==============================================================================================
 
@@ -11,10 +11,10 @@ Most exercises of this chapter are skipped here as they are just theory question
 2 ^1024 = 179769313486231590772930519078902473361797697894230657273430081157732675805500963132708477322407536021120113879871393357658789768814416622492847430639474124377767893424865485276302219601246094119453082952085005768838150682342462881473913110540827237163350510684586298239947245938479716304835356329624224137216
 
 --- Exercise # 7 -------------------------------------------------------------------------------------------------------
-1244415117113489021520804440657
+642108037802797717018961215841
 
 --- Exercise # 8 -------------------------------------------------------------------------------------------------------
-10 random charachers in range [a-z0-9]: q3lwhjo22h
+10 random charachers in range [a-z0-9]: s220xkbm91
 
 --- Exercise # 9 -------------------------------------------------------------------------------------------------------
 First and last characters of string 'Hello!': 'H', '!'
@@ -62,8 +62,8 @@ First and last characters of string 'Hello!': 'H', '!'
 === Chapter 3. Working with Arrays =====================================================================================
 
 --- Exercise # 1 -------------------------------------------------------------------------------------------------------
-(1, 1, 1)
-(5, 4, 1, 4, 5, 3, 6, 2)
+(0, 1, 0)
+(6, 0, 1, 6, 4, 4, 5, 4)
 
 --- Exercise # 2 -------------------------------------------------------------------------------------------------------
 (2, 1, 4, 3, 5)
@@ -85,8 +85,8 @@ First and last characters of string 'Hello!': 'H', '!'
 (5, 4, 3, 2, 1)
 
 --- Exercise # 7 -------------------------------------------------------------------------------------------------------
-(4, 5, 2, 1, 3, 1, 4, 3, 1, 3, 0, 1, 2, 1, 0, 2, 4, 2, 1, 4)
-(4, 5, 2, 1, 3, 0)
+(1, 4, 2, 0, 2, 2, 0, 0, 2, 1, 1, 1, 2, 3, 2, 4, 1, 4, 4, 0)
+(1, 4, 2, 0, 3)
 
 --- Exercise # 8 -------------------------------------------------------------------------------------------------------
 (4, 2, -3, -6, 6, 7, -5)
@@ -345,7 +345,6 @@ Top 5 most frequent 'words' in this file:
   (SUNDAY => 1),
   (Saturday => 1),
   (Scala => 4),
-  (ScalaForTheImpatient => 6),
   (Scanner => 4),
   (SortedMap => 1),
   (Stefano => 1),
@@ -380,6 +379,7 @@ Top 5 most frequent 'words' in this file:
   (chapter => 5),
   (charAggregate => 8),
   (collection => 5),
+  (com => 6),
   (contain => 1),
   (counts => 1),
   (cs => 4),
@@ -415,6 +415,7 @@ Top 5 most frequent 'words' in this file:
   (i => 2),
   (if => 11),
   (immutable => 4),
+  (impatient => 6),
   (import => 6),
   (in => 16),
   (io => 4),
@@ -475,6 +476,7 @@ Top 5 most frequent 'words' in this file:
   (smallest => 1),
   (sortBy => 3),
   (src => 4),
+  (stefperf => 6),
   (take => 2),
   (than => 2),
   (the => 3),
@@ -533,7 +535,6 @@ Top 5 most frequent 'words' in this file:
   (SUNDAY => 1),
   (Saturday => 1),
   (Scala => 4),
-  (ScalaForTheImpatient => 6),
   (Scanner => 4),
   (SortedMap => 1),
   (Stefano => 1),
@@ -568,6 +569,7 @@ Top 5 most frequent 'words' in this file:
   (chapter => 5),
   (charAggregate => 8),
   (collection => 5),
+  (com => 6),
   (contain => 1),
   (counts => 1),
   (cs => 4),
@@ -603,6 +605,7 @@ Top 5 most frequent 'words' in this file:
   (i => 2),
   (if => 11),
   (immutable => 4),
+  (impatient => 6),
   (import => 6),
   (in => 16),
   (io => 4),
@@ -663,6 +666,7 @@ Top 5 most frequent 'words' in this file:
   (smallest => 1),
   (sortBy => 3),
   (src => 4),
+  (stefperf => 6),
   (take => 2),
   (than => 2),
   (the => 3),
@@ -716,7 +720,7 @@ gopherProxySet                  | false
 http.nonProxyHosts              | local|*.local|169.254/16|*.169.254/16
 java.awt.graphicsenv            | sun.awt.CGraphicsEnvironment
 java.awt.printerjob             | sun.lwawt.macosx.CPrinterJob
-java.class.path                 | /Users/sperfetti/IdeaProjects/ScalaForTheImpatient/target/scala-2.12/classes:/Users/sperfetti/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/scala-library/2.12.14/scala-library-2.12.14.jar
+java.class.path                 | /Users/sperfetti/repos/ScalaForTheImpatient/target/scala-2.12/classes:/Users/sperfetti/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/scala-library/2.12.14/scala-library-2.12.14.jar
 java.class.version              | 55.0
 java.home                       | /Applications/IntelliJ IDEA CE.app/Contents/jbr/Contents/Home
 java.io.tmpdir                  | /var/folders/b4/y8tt5y9s1bz7n2nnyhpbs62ncls3b8/T/
@@ -754,13 +758,13 @@ sun.cpu.endian                  | little
 sun.cpu.isalist                 |
 sun.font.fontmanager            | sun.font.CFontManager
 sun.io.unicode.encoding         | UnicodeBig
-sun.java.command                | ScalaForTheImpatient.AllBook
+sun.java.command                | com.stefperf.impatient.AllBook
 sun.java.launcher               | SUN_STANDARD
 sun.jnu.encoding                | UTF-8
 sun.management.compiler         | HotSpot 64-Bit Tiered Compilers
 sun.os.patch.level              | unknown
 user.country                    | US
-user.dir                        | /Users/sperfetti/IdeaProjects/ScalaForTheImpatient
+user.dir                        | /Users/sperfetti/repos/ScalaForTheImpatient
 user.home                       | /Users/sperfetti
 user.language                   | en
 user.name                       | sperfetti
@@ -923,7 +927,7 @@ Scala HashMap = (
 That is a bad idea because it probably causes lots of name conflicts.
 
 --- Exercise # 9 -------------------------------------------------------------------------------------------------------
-sperfetti, type the password: > vfsdv
+sperfetti, type the password: > DSVA
 Printed 'wrong password' on the standard error stream.
 wrong password
 
@@ -1021,7 +1025,6 @@ gtsegfsez	dfgdf	d			g
 ScalaForTheImpatient
 deliberately
 requirements
-ScalaForTheImpatient
 
 --- Exercise # 4 -------------------------------------------------------------------------------------------------------
 -- Numbers found in file:
@@ -1096,7 +1099,7 @@ Image sources on page https://horstmann.com/scala:
 - http://ad.linksynergy.com/fs-bin/show?id=R/ODEl37NHE&amp;bids=163217.2476823&amp;type=2&amp;subid=0
 
 --- Exercise # 9 -------------------------------------------------------------------------------------------------------
-17 files with extension .scala were found in ./src/main/scala.
+18 files with extension .scala were found in ./src/main/scala.
 
 --- Exercise # 10 ------------------------------------------------------------------------------------------------------
 - Before serialization:
@@ -1111,6 +1114,35 @@ Carlo's friends: Boris.
 
 
 ========================================================================================================================
+=== Chapter 10. Traits =================================================================================================
+
+--- Exercise # 1 -------------------------------------------------------------------------------------------------------
+- Behavior of java.awt.Rectangle ---
+rect = java.awt.Rectangle[x=5,y=10,width=20,height=30]
+...executing rect.translate(10, -10)...
+rect = java.awt.Rectangle[x=15,y=0,width=20,height=30]
+...executing rect.grow(10, 20)...
+rect = java.awt.Rectangle[x=5,y=-20,width=40,height=70]
+
+- Behavior of java.awt.geom.Ellipse2D ---
+egg = RectangleLike[x=5.0,y=10.0,width=20.0,height=30.0]
+...executing egg.translate(10, -10)...
+egg = RectangleLike[x=15.0,y=0.0,width=20.0,height=30.0]
+...executing egg.grow(10, 20)...
+egg = RectangleLike[x=5.0,y=-20.0,width=40.0,height=70.0]
+
+--- Exercise # 2 -------------------------------------------------------------------------------------------------------
+OrderedPoints
+before sorting: ((3, 4), (3, 2), (1, 4), (3, 1), (3, 2))
+after sorting:  ((1, 4), (3, 1), (3, 2), (3, 2), (3, 4))
+
+--- Exercise # 3 -------------------------------------------------------------------------------------------------------
+skipped because it is a pure theory exercise
+
+WORK IN PROGRESS
+
+
+========================================================================================================================
 === Chapters executed: =================================================================================================
 Chapter 1. The Basics
 Chapter 2. Control Structures and Functions
@@ -1121,5 +1153,6 @@ Chapter 6. Objects
 Chapter 7. Packages and Imports
 Chapter 8. Inheritance
 Chapter 9. Files and Regular Expressions
+Chapter 10. Traits
 
 Process finished with exit code 0
