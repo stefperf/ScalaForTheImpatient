@@ -1,4 +1,4 @@
-"/Applications/IntelliJ IDEA CE.app/Contents/jbr/Contents/Home/bin/java" -javaagent:/Applications/IntelliJ IDEA CE.app/Contents/lib/idea_rt.jar=60243:/Applications/IntelliJ IDEA CE.app/Contents/bin -Dfile.encoding=UTF-8 -classpath /Users/sperfetti/repos/ScalaForTheImpatient/target/scala-2.12/classes:/Users/sperfetti/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/scala-library/2.12.14/scala-library-2.12.14.jar com.stefperf.impatient.AllBook
+/Library/Java/JavaVirtualMachines/temurin-11.jdk/Contents/Home/bin/java -javaagent:/Applications/IntelliJ IDEA CE.app/Contents/lib/idea_rt.jar=50805:/Applications/IntelliJ IDEA CE.app/Contents/bin -Dfile.encoding=UTF-8 -classpath /Users/Stefano/Documents/GitHub/ScalaForTheImpatient/target/scala-2.12/classes:/Users/Stefano/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/scala-library/2.12.14/scala-library-2.12.14.jar com.stefperf.impatient.AllBook
 ========================================================================================================================
 === Chapter 1. The Basics ==============================================================================================
 
@@ -11,10 +11,10 @@ Most exercises of this chapter are skipped here as they are just theory question
 2 ^1024 = 179769313486231590772930519078902473361797697894230657273430081157732675805500963132708477322407536021120113879871393357658789768814416622492847430639474124377767893424865485276302219601246094119453082952085005768838150682342462881473913110540827237163350510684586298239947245938479716304835356329624224137216
 
 --- Exercise # 7 -------------------------------------------------------------------------------------------------------
-642108037802797717018961215841
+739284185787695403349735364741
 
 --- Exercise # 8 -------------------------------------------------------------------------------------------------------
-10 random charachers in range [a-z0-9]: s220xkbm91
+10 random charachers in range [a-z0-9]: wsp7ksv8np
 
 --- Exercise # 9 -------------------------------------------------------------------------------------------------------
 First and last characters of string 'Hello!': 'H', '!'
@@ -62,8 +62,8 @@ First and last characters of string 'Hello!': 'H', '!'
 === Chapter 3. Working with Arrays =====================================================================================
 
 --- Exercise # 1 -------------------------------------------------------------------------------------------------------
-(0, 1, 0)
-(6, 0, 1, 6, 4, 4, 5, 4)
+(1, 1, 0)
+(5, 7, 6, 0, 4, 7, 2, 1)
 
 --- Exercise # 2 -------------------------------------------------------------------------------------------------------
 (2, 1, 4, 3, 5)
@@ -85,8 +85,8 @@ First and last characters of string 'Hello!': 'H', '!'
 (5, 4, 3, 2, 1)
 
 --- Exercise # 7 -------------------------------------------------------------------------------------------------------
-(1, 4, 2, 0, 2, 2, 0, 0, 2, 1, 1, 1, 2, 3, 2, 4, 1, 4, 4, 0)
-(1, 4, 2, 0, 3)
+(3, 3, 2, 3, 0, 3, 3, 3, 5, 4, 2, 4, 3, 4, 4, 4, 4, 0, 0, 5)
+(3, 2, 0, 5, 4)
 
 --- Exercise # 8 -------------------------------------------------------------------------------------------------------
 (4, 2, -3, -6, 6, 7, -5)
@@ -720,20 +720,20 @@ gopherProxySet                  | false
 http.nonProxyHosts              | local|*.local|169.254/16|*.169.254/16
 java.awt.graphicsenv            | sun.awt.CGraphicsEnvironment
 java.awt.printerjob             | sun.lwawt.macosx.CPrinterJob
-java.class.path                 | /Users/sperfetti/repos/ScalaForTheImpatient/target/scala-2.12/classes:/Users/sperfetti/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/scala-library/2.12.14/scala-library-2.12.14.jar
+java.class.path                 | /Users/Stefano/Documents/GitHub/ScalaForTheImpatient/target/scala-2.12/classes:/Users/Stefano/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/scala-library/2.12.14/scala-library-2.12.14.jar
 java.class.version              | 55.0
-java.home                       | /Applications/IntelliJ IDEA CE.app/Contents/jbr/Contents/Home
-java.io.tmpdir                  | /var/folders/b4/y8tt5y9s1bz7n2nnyhpbs62ncls3b8/T/
-java.library.path               | /Users/sperfetti/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.
+java.home                       | /Library/Java/JavaVirtualMachines/temurin-11.jdk/Contents/Home
+java.io.tmpdir                  | /var/folders/vt/xh6vj3q915s06wdh7kvwf3f40000gn/T/
+java.library.path               | /Users/Stefano/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.
 java.runtime.name               | OpenJDK Runtime Environment
-java.runtime.version            | 11.0.12+7-b1504.28
+java.runtime.version            | 11.0.12+7
 java.specification.name         | Java Platform API Specification
 java.specification.vendor       | Oracle Corporation
 java.specification.version      | 11
-java.vendor                     | JetBrains s.r.o.
-java.vendor.url                 | https://openjdk.java.net/
-java.vendor.url.bug             | https://bugreport.java.com/bugreport/
-java.vendor.version             | JBR-11.0.12.7-1504.28-jcef
+java.vendor                     | Eclipse Foundation
+java.vendor.url                 | https://adoptium.net/
+java.vendor.url.bug             | https://github.com/adoptium/adoptium-support/issues
+java.vendor.version             | Temurin-11.0.12+7
 java.version                    | 11.0.12
 java.version.date               | 2021-07-20
 java.vm.compressedOopsMode      | Zero based
@@ -742,8 +742,8 @@ java.vm.name                    | OpenJDK 64-Bit Server VM
 java.vm.specification.name      | Java Virtual Machine Specification
 java.vm.specification.vendor    | Oracle Corporation
 java.vm.specification.version   | 11
-java.vm.vendor                  | JetBrains s.r.o.
-java.vm.version                 | 11.0.12+7-b1504.28
+java.vm.vendor                  | Eclipse Foundation
+java.vm.version                 | 11.0.12+7
 jdk.debug                       | release
 line.separator                  | \n
 os.arch                         | x86_64
@@ -753,7 +753,7 @@ path.separator                  | :
 socksNonProxyHosts              | local|*.local|169.254/16|*.169.254/16
 sun.arch.data.model             | 64
 sun.awt.enableExtraMouseButtons | true
-sun.boot.library.path           | /Applications/IntelliJ IDEA CE.app/Contents/jbr/Contents/Home/lib
+sun.boot.library.path           | /Library/Java/JavaVirtualMachines/temurin-11.jdk/Contents/Home/lib
 sun.cpu.endian                  | little
 sun.cpu.isalist                 |
 sun.font.fontmanager            | sun.font.CFontManager
@@ -764,10 +764,10 @@ sun.jnu.encoding                | UTF-8
 sun.management.compiler         | HotSpot 64-Bit Tiered Compilers
 sun.os.patch.level              | unknown
 user.country                    | US
-user.dir                        | /Users/sperfetti/repos/ScalaForTheImpatient
-user.home                       | /Users/sperfetti
+user.dir                        | /Users/Stefano/Documents/GitHub/ScalaForTheImpatient
+user.home                       | /Users/Stefano
 user.language                   | en
-user.name                       | sperfetti
+user.name                       | Stefano
 user.timezone                   | Europe/Zurich
 
 --- Exercise # 8 -------------------------------------------------------------------------------------------------------
@@ -927,9 +927,8 @@ Scala HashMap = (
 That is a bad idea because it probably causes lots of name conflicts.
 
 --- Exercise # 9 -------------------------------------------------------------------------------------------------------
-sperfetti, type the password: > DSVA
-Printed 'wrong password' on the standard error stream.
-wrong password
+Stefano, type the password: > secret
+Welcome, Stefano!
 
 --- Exercise # 10 ------------------------------------------------------------------------------------------------------
 The package scala overrides the following members of the package java.lang:
@@ -1138,6 +1137,62 @@ after sorting:  ((1, 4), (3, 1), (3, 2), (3, 2), (3, 4))
 
 --- Exercise # 3 -------------------------------------------------------------------------------------------------------
 skipped because it is a pure theory exercise
+
+--- Exercise # 4 -------------------------------------------------------------------------------------------------------
+Encoding the test text 'this is the test text' with Caesar cipher = 3:
+wklv#lv#wkh#whvw#wh{w
+Encoding the test text 'this is the test text' with Caesar cipher = -3:
+qefpfpqebqbpqqbuq
+
+--- Exercise # 5 -------------------------------------------------------------------------------------------------------
+property 'myPoint' changed from (0,0) to (1,2)
+property 'myPoint' changed from (1,2) to (3,4)
+property 'myPoint' changed from (3,4) to (5,6)
+property 'myPoint' changed from (5,6) to (7,8)
+
+--- Exercise # 6 -------------------------------------------------------------------------------------------------------
+skipped because it is a pure theory exercise
+
+--- Exercise # 7 -------------------------------------------------------------------------------------------------------
+WORK IN PROGRESS
+
+--- Exercise # 8 -------------------------------------------------------------------------------------------------------
+WORK IN PROGRESS
+
+--- Exercise # 9 -------------------------------------------------------------------------------------------------------
+-- (Simplified implementation, for pure demo purposes) --
+-- Reading file $filename one character at a time... --
+The 0-bytes buffer '' has been exhausted; trying to read more bytes...
+a
+b
+c
+d
+e
+f
+g
+h
+i
+j
+The 10-bytes buffer 'abcdefghij' has been exhausted; trying to read more bytes...
+k
+l
+m
+n
+o
+p
+q
+r
+s
+t
+The 10-bytes buffer 'klmnopqrst' has been exhausted; trying to read more bytes...
+u
+v
+w
+x
+y
+z
+The 6-bytes buffer 'uvwxyz' has been exhausted; trying to read more bytes...
+The input stream has finished.
 
 WORK IN PROGRESS
 

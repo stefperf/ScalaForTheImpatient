@@ -1,3 +1,3 @@
-[debug] not up to date. inChanged = false, force = false
-[debug] Updating ProjectRef(uri("file:/Users/sperfetti/repos/ScalaForTheImpatient/project/"), "scalafortheimpatient-build")...
-[debug] Done updating ProjectRef(uri("file:/Users/sperfetti/repos/ScalaForTheImpatient/project/"), "scalafortheimpatient-build")
+[debug] not up to date. inChanged = true, force = false
+[debug] Updating ProjectRef(uri("file:/Users/Stefano/Documents/GitHub/ScalaForTheImpatient/project/"), "scalafortheimpatient-build")...
+[debug] Done updating ProjectRef(uri("file:/Users/Stefano/Documents/GitHub/ScalaForTheImpatient/project/"), "scalafortheimpatient-build")

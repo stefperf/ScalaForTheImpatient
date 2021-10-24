@@ -2,6 +2,8 @@ package com.stefperf.impatient.chapter10
 
 import com.stefperf.impatient._
 
+import java.beans.{PropertyChangeEvent, PropertyChangeListener}
+
 object Chapter10 extends Chapter(10, "Traits", {
   exercise(1) {
     trait RectangleLike {
@@ -21,7 +23,7 @@ object Chapter10 extends Chapter(10, "Traits", {
 
       def className = this.getClass.getName
 
-      override def toString = s"RectangleLike[x=${getX},y=${getY},width=${getWidth},height=${getHeight}]"
+      override def toString = s"RectangleLike[x=$getX,y=$getY,width=$getWidth,height=$getHeight]"
     }
 
     println("- Behavior of java.awt.Rectangle ---")
@@ -73,6 +75,113 @@ object Chapter10 extends Chapter(10, "Traits", {
 
   exercise(3) {
     println("skipped because it is a pure theory exercise")
+  }
+
+  exercise(4){
+    trait Logger {
+      def log(msg: String): Unit
+    }
+    trait CryptoLogger extends Logger {
+      val cryptoKey: Int
+      private lazy val encode = (text: String) => {
+        text.map((ch: Char) => {(ch.toInt + cryptoKey).toChar})
+      }
+      abstract override def log(text: String) = super.log(encode(text))
+    }
+    trait ConsoleLogger extends Logger {
+      def log(msg: String): Unit = {
+        println(msg)
+      }
+    }
+    val testText = "this is the test text"
+    for (key <- Array(+3, -3)) {
+      println(f"Encoding the test text '$testText' with Caesar cipher = $key:")
+      new ConsoleLogger with CryptoLogger {val cryptoKey: Int = key}.log(testText)
+    }
+  }
+
+  exercise(5) {
+    import java.awt.Point
+    import java.beans.{PropertyChangeEvent => PCE, PropertyChangeListener => PCL, PropertyChangeSupport => PCS}
+    trait MyPropertyChangeSupport {
+      val pcs = new PCS(this)
+      def addPropertyChangeListener(listener: PCL) = pcs.addPropertyChangeListener(listener)
+      def removePropertyChangeListener(listener: PCL) = pcs.removePropertyChangeListener(listener)
+    }
+    trait ListenedLocationXY extends Point with MyPropertyChangeSupport {
+      val name: String
+      override def move(x: Int, y: Int): Unit = {
+        val oldValue = (this.x, this.y)
+        val newValue = (x, y)
+        super.move(x, y)
+        pcs.firePropertyChange(name, oldValue, newValue)
+      }
+      override def translate(dx: Int, dy: Int): Unit = move(x + dx, y + dy)
+    }
+    val point = new Point with ListenedLocationXY {val name = "myPoint"}
+    point.addPropertyChangeListener((evt: PCE) =>
+      println(s"property '${evt.getPropertyName}' changed from ${evt.getOldValue} to ${evt.getNewValue}"))
+    point.setLocation(1, 2)
+    point.move(3, 4)
+    point.setLocation(new Point(5, 6))
+    point.translate(2, 2)
+  }
+
+  exercise(6) {
+    println("skipped because it is a pure theory exercise")
+  }
+
+  exercise(7) {
+    println("WORK IN PROGRESS")  // TODO
+  }
+
+  exercise(8) {
+    println("WORK IN PROGRESS")  // TODO
+  }
+
+  exercise(9) {
+    println("-- (Simplified implementation, for pure demo purposes) --")
+    val filepath = "./src/main/scala/com/stefperf/impatient/Chapter10/"
+    val filename = "Chapter10Exercise09.txt"
+    println("-- Reading file $filename one character at a time... --")
+    import java.io._
+    val EOF = -1
+    trait MyBufferedInputStream extends java.io.InputStream {
+      val bufSize: Int
+      protected lazy val buf = new Array[Byte](bufSize)
+      protected var count, pos = 0
+      protected def nextByte(): Int = {
+        val next = buf(pos)
+        pos += 1
+        next
+      }
+      override def read(): Int = {
+        if (pos < count) nextByte()
+        else {
+          println(s"The $count-bytes buffer '${buf.take(count).map(_.toChar).mkString}' " +
+            s"has been exhausted; trying to read more bytes...")  // for demo
+          pos = 0
+          val nrBytesRead = read(buf)
+          if (nrBytesRead > 0) {
+            count = nrBytesRead
+            nextByte()
+          }
+          else {
+            println("The input stream has finished.")
+            count = 0
+            EOF
+          }
+        }
+      }
+    }
+    val inFile = new File(filepath + filename)
+    val in = new java.io.FileInputStream(inFile) with MyBufferedInputStream {val bufSize = 10}
+    var hasNext = true
+    while (hasNext) {
+      val next = in.read()
+      if (next == EOF) hasNext = false
+      else println(next.toChar)
+    }
   }
 
   println("WORK IN PROGRESS")
