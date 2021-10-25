@@ -3,6 +3,8 @@ package com.stefperf.impatient.chapter10
 import com.stefperf.impatient._
 
 import java.beans.{PropertyChangeEvent, PropertyChangeListener}
+import java.io.IOException
+import scala.io.Source
 
 object Chapter10 extends Chapter(10, "Traits", {
   exercise(1) {
@@ -21,7 +23,7 @@ object Chapter10 extends Chapter(10, "Traits", {
 
       def grow(x: Double, y: Double) = setFrame(getX - x, getY - y, getWidth + 2 * x, getHeight + 2 * y)
 
-      def className = this.getClass.getName
+      def className: String = this.getClass.getName
 
       override def toString = s"RectangleLike[x=$getX,y=$getY,width=$getWidth,height=$getHeight]"
     }
@@ -136,22 +138,62 @@ object Chapter10 extends Chapter(10, "Traits", {
   }
 
   exercise(7) {
-    println("WORK IN PROGRESS")  // TODO
+    val savingsAccount = new SavingsAccount(1)
+    savingsAccount.deposit(100)
+    savingsAccount.withdraw(200)
+    printf("(to see the point of this exercise, it is necessary to write and compile the code incrementally)")
   }
 
   exercise(8) {
-    println("WORK IN PROGRESS")  // TODO
+    trait LayeredAnagrammer {
+      val originalWord: String
+      val minLength = 3
+      lazy val minChanges: Int = originalWord.length / 2
+      lazy val maxChanges: Int = originalWord.length
+      protected def nextInRange(minInt: Int, maxInt: Int): Int = minInt + util.Random.nextInt(maxInt + 1 - minInt)
+      protected def getNChangesRandomly: Int = nextInRange(minChanges, maxChanges)
+      def permute: String = {
+        require(originalWord.length >= minLength, s"originalWord must havve at least $minLength characters")
+        originalWord
+      }
+    }
+    trait ReversingAnagrammer extends LayeredAnagrammer {
+      override def permute: String = super.permute.reverse
+    }
+    trait CuttingAnagrammer extends LayeredAnagrammer {
+      def cutPosition: Int
+      def cut(word: String): String = {
+        require(1 <= cutPosition && cutPosition <= originalWord.length - 1, "cutPosition out of bounds")
+        word.drop(cutPosition) + word.take(cutPosition)
+      }
+      override def permute: String = cut(super.permute)
+    }
+      trait RandomCuttingAnagrammer extends CuttingAnagrammer {
+        def cutPosition: Int = nextInRange(1, originalWord.length - 1)
+      }
+    trait HalfCuttingAnagrammer extends CuttingAnagrammer {
+      val cutPosition: Int = originalWord.length / 2
+    }
+    val word = "ANAGRAM"
+    val anagram1 = (new { val originalWord = word } with ReversingAnagrammer with HalfCuttingAnagrammer).permute
+    val anagram2 = (new { val originalWord = word } with HalfCuttingAnagrammer with ReversingAnagrammer).permute
+    println(s"ReversingAnagrammer with HalfCuttingAnagrammer: $anagram1")
+    println(s"HalfCuttingAnagrammer with ReversingAnagrammer: $anagram2")
+
   }
 
-  exercise(9) {
-    println("-- (Simplified implementation, for pure demo purposes) --")
-    val filepath = "./src/main/scala/com/stefperf/impatient/Chapter10/"
-    val filename = "Chapter10Exercise09.txt"
-    val bufferSize = 10
-    println("-- Processing file $filename one character at a time, but reading bufferSize characters at a time... --")
+  exercise(9, 10) {
+    // logging traits
+    trait Logger { def log(msg: String) }
+    trait ActivatableLogger extends Logger {
+      var doLog: Boolean
+      abstract override def log(msg: String) { if (doLog) super.log(msg) }
+    }
+    trait ConsoleLogger extends Logger { def log(msg: String) {println(msg)} }
+    // buffered input stream
     import java.io._
     val EOF = -1
-    trait MyBufferedInputStream extends java.io.InputStream {
+    trait MyBufferedInputStream extends java.io.InputStream with ConsoleLogger with ActivatableLogger {
       val bufSize: Int
       protected lazy val buf = new Array[Byte](bufSize)
       protected var count, pos = 0
@@ -163,7 +205,7 @@ object Chapter10 extends Chapter(10, "Traits", {
       override def read(): Int = {
         if (pos < count) nextByte()
         else {
-          println(s"The $count-bytes buffer '${buf.take(count).map(_.toChar).mkString}' " +
+          log(s"The $count-bytes buffer '${buf.take(count).map(_.toChar).mkString}' " +
             s"has been exhausted; trying to read more bytes...")  // for demo
           pos = 0
           val nrBytesRead = read(buf)
@@ -172,15 +214,22 @@ object Chapter10 extends Chapter(10, "Traits", {
             nextByte()
           }
           else {
-            println("The input stream has finished.")
+            log("The input stream has finished.")
             count = 0
             EOF
           }
         }
       }
     }
-    val inFile = new File(filepath + filename)
-    val in = new java.io.FileInputStream(inFile) with MyBufferedInputStream {val bufSize = bufferSize}
+    // demo
+    val filepath = "./src/main/scala/com/stefperf/impatient/Chapter10/"
+    val filename = "Chapter10.txt"
+    val bufferSize = 10
+    println("-- Echoing file $filename one character at a time, but reading bufferSize characters at a time... --")
+    val in = new java.io.FileInputStream(new File(filepath + filename)) with MyBufferedInputStream {
+      val bufSize: Int = bufferSize
+      var doLog = true
+    }
     var hasNext = true
     while (hasNext) {
       val next = in.read()
@@ -189,16 +238,51 @@ object Chapter10 extends Chapter(10, "Traits", {
     }
   }
 
-  exercise(10) {
-    println("WORK IN PROGRESS")  // TODO
+  exercise(11) {
+    import java.io._
+    abstract class IterableInputStream extends InputStream with Iterable[Byte] {
+      class InputStreamIterator(private val in: InputStream) extends Iterator[Byte] {
+        protected val EOF: Int = -1 // end of stream reached
+        protected[this] var nextByte: Option[Byte] = None
+
+        def hasNext: Boolean = {
+          if (nextByte.isDefined) true
+          else {
+            val readResult = in.read()
+            if (readResult == EOF) false
+            else {
+              nextByte = Some(readResult.toByte)
+              true
+            }
+          }
+        }
+
+        def next(): Byte = {
+          if (hasNext) {
+            val nextByteValue = nextByte.get
+            nextByte = None
+            nextByteValue
+          } else {
+            throw new IOException("no next Byte can be accessed from the input stream")
+          }
+        }
+      }
+
+      override def iterator: Iterator[Byte] = new InputStreamIterator(this)
+    }
+    val filepath = "./src/main/scala/com/stefperf/impatient/Chapter10/"
+    val filename = "Chapter10.txt"
+    val iterableInputStream = new IterableInputStream {
+      val in = new java.io.FileInputStream(new File(filepath + filename))
+      override def read(): Int = in.read()
+    }
+    val streamIterator = iterableInputStream.iterator
+    println("-- Echoing file $filename one character at a time with iterator... --")
+    while (streamIterator.hasNext) println(streamIterator.next().toChar)
   }
 
-  exercise(11) {
-    class IterableInputStream extends java.io.InputStream with Iterable[Byte]{
-      override def read(): Int = ???
-
-      override def iterator: Iterator[Byte] = ???
-    }
+  exercise(12) {
+    println("Skipped as it is not a coding exercise.")
   }
 
   println("WORK IN PROGRESS")
