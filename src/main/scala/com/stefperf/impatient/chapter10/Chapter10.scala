@@ -116,14 +116,18 @@ object Chapter10 extends Chapter(10, "Traits", {
         super.move(x, y)
         pcs.firePropertyChange(name, oldValue, newValue)
       }
+      override def setLocation(x: Int, y: Int): Unit = move(x, y)
+      override def setLocation(x: Double, y: Double): Unit = move(math.round(x).toInt, math.round(y).toInt)
+      override def setLocation(p: Point): Unit = move(p.x, p.y)
       override def translate(dx: Int, dy: Int): Unit = move(x + dx, y + dy)
     }
-    val point = new Point with ListenedLocationXY {val name = "myPoint"}
+    val point = new Point(0, 1) with ListenedLocationXY {val name = "myPoint"}
     point.addPropertyChangeListener((evt: PCE) =>
       println(s"property '${evt.getPropertyName}' changed from ${evt.getOldValue} to ${evt.getNewValue}"))
-    point.setLocation(1, 2)
-    point.move(3, 4)
-    point.setLocation(new Point(5, 6))
+    point.move(2, 3)
+    point.setLocation(4, 5)
+    point.setLocation(6.3, 6.9)
+    point.setLocation(new Point(8, 9))
     point.translate(2, 2)
   }
 
@@ -143,7 +147,8 @@ object Chapter10 extends Chapter(10, "Traits", {
     println("-- (Simplified implementation, for pure demo purposes) --")
     val filepath = "./src/main/scala/com/stefperf/impatient/Chapter10/"
     val filename = "Chapter10Exercise09.txt"
-    println("-- Reading file $filename one character at a time... --")
+    val bufferSize = 10
+    println("-- Processing file $filename one character at a time, but reading bufferSize characters at a time... --")
     import java.io._
     val EOF = -1
     trait MyBufferedInputStream extends java.io.InputStream {
@@ -175,12 +180,24 @@ object Chapter10 extends Chapter(10, "Traits", {
       }
     }
     val inFile = new File(filepath + filename)
-    val in = new java.io.FileInputStream(inFile) with MyBufferedInputStream {val bufSize = 10}
+    val in = new java.io.FileInputStream(inFile) with MyBufferedInputStream {val bufSize = bufferSize}
     var hasNext = true
     while (hasNext) {
       val next = in.read()
       if (next == EOF) hasNext = false
       else println(next.toChar)
+    }
+  }
+
+  exercise(10) {
+    println("WORK IN PROGRESS")  // TODO
+  }
+
+  exercise(11) {
+    class IterableInputStream extends java.io.InputStream with Iterable[Byte]{
+      override def read(): Int = ???
+
+      override def iterator: Iterator[Byte] = ???
     }
   }
 
