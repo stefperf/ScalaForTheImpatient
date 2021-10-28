@@ -1,4 +1,4 @@
-/Library/Java/JavaVirtualMachines/temurin-11.jdk/Contents/Home/bin/java -javaagent:/Applications/IntelliJ IDEA CE.app/Contents/lib/idea_rt.jar=54420:/Applications/IntelliJ IDEA CE.app/Contents/bin -Dfile.encoding=UTF-8 -classpath /Users/Stefano/Documents/GitHub/ScalaForTheImpatient/target/scala-2.12/classes:/Users/Stefano/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/scala-library/2.12.14/scala-library-2.12.14.jar com.stefperf.impatient.AllBook
+/Library/Java/JavaVirtualMachines/temurin-11.jdk/Contents/Home/bin/java -javaagent:/Applications/IntelliJ IDEA CE.app/Contents/lib/idea_rt.jar=50533:/Applications/IntelliJ IDEA CE.app/Contents/bin -Dfile.encoding=UTF-8 -classpath /Users/Stefano/Documents/GitHub/ScalaForTheImpatient/target/scala-2.12/classes:/Users/Stefano/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/scala-library/2.12.14/scala-library-2.12.14.jar com.stefperf.impatient.AllBook
 ========================================================================================================================
 === Chapter 1. The Basics ==============================================================================================
 
@@ -11,10 +11,10 @@ Most exercises of this chapter are skipped here as they are just theory question
 2 ^1024 = 179769313486231590772930519078902473361797697894230657273430081157732675805500963132708477322407536021120113879871393357658789768814416622492847430639474124377767893424865485276302219601246094119453082952085005768838150682342462881473913110540827237163350510684586298239947245938479716304835356329624224137216
 
 --- Exercise # 7 -------------------------------------------------------------------------------------------------------
-1026505032765246533330771750273
+676769793825813632277208742819
 
 --- Exercise # 8 -------------------------------------------------------------------------------------------------------
-10 random charachers in range [a-z0-9]: udmqn8tc0d
+10 random charachers in range [a-z0-9]: 13ekrjosmf
 
 --- Exercise # 9 -------------------------------------------------------------------------------------------------------
 First and last characters of string 'Hello!': 'H', '!'
@@ -62,8 +62,8 @@ First and last characters of string 'Hello!': 'H', '!'
 === Chapter 3. Working with Arrays =====================================================================================
 
 --- Exercise # 1 -------------------------------------------------------------------------------------------------------
-(1, 1, 1)
-(6, 7, 5, 4, 3, 3, 0, 6)
+(1, 0, 0)
+(0, 6, 4, 3, 1, 5, 0, 5)
 
 --- Exercise # 2 -------------------------------------------------------------------------------------------------------
 (2, 1, 4, 3, 5)
@@ -85,8 +85,8 @@ First and last characters of string 'Hello!': 'H', '!'
 (5, 4, 3, 2, 1)
 
 --- Exercise # 7 -------------------------------------------------------------------------------------------------------
-(1, 3, 2, 3, 5, 4, 3, 0, 0, 3, 0, 4, 3, 2, 5, 5, 0, 0, 0, 0)
-(1, 3, 2, 5, 4, 0)
+(5, 3, 3, 3, 0, 2, 1, 4, 1, 2, 5, 2, 3, 3, 1, 0, 2, 0, 2, 1)
+(5, 3, 0, 2, 1, 4)
 
 --- Exercise # 8 -------------------------------------------------------------------------------------------------------
 (4, 2, -3, -6, 6, 7, -5)
@@ -748,7 +748,7 @@ jdk.debug                       | release
 line.separator                  | \n
 os.arch                         | x86_64
 os.name                         | Mac OS X
-os.version                      | 11.5
+os.version                      | 10.16
 path.separator                  | :
 socksNonProxyHosts              | local|*.local|169.254/16|*.169.254/16
 sun.arch.data.model             | 64
@@ -1098,7 +1098,7 @@ Image sources on page https://horstmann.com/scala:
 - http://ad.linksynergy.com/fs-bin/show?id=R/ODEl37NHE&amp;bids=163217.2476823&amp;type=2&amp;subid=0
 
 --- Exercise # 9 -------------------------------------------------------------------------------------------------------
-21 files with extension .scala were found in ./src/main/scala.
+24 files with extension .scala were found in ./src/main/scala.
 
 --- Exercise # 10 ------------------------------------------------------------------------------------------------------
 - Before serialization:
@@ -1232,6 +1232,60 @@ WORK IN PROGRESS
 
 
 ========================================================================================================================
+=== Chapter 11. Operators ==============================================================================================
+
+--- Exercise # 1 -------------------------------------------------------------------------------------------------------
+3 + 4 -> 5 == (3 + 4) -> 5 == (7,5), from left to right, because both operators have the same precedence.
+3 + 4 -> 5 is legal only as 3 -> (4 + 5) == (3,9).
+
+--- Exercise # 2 -------------------------------------------------------------------------------------------------------
+Operators ** or ^ for power would have an unintuitively too low precedence, based on Scala's rules.
+
+--- Exercise # 3 -------------------------------------------------------------------------------------------------------
+2/3 + 3/4 = 17/12
+2/3 - 3/4 = -1/12
+2/3 * 3/4 = 1/2
+2/3 / 3/4 = 8/9
+2/3 + (-3/4) = -1/12
+2/3 - (-3/4) = 17/12
+2/3 * (-3/4) = -1/2
+2/3 / (-3/4) = -8/9
+
+--- Exercise # 4 -------------------------------------------------------------------------------------------------------
+Money(1, 75) + Money(0, 50) == Money(2, 25): true
+It is at least questionable to implement operator *, as money cannot be multiplied by money.
+It is at least questionable to implement operator /, as money divided by money yields a pure number.
+
+--- Exercise # 5 -------------------------------------------------------------------------------------------------------
+not implemented yet
+
+--- Exercise # 6 -------------------------------------------------------------------------------------------------------
+not implemented yet
+
+--- Exercise # 7 -------------------------------------------------------------------------------------------------------
+not implemented yet
+
+--- Exercise # 8 -------------------------------------------------------------------------------------------------------
+not implemented yet
+
+--- Exercise # 9 -------------------------------------------------------------------------------------------------------
+not implemented yet
+
+--- Exercise # 10 ------------------------------------------------------------------------------------------------------
+not implemented yet
+
+--- Exercise # 11 ------------------------------------------------------------------------------------------------------
+not implemented yet
+
+--- Exercise # 12 ------------------------------------------------------------------------------------------------------
+not implemented yet
+
+--- Exercise # 13 ------------------------------------------------------------------------------------------------------
+not implemented yet
+
+
+
+========================================================================================================================
 === Chapters executed: =================================================================================================
 Chapter 1. The Basics
 Chapter 2. Control Structures and Functions
@@ -1243,5 +1297,6 @@ Chapter 7. Packages and Imports
 Chapter 8. Inheritance
 Chapter 9. Files and Regular Expressions
 Chapter 10. Traits
+Chapter 11. Operators
 
 Process finished with exit code 0

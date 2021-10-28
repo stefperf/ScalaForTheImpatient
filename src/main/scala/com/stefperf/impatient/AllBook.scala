@@ -10,6 +10,7 @@ import com.stefperf.impatient.chapter07.Chapter07
 import com.stefperf.impatient.chapter08.Chapter08
 import com.stefperf.impatient.chapter09.Chapter09
 import com.stefperf.impatient.chapter10.Chapter10
+import com.stefperf.impatient.chapter11.Chapter11
 
 import scala.collection.mutable.ArrayBuffer
 import util.control.Breaks._
@@ -27,6 +28,7 @@ object AllBook extends App {
   Chapter08.forceInit()
   Chapter09.forceInit()
   Chapter10.forceInit()
+  Chapter11.forceInit()
 
   val requestedChapters = ArrayBuffer[Int]()
   breakable {

@@ -2,10 +2,6 @@ package com.stefperf.impatient.chapter10
 
 import com.stefperf.impatient._
 
-import java.beans.{PropertyChangeEvent, PropertyChangeListener}
-import java.io.IOException
-import scala.io.Source
-
 object Chapter10 extends Chapter(10, "Traits", {
   exercise(1) {
     trait RectangleLike {
@@ -22,8 +18,6 @@ object Chapter10 extends Chapter(10, "Traits", {
       def translate(dx: Double, dy: Double) = setFrame(getX + dx, getY + dy, getWidth, getHeight)
 
       def grow(x: Double, y: Double) = setFrame(getX - x, getY - y, getWidth + 2 * x, getHeight + 2 * y)
-
-      def className: String = this.getClass.getName
 
       override def toString = s"RectangleLike[x=$getX,y=$getY,width=$getWidth,height=$getHeight]"
     }
