@@ -16,32 +16,25 @@ object Chapter11 extends Chapter(11, "Operators", {
   }
 
   exercise(3) {
-    // class Fraction implemented in Fraction.scala with some improvements over exercise specs
-    def parenNeg(f: Fraction) = if (f.sign < 0) s"($f)" else f.toString
-    val f1 = new Fraction(2, 3)
-    for (
-      f2 <- Seq(new Fraction(-3, -4), new Fraction(3, -4));
-      (f1_operator, symbol) <- Seq(f1.+ _, f1.- _, f1.* _, f1./ _) zip Seq('+', '-', '*', '/')
-    )
-      println(s"$f1 $symbol ${parenNeg(f2)} = ${f1_operator(f2)}")
+    Chapter11Exercise03.main(Array.empty)
   }
 
   exercise(4) {
-    // class Money implemented in Money.scala
-    println(s"Money(1, 75) + Money(0, 50) == Money(2, 25): ${Money(1, 75) + Money(0, 50) == Money(2, 25)}")
-    println("It is at least questionable to implement operator *, as money cannot be multiplied by money.")
-    println("It is at least questionable to implement operator /, as money divided by money yields a pure number.")
-  }
+    Chapter11Exercise04.main(Array.empty)
+ }
 
   exercise(5) {
-    println("not implemented yet")
+    Chapter11Exercise05.main(Array.empty)
   }
+
   exercise(6) {
-    println("not implemented yet")
+    Chapter11Exercise06.main(Array.empty)
   }
+
   exercise(7) {
-    println("not implemented yet")
+    Chapter11Exercise07.main(Array.empty)
   }
+
   exercise(8) {
     println("not implemented yet")
   }

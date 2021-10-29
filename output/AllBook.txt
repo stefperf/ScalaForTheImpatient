@@ -1,4 +1,4 @@
-/Library/Java/JavaVirtualMachines/temurin-11.jdk/Contents/Home/bin/java -javaagent:/Applications/IntelliJ IDEA CE.app/Contents/lib/idea_rt.jar=50533:/Applications/IntelliJ IDEA CE.app/Contents/bin -Dfile.encoding=UTF-8 -classpath /Users/Stefano/Documents/GitHub/ScalaForTheImpatient/target/scala-2.12/classes:/Users/Stefano/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/scala-library/2.12.14/scala-library-2.12.14.jar com.stefperf.impatient.AllBook
+/Library/Java/JavaVirtualMachines/temurin-11.jdk/Contents/Home/bin/java -javaagent:/Applications/IntelliJ IDEA CE.app/Contents/lib/idea_rt.jar=55588:/Applications/IntelliJ IDEA CE.app/Contents/bin -Dfile.encoding=UTF-8 -classpath /Users/Stefano/Documents/GitHub/ScalaForTheImpatient/target/scala-2.12/classes:/Users/Stefano/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/scala-library/2.12.14/scala-library-2.12.14.jar com.stefperf.impatient.AllBook
 ========================================================================================================================
 === Chapter 1. The Basics ==============================================================================================
 
@@ -11,10 +11,10 @@ Most exercises of this chapter are skipped here as they are just theory question
 2 ^1024 = 179769313486231590772930519078902473361797697894230657273430081157732675805500963132708477322407536021120113879871393357658789768814416622492847430639474124377767893424865485276302219601246094119453082952085005768838150682342462881473913110540827237163350510684586298239947245938479716304835356329624224137216
 
 --- Exercise # 7 -------------------------------------------------------------------------------------------------------
-676769793825813632277208742819
+874031047202572690354419597601
 
 --- Exercise # 8 -------------------------------------------------------------------------------------------------------
-10 random charachers in range [a-z0-9]: 13ekrjosmf
+10 random charachers in range [a-z0-9]: 15o1jx79ok
 
 --- Exercise # 9 -------------------------------------------------------------------------------------------------------
 First and last characters of string 'Hello!': 'H', '!'
@@ -62,8 +62,8 @@ First and last characters of string 'Hello!': 'H', '!'
 === Chapter 3. Working with Arrays =====================================================================================
 
 --- Exercise # 1 -------------------------------------------------------------------------------------------------------
-(1, 0, 0)
-(0, 6, 4, 3, 1, 5, 0, 5)
+(2, 1, 0)
+(3, 0, 0, 3, 5, 6, 2, 1)
 
 --- Exercise # 2 -------------------------------------------------------------------------------------------------------
 (2, 1, 4, 3, 5)
@@ -85,8 +85,8 @@ First and last characters of string 'Hello!': 'H', '!'
 (5, 4, 3, 2, 1)
 
 --- Exercise # 7 -------------------------------------------------------------------------------------------------------
-(5, 3, 3, 3, 0, 2, 1, 4, 1, 2, 5, 2, 3, 3, 1, 0, 2, 0, 2, 1)
-(5, 3, 0, 2, 1, 4)
+(2, 4, 5, 5, 3, 4, 3, 4, 4, 2, 4, 3, 5, 0, 3, 4, 1, 4, 4, 5)
+(2, 4, 5, 3, 0, 1)
 
 --- Exercise # 8 -------------------------------------------------------------------------------------------------------
 (4, 2, -3, -6, 6, 7, -5)
@@ -1098,7 +1098,7 @@ Image sources on page https://horstmann.com/scala:
 - http://ad.linksynergy.com/fs-bin/show?id=R/ODEl37NHE&amp;bids=163217.2476823&amp;type=2&amp;subid=0
 
 --- Exercise # 9 -------------------------------------------------------------------------------------------------------
-24 files with extension .scala were found in ./src/main/scala.
+27 files with extension .scala were found in ./src/main/scala.
 
 --- Exercise # 10 ------------------------------------------------------------------------------------------------------
 - Before serialization:
@@ -1257,13 +1257,48 @@ It is at least questionable to implement operator *, as money cannot be multipli
 It is at least questionable to implement operator /, as money divided by money yields a pure number.
 
 --- Exercise # 5 -------------------------------------------------------------------------------------------------------
-not implemented yet
+println(Table() | "Java" | "Scala" || "Gosling" | "Odersky" || "JVM" | "JVM, .NET")
+ ->
+<table><tr><td>Java</td><td>Scala</td></tr><tr><td>Gosling</td><td>Odersky</td></tr><tr><td>JVM</td><td>JVM, .NET</td></tr></table>
 
 --- Exercise # 6 -------------------------------------------------------------------------------------------------------
-not implemented yet
+a0 =
+ /\_/\
+( ' ' )
+(  -  )
+ | | |
+(__|__)
+
+a1 =
+   -----
+ / Hello \
+<  Scala |
+ \ Coder /
+   -----
+
+println(
+  a0 << a1
+     ^^
+  a1 << a0
+)
+
+ ->
+
+ /\_/\     -----
+( ' ' )  / Hello \
+(  -  ) <  Scala |
+ | | |   \ Coder /
+(__|__)    -----
+
+   -----    /\_/\
+ / Hello \ ( ' ' )
+<  Scala | (  -  )
+ \ Coder /  | | |
+   -----   (__|__)
 
 --- Exercise # 7 -------------------------------------------------------------------------------------------------------
-not implemented yet
+initial BitSequence contents: 0000000000000000000000000000000000000000000000000000000000000000
+final BitSequence contents:   0010100010100010100010100010100010100010100010100010100010100010
 
 --- Exercise # 8 -------------------------------------------------------------------------------------------------------
 not implemented yet

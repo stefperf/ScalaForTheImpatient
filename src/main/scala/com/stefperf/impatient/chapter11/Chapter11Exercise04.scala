@@ -1,3 +1,4 @@
+// Chapter 11 exercise 4
 package com.stefperf.impatient.chapter11
 
 sealed case class Money private(dollars: Long, cents: Int) {
@@ -20,4 +21,10 @@ object Money {
     Money(roundedCentsValue / centsToDollars, (roundedCentsValue % centsToDollars).toInt)
   }
   def ratio(num: Money, den: Money): Double = num.decimalValue / den.decimalValue
+}
+
+object Chapter11Exercise04 extends App {
+  println(s"Money(1, 75) + Money(0, 50) == Money(2, 25): ${Money(1, 75) + Money(0, 50) == Money(2, 25)}")
+  println("It is at least questionable to implement operator *, as money cannot be multiplied by money.")
+  println("It is at least questionable to implement operator /, as money divided by money yields a pure number.")
 }
