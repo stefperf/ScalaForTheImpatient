@@ -36,7 +36,7 @@ object Chapter11 extends Chapter(11, "Operators", {
   }
 
   exercise(8) {
-    println("not implemented yet")
+    Chapter11Exercise08.main(Array.empty)
   }
   exercise(9) {
     println("not implemented yet")
