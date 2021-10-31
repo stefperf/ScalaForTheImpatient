@@ -1,7 +1,5 @@
 package com.stefperf.impatient.chapter11
 
-import scala.reflect.ClassTag
-
 class Matrix(val nRows: Int, val nCols: Int, initElements: Seq[Double]) {
   if (nRows < 1 || nCols < 1)
     throw new IllegalArgumentException(s"Both nRows and nCols must be greater than zero")
