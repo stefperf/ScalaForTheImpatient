@@ -11,7 +11,7 @@ class XMLElement(val name: String, val text: String = "", val attributes: Map[St
                  protected val _children: mutable.ArrayBuffer[XMLElement] = mutable.ArrayBuffer.empty) extends Dynamic {
   import XMLElement._
 
-  def children: Seq[XMLElement] = _children.toArray
+  def children: Array[XMLElement] = _children.toArray
 
   // derived classes could override this method to implement schema validation
   def addChildren(els: XMLElement*): Unit = _children ++= els

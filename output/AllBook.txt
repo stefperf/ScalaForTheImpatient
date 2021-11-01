@@ -1,4 +1,4 @@
-/Library/Java/JavaVirtualMachines/temurin-11.jdk/Contents/Home/bin/java -javaagent:/Applications/IntelliJ IDEA CE.app/Contents/lib/idea_rt.jar=52197:/Applications/IntelliJ IDEA CE.app/Contents/bin -Dfile.encoding=UTF-8 -classpath /Users/Stefano/Documents/GitHub/ScalaForTheImpatient/target/scala-2.12/classes:/Users/Stefano/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/scala-library/2.12.14/scala-library-2.12.14.jar com.stefperf.impatient.AllBook
+/Library/Java/JavaVirtualMachines/temurin-11.jdk/Contents/Home/bin/java -javaagent:/Applications/IntelliJ IDEA CE.app/Contents/lib/idea_rt.jar=53164:/Applications/IntelliJ IDEA CE.app/Contents/bin -Dfile.encoding=UTF-8 -classpath /Users/Stefano/Documents/GitHub/ScalaForTheImpatient/target/scala-2.12/classes:/Users/Stefano/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/scala-library/2.12.14/scala-library-2.12.14.jar com.stefperf.impatient.AllBook
 ========================================================================================================================
 === Chapter 1. The Basics ==============================================================================================
 
@@ -11,10 +11,10 @@ Most exercises of this chapter are skipped here as they are just theory question
 2 ^1024 = 179769313486231590772930519078902473361797697894230657273430081157732675805500963132708477322407536021120113879871393357658789768814416622492847430639474124377767893424865485276302219601246094119453082952085005768838150682342462881473913110540827237163350510684586298239947245938479716304835356329624224137216
 
 --- Chapter 1 Exercise 7 -----------------------------------------------------------------------------------------------
-927604566665658299267168642287
+1184524236416128102259158426889
 
 --- Chapter 1 Exercise 8 -----------------------------------------------------------------------------------------------
-10 random charachers in range [a-z0-9]: t9965mutot
+10 random charachers in range [a-z0-9]: o0nflsebrp
 
 --- Chapter 1 Exercise 9 -----------------------------------------------------------------------------------------------
 First and last characters of string 'Hello!': 'H', '!'
@@ -62,8 +62,8 @@ First and last characters of string 'Hello!': 'H', '!'
 === Chapter 3. Working with Arrays =====================================================================================
 
 --- Chapter 3 Exercise 1 -----------------------------------------------------------------------------------------------
-(1, 0, 1)
-(6, 5, 4, 0, 0, 1, 0, 1)
+(0, 0, 1)
+(3, 4, 7, 7, 5, 7, 7, 2)
 
 --- Chapter 3 Exercise 2 -----------------------------------------------------------------------------------------------
 (2, 1, 4, 3, 5)
@@ -85,8 +85,8 @@ First and last characters of string 'Hello!': 'H', '!'
 (5, 4, 3, 2, 1)
 
 --- Chapter 3 Exercise 7 -----------------------------------------------------------------------------------------------
-(1, 1, 2, 2, 1, 4, 5, 4, 0, 2, 3, 1, 1, 0, 4, 4, 5, 0, 3, 1)
-(1, 2, 4, 5, 0, 3)
+(4, 5, 0, 2, 5, 3, 4, 1, 0, 0, 3, 2, 3, 0, 5, 4, 0, 4, 2, 4)
+(4, 5, 0, 2, 3, 1)
 
 --- Chapter 3 Exercise 8 -----------------------------------------------------------------------------------------------
 (4, 2, -3, -6, 6, 7, -5)
@@ -1373,6 +1373,76 @@ XMLElement(name='ul', text='', 2 attributes, 0 _children)
 
 
 ========================================================================================================================
+=== Chapter 12. Higher-Order Functions =================================================================================
+
+--- Chapter 12 Exercise 1 ----------------------------------------------------------------------------------------------
+values(x => x * x, -5, 5):
+Vector((-5,25), (-4,16), (-3,9), (-2,4), (-1,1), (0,0), (1,1), (2,4), (3,9), (4,16), (5,25))
+
+--- Chapter 12 Exercise 2 ----------------------------------------------------------------------------------------------
+Array(3, 7, 2, 1).reduceLeft(_ max _):
+7
+
+--- Chapter 12 Exercises 3, 4 together ---------------------------------------------------------------------------------
+Factorial using reduceLeft:
+0 -> 1
+1 -> 1
+2 -> 2
+3 -> 6
+4 -> 24
+5 -> 120
+6 -> 720
+7 -> 5040
+8 -> 40320
+9 -> 362880
+Factorial using foldLeft:
+0 -> 1
+1 -> 1
+2 -> 2
+3 -> 6
+4 -> 24
+5 -> 120
+6 -> 720
+7 -> 5040
+8 -> 40320
+9 -> 362880
+
+--- Chapter 12 Exercise 5 ----------------------------------------------------------------------------------------------
+largest(x => 10 * x - x * x, 1 to 10):
+25
+
+--- Chapter 12 Exercise 6 ----------------------------------------------------------------------------------------------
+largestAt(x => 10 * x - x * x, 1 to 10):
+5
+
+--- Chapter 12 Exercise 7 ----------------------------------------------------------------------------------------------
+adjustToPair(_ * _)((6, 7)):
+42
+
+--- Chapter 12 Exercise 8 ----------------------------------------------------------------------------------------------
+Seq("this", "is", "exercise", "eight").corresponds(Seq(4, 2, 8,5))(_.length == _):
+true
+
+--- Chapter 12 Exercise 9 ----------------------------------------------------------------------------------------------
+myCorresponds(Seq("this", "is", "exercise", "eight"), Seq(4, 2, 8,5), (s: String, i: Int) => s.length == i):
+true
+This time, it is necessary to fully declare the function argument, in order to satisfy the compiler.
+
+--- Chapter 12 Exercise 10 ---------------------------------------------------------------------------------------------
+Here, for the first Boolean parameter, call-by-name or not makes no difference, as it must be evaluated immediately anyway.
+However, the second Unit parameter must be call-by-name, so that it can be evaluated later only if needed.
+Currying is not strictly needed, but it allows a nicer syntax when using this control abstraction.
+For example:
+(1 to 5).foreach(i => unless(i == 3) {println(i)})
+ ->
+1
+2
+4
+5
+
+
+
+========================================================================================================================
 === Chapters executed: =================================================================================================
 Chapter 1. The Basics
 Chapter 2. Control Structures and Functions
@@ -1385,5 +1455,6 @@ Chapter 8. Inheritance
 Chapter 9. Files and Regular Expressions
 Chapter 10. Traits
 Chapter 11. Operators
+Chapter 12. Higher-Order Functions
 
 Process finished with exit code 0
