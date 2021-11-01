@@ -91,12 +91,8 @@ object Chapter11 extends Chapter(11, "Operators") {
       Chapter11Exercise11.main(Array.empty)
     }
 
-    exercise(12) {
-      Chapter11Exercise12.main(Array.empty)
-    }
-
-    exercise(13) {
-      println("not implemented yet")
+    exercise(12, 13) {
+      Chapter11Exercises12_13.main(Array.empty)
     }
 
   }

@@ -1,4 +1,4 @@
-/Library/Java/JavaVirtualMachines/temurin-11.jdk/Contents/Home/bin/java -javaagent:/Applications/IntelliJ IDEA CE.app/Contents/lib/idea_rt.jar=50392:/Applications/IntelliJ IDEA CE.app/Contents/bin -Dfile.encoding=UTF-8 -classpath /Users/Stefano/Documents/GitHub/ScalaForTheImpatient/target/scala-2.12/classes:/Users/Stefano/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/scala-library/2.12.14/scala-library-2.12.14.jar com.stefperf.impatient.AllBook
+/Library/Java/JavaVirtualMachines/temurin-11.jdk/Contents/Home/bin/java -javaagent:/Applications/IntelliJ IDEA CE.app/Contents/lib/idea_rt.jar=52197:/Applications/IntelliJ IDEA CE.app/Contents/bin -Dfile.encoding=UTF-8 -classpath /Users/Stefano/Documents/GitHub/ScalaForTheImpatient/target/scala-2.12/classes:/Users/Stefano/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/scala-library/2.12.14/scala-library-2.12.14.jar com.stefperf.impatient.AllBook
 ========================================================================================================================
 === Chapter 1. The Basics ==============================================================================================
 
@@ -11,10 +11,10 @@ Most exercises of this chapter are skipped here as they are just theory question
 2 ^1024 = 179769313486231590772930519078902473361797697894230657273430081157732675805500963132708477322407536021120113879871393357658789768814416622492847430639474124377767893424865485276302219601246094119453082952085005768838150682342462881473913110540827237163350510684586298239947245938479716304835356329624224137216
 
 --- Chapter 1 Exercise 7 -----------------------------------------------------------------------------------------------
-741990672372281626257727590467
+927604566665658299267168642287
 
 --- Chapter 1 Exercise 8 -----------------------------------------------------------------------------------------------
-10 random charachers in range [a-z0-9]: 11hlicer3e
+10 random charachers in range [a-z0-9]: t9965mutot
 
 --- Chapter 1 Exercise 9 -----------------------------------------------------------------------------------------------
 First and last characters of string 'Hello!': 'H', '!'
@@ -62,8 +62,8 @@ First and last characters of string 'Hello!': 'H', '!'
 === Chapter 3. Working with Arrays =====================================================================================
 
 --- Chapter 3 Exercise 1 -----------------------------------------------------------------------------------------------
-(2, 2, 0)
-(2, 3, 7, 1, 0, 4, 3, 7)
+(1, 0, 1)
+(6, 5, 4, 0, 0, 1, 0, 1)
 
 --- Chapter 3 Exercise 2 -----------------------------------------------------------------------------------------------
 (2, 1, 4, 3, 5)
@@ -85,8 +85,8 @@ First and last characters of string 'Hello!': 'H', '!'
 (5, 4, 3, 2, 1)
 
 --- Chapter 3 Exercise 7 -----------------------------------------------------------------------------------------------
-(1, 3, 1, 4, 4, 5, 4, 1, 5, 0, 4, 2, 3, 1, 1, 5, 2, 2, 2, 3)
-(1, 3, 4, 5, 0, 2)
+(1, 1, 2, 2, 1, 4, 5, 4, 0, 2, 3, 1, 1, 0, 4, 4, 5, 0, 3, 1)
+(1, 2, 4, 5, 0, 3)
 
 --- Chapter 3 Exercise 8 -----------------------------------------------------------------------------------------------
 (4, 2, -3, -6, 6, 7, -5)
@@ -1339,13 +1339,36 @@ println(TieredSysProps.java.home):
 println(TieredSysProps.java.vm.specification.version):
 11
 
---- Chapter 11 Exercise 12 ---------------------------------------------------------------------------------------------
-(This exercise / example is just didactic and not really a good idea, at least not implemented this way)
-println(rootElement.html.body.ul(id="42").li):
-ArrayBuffer(XMLElement(name='li', text='li4', 0 attributes, 0 children), XMLElement(name='li', text='li5', 0 attributes, 0 children), XMLElement(name='li', text='li6', 0 attributes, 0 children))
+--- Chapter 11 Exercises 12, 13 together -------------------------------------------------------------------------------
+(This exercise is a simplistic implementation for didactic purposes)
+XML:
+<rootElement>
+  <html>
+    <body>
+      <ul id="41">ul41
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+      </ul>
+      <ul id="42">ul42
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+      </ul>
+      <ul id="43">ul43
+        <li>7</li>
+        <li>8</li>
+        <li>9</li>
+      </ul>
+    </body>
+  </html>
+</rootElement>
 
---- Chapter 11 Exercise 13 ---------------------------------------------------------------------------------------------
-not implemented yet
+println(rootElement.html.body.ul(id="42").li):
+ArrayBuffer(XMLElement(name='li', text='4', 0 attributes, 0 _children), XMLElement(name='li', text='5', 0 attributes, 0 _children), XMLElement(name='li', text='6', 0 attributes, 0 _children))
+
+println(builder.ul(id="42", style="list-style: lower-alpha;"))
+XMLElement(name='ul', text='', 2 attributes, 0 _children)
 
 
 
