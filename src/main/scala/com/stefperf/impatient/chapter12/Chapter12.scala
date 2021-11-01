@@ -48,6 +48,10 @@ object Chapter12 extends Chapter(12, "Higher-Order Functions") {
       def adjustToPair(fun: (Int, Int) => Int): ((Int, Int)) => Int = t => fun(t._1, t._2)
       println("adjustToPair(_ * _)((6, 7)):")
       println(adjustToPair(_ * _)((6, 7)))
+      val pairs = (1 to 10) zip (11 to 20)
+      println(s"pairs = $pairs")
+      println("pairs.map(adjustToPair(_ + _)(_)):")
+      println(pairs.map(adjustToPair(_ + _)(_)))
     }
 
     exercise(8) {
