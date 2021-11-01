@@ -92,7 +92,7 @@ object Chapter04 extends Chapter(4, "Maps and Tuples") {
 
     exercise(7) {
       import scala.collection.JavaConverters._
-      val props: scala.collection.Map[String, String] = System.getProperties().asScala
+      val props: scala.collection.Map[String, String] = System.getProperties.asScala
       var maxNameLength = 0
       for (k <- props.keys) maxNameLength = maxNameLength max k.length
       for ((k, v) <- props.toSeq.sortBy(_._1))
@@ -137,7 +137,7 @@ object Chapter04 extends Chapter(4, "Maps and Tuples") {
         var w1 = word1
         var w2 = word2
         if (!caseSensitive) {
-          w1 = word1.toUpperCase();
+          w1 = word1.toUpperCase()
           w2 = word2.toUpperCase()
         }
         (for (((let1, let2), i) <- (w1 zip w2).zipWithIndex if let1 == let2) yield (i, let1)).toMap
