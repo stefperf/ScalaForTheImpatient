@@ -21,6 +21,12 @@ package object impatient {
                      start: String = "", end: String = "\n)\n"): Unit =
     print(start + "(\n" + map2str(map, lineStart, sep) + end)
 
+  def timeIt[T](name: String)(code: => T): Unit = {
+    val t0 = System.nanoTime
+    code
+    val millisecs = (System.nanoTime - t0) / 1000000
+    println(s"$name took $millisecs millisecs.")
+  }
 
   abstract class Chapter(val chapterNumber: Int, title: String) {
     Chapter.chaptersByNumber(chapterNumber) = this  // register this chapter
