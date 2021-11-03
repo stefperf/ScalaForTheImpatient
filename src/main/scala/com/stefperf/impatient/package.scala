@@ -21,10 +21,10 @@ package object impatient {
                      start: String = "", end: String = "\n)\n"): Unit =
     print(start + "(\n" + map2str(map, lineStart, sep) + end)
 
-  def timeIt[T](name: String)(code: => T): Unit = {
+  def timeIt[T](name: String, divisor: Int = 1000000)(code: => T): Unit = {
     val t0 = System.nanoTime
     code
-    val millisecs = (System.nanoTime - t0) / 1000000
+    val millisecs = (System.nanoTime - t0) / divisor
     println(s"$name took $millisecs millisecs.")
   }
 
