@@ -252,7 +252,7 @@ object Chapter10 extends Chapter(10, "Traits") {
         }
       }
       // demo
-      val filepath = "./src/main/scala/com/stefperf/impatient/Chapter10/"
+      val filepath = "./src/main/scala/com/stefperf/impatient/chapter10/"
       val filename = "Chapter10.txt"
       val bufferSize = 10
       println("-- Echoing file $filename one character at a time, but reading bufferSize characters at a time... --")
@@ -300,7 +300,7 @@ object Chapter10 extends Chapter(10, "Traits") {
 
         override def iterator: Iterator[Byte] = new InputStreamIterator(this)
       }
-      val filepath = "./src/main/scala/com/stefperf/impatient/Chapter10/"
+      val filepath = "./src/main/scala/com/stefperf/impatient/chapter10/"
       val filename = "Chapter10.txt"
       val iterableInputStream = new IterableInputStream {
         val in = new java.io.FileInputStream(new File(filepath + filename))

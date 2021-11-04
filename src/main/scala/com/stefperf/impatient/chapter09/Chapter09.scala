@@ -9,7 +9,7 @@ object Chapter09 extends Chapter(9, "Files and Regular Expressions") {
   override def exercises() {
 
     exercise(1) {
-      val dir = "./src/main/scala/com/stefperf/impatient/Chapter09/"
+      val dir = "./src/main/scala/com/stefperf/impatient/chapter09/"
       val inFileName = "Chapter09Exercise01"
       val outFileName = inFileName + "LineReversed"
       val ext = ".txt"
@@ -38,7 +38,7 @@ object Chapter09 extends Chapter(9, "Files and Regular Expressions") {
         sb.toString
       }
 
-      val dir = "./src/main/scala/com/stefperf/impatient/Chapter09/"
+      val dir = "./src/main/scala/com/stefperf/impatient/chapter09/"
       val inFileName = "Chapter09Exercise02"
       val outFileName = inFileName + "TabsVisualized"
       val ext = ".txt"
@@ -56,12 +56,12 @@ object Chapter09 extends Chapter(9, "Files and Regular Expressions") {
 
     exercise(3) {
       // putting all in one line here is actually not a good idea, as readability decreases
-      println("-- Words with 12+ chars:\n" + (for (w <- """[A-Za-z]{12,}""".r.findAllIn(scala.io.Source.fromFile("./src/main/scala/com/stefperf/impatient/Chapter09/Chapter09Exercise03.txt").mkString)) yield w).mkString("\n"))
+      println("-- Words with 12+ chars:\n" + (for (w <- """[A-Za-z]{12,}""".r.findAllIn(scala.io.Source.fromFile("./src/main/scala/com/stefperf/impatient/chapter09/Chapter09Exercise03.txt").mkString)) yield w).mkString("\n"))
     }
 
     exercise(4) {
       val text = scala.io.Source.fromFile(
-        "./src/main/scala/com/stefperf/impatient/Chapter09/Chapter09Exercise04.txt").mkString
+        "./src/main/scala/com/stefperf/impatient/chapter09/Chapter09Exercise04.txt").mkString
       val numbers = new scala.collection.mutable.ArrayBuffer[Double]()
       println("-- Numbers found in file:")
       for (w0 <- text.split("\\s") if w0.nonEmpty) {
@@ -95,7 +95,7 @@ object Chapter09 extends Chapter(9, "Files and Regular Expressions") {
         power *= base
       }
       val maxDigits = powers.last.toString.length
-      val filename = "./src/main/scala/com/stefperf/impatient/Chapter09/Chapter09Exercise05.txt"
+      val filename = "./src/main/scala/com/stefperf/impatient/chapter09/Chapter09Exercise05.txt"
       val output = new PrintWriter(filename)
       for (p <- powers; s = p.toString) output.println(s"${" " * (maxDigits - s.length)}$s          ${1D / p}")
       output.close()
@@ -105,7 +105,7 @@ object Chapter09 extends Chapter(9, "Files and Regular Expressions") {
 
     exercise(6) {
       val pattern = """""|"\\""|"([^\\"]*|([^\\]{1}\\")*)*"|"[^"]*([^\\]\\\\){1}"""".r
-      val filename = "./src/main/scala/com/stefperf/impatient/Chapter09/Chapter09Exercise06.txt" + "" // empty str as test
+      val filename = "./src/main/scala/com/stefperf/impatient/chapter09/Chapter09Exercise06.txt" + "" // empty str as test
       println("Quoted strings found in file:")
       for (quoted <- pattern.findAllIn(Source.fromFile(filename).mkString))
         println(s"$quoted")
@@ -113,7 +113,7 @@ object Chapter09 extends Chapter(9, "Files and Regular Expressions") {
 
     exercise(7) {
       val floatPattern = """[-+]?(\d+(.\d*)?|.\d+)([Ee]{1}[-+]?\d+)?"""
-      val text = Source.fromFile("./src/main/scala/com/stefperf/impatient/Chapter09/Chapter09Exercise07.txt").mkString
+      val text = Source.fromFile("./src/main/scala/com/stefperf/impatient/chapter09/Chapter09Exercise07.txt").mkString
       for (token <- text.split("[\\n\\s]") if token.nonEmpty && !token.matches(floatPattern))
         println(token)
     }

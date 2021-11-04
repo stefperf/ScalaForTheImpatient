@@ -1,4 +1,4 @@
-/Library/Java/JavaVirtualMachines/temurin-11.jdk/Contents/Home/bin/java -javaagent:/Applications/IntelliJ IDEA CE.app/Contents/lib/idea_rt.jar=60857:/Applications/IntelliJ IDEA CE.app/Contents/bin -Dfile.encoding=UTF-8 -classpath /Users/Stefano/Documents/GitHub/ScalaForTheImpatient/target/scala-2.12/classes:/Users/Stefano/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/scala-library/2.12.14/scala-library-2.12.14.jar com.stefperf.impatient.AllBook
+/Library/Java/JavaVirtualMachines/temurin-11.jdk/Contents/Home/bin/java -javaagent:/Applications/IntelliJ IDEA CE.app/Contents/lib/idea_rt.jar=63528:/Applications/IntelliJ IDEA CE.app/Contents/bin -Dfile.encoding=UTF-8 -classpath /Users/Stefano/Documents/GitHub/ScalaForTheImpatient/target/scala-2.12/classes:/Users/Stefano/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/scala-library/2.12.14/scala-library-2.12.14.jar com.stefperf.impatient.AllBook
 ========================================================================================================================
 === Chapter 1. The Basics ==============================================================================================
 
@@ -11,10 +11,10 @@ Most exercises of this chapter are skipped here as they are just theory question
 2 ^1024 = 179769313486231590772930519078902473361797697894230657273430081157732675805500963132708477322407536021120113879871393357658789768814416622492847430639474124377767893424865485276302219601246094119453082952085005768838150682342462881473913110540827237163350510684586298239947245938479716304835356329624224137216
 
 --- Chapter 1 Exercise 7 -----------------------------------------------------------------------------------------------
-779906886647774985674676470129
+877363105440682925622826833319
 
 --- Chapter 1 Exercise 8 -----------------------------------------------------------------------------------------------
-10 random charachers in range [a-z0-9]: 10aog71ibk
+10 random charachers in range [a-z0-9]: qrui5o1akb
 
 --- Chapter 1 Exercise 9 -----------------------------------------------------------------------------------------------
 First and last characters of string 'Hello!': 'H', '!'
@@ -62,8 +62,8 @@ First and last characters of string 'Hello!': 'H', '!'
 === Chapter 3. Working with Arrays =====================================================================================
 
 --- Chapter 3 Exercise 1 -----------------------------------------------------------------------------------------------
-(2, 1, 2)
-(1, 7, 7, 7, 6, 3, 7, 3)
+(0, 1, 2)
+(7, 2, 2, 7, 3, 6, 7, 1)
 
 --- Chapter 3 Exercise 2 -----------------------------------------------------------------------------------------------
 (2, 1, 4, 3, 5)
@@ -85,8 +85,8 @@ First and last characters of string 'Hello!': 'H', '!'
 (5, 4, 3, 2, 1)
 
 --- Chapter 3 Exercise 7 -----------------------------------------------------------------------------------------------
-(2, 0, 4, 4, 0, 1, 4, 4, 0, 2, 4, 0, 5, 0, 2, 5, 4, 2, 0, 3)
-(2, 0, 4, 1, 5, 3)
+(4, 1, 3, 0, 5, 5, 3, 2, 5, 3, 1, 0, 4, 0, 4, 3, 5, 5, 0, 5)
+(4, 1, 3, 0, 5, 2)
 
 --- Chapter 3 Exercise 8 -----------------------------------------------------------------------------------------------
 (4, 2, -3, -6, 6, 7, -5)
@@ -1455,8 +1455,8 @@ indexes("Mississippi") -> TreeMap(I -> Set(1, 10, 7, 4), M -> Set(0), P -> Set(9
 indexes("Mississippi") -> Map(I -> Set(1, 4, 7, 10), M -> Set(0), P -> Set(8, 9), S -> Set(2, 3, 5, 6))
 
 --- Chapter 13 Exercise 3 ----------------------------------------------------------------------------------------------
-halveByCopying(<integers from 1 to 50000>) took 1776 millisecs.
-halveByRemoving(<integers from 1 to 50000>) took 1740 millisecs.
+halveByCopying(<integers from 1 to 50000>) took 2132 millisecs.
+halveByRemoving(<integers from 1 to 50000>) took 1773 millisecs.
 
 --- Chapter 13 Exercise 4 ----------------------------------------------------------------------------------------------
 mapKeys(Array("Tom", "Fred", "Harry"), Map("Tom" -> 3, "Dick" -> 4, "Harry" -> 5)) -> (3, 5)
@@ -1473,7 +1473,861 @@ Both expressions can be modified to reverse the list:
 [inefficient]   (lst :\ List[Int]())((el, lstNew) => lstNew :+ el) -> List(3, 2, 1)
 [ efficient ]   (List[Int]() /: lst)((lstNew, el) => el +: lstNew) -> List(3, 2, 1)
 
-WORK IN PROGRESS
+--- Chapter 13 Exercise 7 ----------------------------------------------------------------------------------------------
+prices = List(1.1, 1.2, 1.3), quantities = List(11, 12, 13)
+(prices zip quantities) map { t => t._1 * t._2 } = List(12.100000000000001, 14.399999999999999, 16.900000000000002)
+(prices zip quantities) map { Function.tupled(_ * _) } = List(12.100000000000001, 14.399999999999999, 16.900000000000002)
+
+--- Chapter 13 Exercise 8 ----------------------------------------------------------------------------------------------
+to2DArr(Array(1, 2, 3, 4, 5, 6), 3) =
+[[(1.0, 2.0, 3.0)],
+ [(4.0, 5.0, 6.0)]]
+
+to2DArr(Array(1, 2, 3, 4, 5), 3) =
+[[(1.0, 2.0, 3.0)],
+ [(4.0, 5.0, NaN)]]
+
+--- Chapter 13 Exercise 9 ----------------------------------------------------------------------------------------------
+flatMap is used for all but the last generator inside the `for` parentheses, so as to retain only one "level". Example with 3 generators:
+for (i <- 1 to 3; j <- 1 to i; k <- 1 to j) yield i * j * k:
+ Vector(1, 2, 4, 8, 3, 6, 12, 9, 18, 27)
+
+(1 to 3).flatMap(i => (1 to i).flatMap(j => (1 to j).map(k => i * j * k))):
+ Vector(1, 2, 4, 8, 3, 6, 12, 9, 18, 27)
+
+--- Chapter 13 Exercise 10 ---------------------------------------------------------------------------------------------
+Time zones:
+ACT
+AET
+AGT
+ART
+AST
+Africa/Abidjan
+Africa/Accra
+Africa/Addis_Ababa
+Africa/Algiers
+Africa/Asmara
+Africa/Asmera
+Africa/Bamako
+Africa/Bangui
+Africa/Banjul
+Africa/Bissau
+Africa/Blantyre
+Africa/Brazzaville
+Africa/Bujumbura
+Africa/Cairo
+Africa/Casablanca
+Africa/Ceuta
+Africa/Conakry
+Africa/Dakar
+Africa/Dar_es_Salaam
+Africa/Djibouti
+Africa/Douala
+Africa/El_Aaiun
+Africa/Freetown
+Africa/Gaborone
+Africa/Harare
+Africa/Johannesburg
+Africa/Juba
+Africa/Kampala
+Africa/Khartoum
+Africa/Kigali
+Africa/Kinshasa
+Africa/Lagos
+Africa/Libreville
+Africa/Lome
+Africa/Luanda
+Africa/Lubumbashi
+Africa/Lusaka
+Africa/Malabo
+Africa/Maputo
+Africa/Maseru
+Africa/Mbabane
+Africa/Mogadishu
+Africa/Monrovia
+Africa/Nairobi
+Africa/Ndjamena
+Africa/Niamey
+Africa/Nouakchott
+Africa/Ouagadougou
+Africa/Porto-Novo
+Africa/Sao_Tome
+Africa/Timbuktu
+Africa/Tripoli
+Africa/Tunis
+Africa/Windhoek
+America/Adak
+America/Anchorage
+America/Anguilla
+America/Antigua
+America/Araguaina
+America/Argentina/Buenos_Aires
+America/Argentina/Catamarca
+America/Argentina/ComodRivadavia
+America/Argentina/Cordoba
+America/Argentina/Jujuy
+America/Argentina/La_Rioja
+America/Argentina/Mendoza
+America/Argentina/Rio_Gallegos
+America/Argentina/Salta
+America/Argentina/San_Juan
+America/Argentina/San_Luis
+America/Argentina/Tucuman
+America/Argentina/Ushuaia
+America/Aruba
+America/Asuncion
+America/Atikokan
+America/Atka
+America/Bahia
+America/Bahia_Banderas
+America/Barbados
+America/Belem
+America/Belize
+America/Blanc-Sablon
+America/Boa_Vista
+America/Bogota
+America/Boise
+America/Buenos_Aires
+America/Cambridge_Bay
+America/Campo_Grande
+America/Cancun
+America/Caracas
+America/Catamarca
+America/Cayenne
+America/Cayman
+America/Chicago
+America/Chihuahua
+America/Coral_Harbour
+America/Cordoba
+America/Costa_Rica
+America/Creston
+America/Cuiaba
+America/Curacao
+America/Danmarkshavn
+America/Dawson
+America/Dawson_Creek
+America/Denver
+America/Detroit
+America/Dominica
+America/Edmonton
+America/Eirunepe
+America/El_Salvador
+America/Ensenada
+America/Fort_Nelson
+America/Fort_Wayne
+America/Fortaleza
+America/Glace_Bay
+America/Godthab
+America/Goose_Bay
+America/Grand_Turk
+America/Grenada
+America/Guadeloupe
+America/Guatemala
+America/Guayaquil
+America/Guyana
+America/Halifax
+America/Havana
+America/Hermosillo
+America/Indiana/Indianapolis
+America/Indiana/Knox
+America/Indiana/Marengo
+America/Indiana/Petersburg
+America/Indiana/Tell_City
+America/Indiana/Vevay
+America/Indiana/Vincennes
+America/Indiana/Winamac
+America/Indianapolis
+America/Inuvik
+America/Iqaluit
+America/Jamaica
+America/Jujuy
+America/Juneau
+America/Kentucky/Louisville
+America/Kentucky/Monticello
+America/Knox_IN
+America/Kralendijk
+America/La_Paz
+America/Lima
+America/Los_Angeles
+America/Louisville
+America/Lower_Princes
+America/Maceio
+America/Managua
+America/Manaus
+America/Marigot
+America/Martinique
+America/Matamoros
+America/Mazatlan
+America/Mendoza
+America/Menominee
+America/Merida
+America/Metlakatla
+America/Mexico_City
+America/Miquelon
+America/Moncton
+America/Monterrey
+America/Montevideo
+America/Montreal
+America/Montserrat
+America/Nassau
+America/New_York
+America/Nipigon
+America/Nome
+America/Noronha
+America/North_Dakota/Beulah
+America/North_Dakota/Center
+America/North_Dakota/New_Salem
+America/Nuuk
+America/Ojinaga
+America/Panama
+America/Pangnirtung
+America/Paramaribo
+America/Phoenix
+America/Port-au-Prince
+America/Port_of_Spain
+America/Porto_Acre
+America/Porto_Velho
+America/Puerto_Rico
+America/Punta_Arenas
+America/Rainy_River
+America/Rankin_Inlet
+America/Recife
+America/Regina
+America/Resolute
+America/Rio_Branco
+America/Rosario
+America/Santa_Isabel
+America/Santarem
+America/Santiago
+America/Santo_Domingo
+America/Sao_Paulo
+America/Scoresbysund
+America/Shiprock
+America/Sitka
+America/St_Barthelemy
+America/St_Johns
+America/St_Kitts
+America/St_Lucia
+America/St_Thomas
+America/St_Vincent
+America/Swift_Current
+America/Tegucigalpa
+America/Thule
+America/Thunder_Bay
+America/Tijuana
+America/Toronto
+America/Tortola
+America/Vancouver
+America/Virgin
+America/Whitehorse
+America/Winnipeg
+America/Yakutat
+America/Yellowknife
+Antarctica/Casey
+Antarctica/Davis
+Antarctica/DumontDUrville
+Antarctica/Macquarie
+Antarctica/Mawson
+Antarctica/McMurdo
+Antarctica/Palmer
+Antarctica/Rothera
+Antarctica/South_Pole
+Antarctica/Syowa
+Antarctica/Troll
+Antarctica/Vostok
+Arctic/Longyearbyen
+Asia/Aden
+Asia/Almaty
+Asia/Amman
+Asia/Anadyr
+Asia/Aqtau
+Asia/Aqtobe
+Asia/Ashgabat
+Asia/Ashkhabad
+Asia/Atyrau
+Asia/Baghdad
+Asia/Bahrain
+Asia/Baku
+Asia/Bangkok
+Asia/Barnaul
+Asia/Beirut
+Asia/Bishkek
+Asia/Brunei
+Asia/Calcutta
+Asia/Chita
+Asia/Choibalsan
+Asia/Chongqing
+Asia/Chungking
+Asia/Colombo
+Asia/Dacca
+Asia/Damascus
+Asia/Dhaka
+Asia/Dili
+Asia/Dubai
+Asia/Dushanbe
+Asia/Famagusta
+Asia/Gaza
+Asia/Harbin
+Asia/Hebron
+Asia/Ho_Chi_Minh
+Asia/Hong_Kong
+Asia/Hovd
+Asia/Irkutsk
+Asia/Istanbul
+Asia/Jakarta
+Asia/Jayapura
+Asia/Jerusalem
+Asia/Kabul
+Asia/Kamchatka
+Asia/Karachi
+Asia/Kashgar
+Asia/Kathmandu
+Asia/Katmandu
+Asia/Khandyga
+Asia/Kolkata
+Asia/Krasnoyarsk
+Asia/Kuala_Lumpur
+Asia/Kuching
+Asia/Kuwait
+Asia/Macao
+Asia/Macau
+Asia/Magadan
+Asia/Makassar
+Asia/Manila
+Asia/Muscat
+Asia/Nicosia
+Asia/Novokuznetsk
+Asia/Novosibirsk
+Asia/Omsk
+Asia/Oral
+Asia/Phnom_Penh
+Asia/Pontianak
+Asia/Pyongyang
+Asia/Qatar
+Asia/Qostanay
+Asia/Qyzylorda
+Asia/Rangoon
+Asia/Riyadh
+Asia/Saigon
+Asia/Sakhalin
+Asia/Samarkand
+Asia/Seoul
+Asia/Shanghai
+Asia/Singapore
+Asia/Srednekolymsk
+Asia/Taipei
+Asia/Tashkent
+Asia/Tbilisi
+Asia/Tehran
+Asia/Tel_Aviv
+Asia/Thimbu
+Asia/Thimphu
+Asia/Tokyo
+Asia/Tomsk
+Asia/Ujung_Pandang
+Asia/Ulaanbaatar
+Asia/Ulan_Bator
+Asia/Urumqi
+Asia/Ust-Nera
+Asia/Vientiane
+Asia/Vladivostok
+Asia/Yakutsk
+Asia/Yangon
+Asia/Yekaterinburg
+Asia/Yerevan
+Atlantic/Azores
+Atlantic/Bermuda
+Atlantic/Canary
+Atlantic/Cape_Verde
+Atlantic/Faeroe
+Atlantic/Faroe
+Atlantic/Jan_Mayen
+Atlantic/Madeira
+Atlantic/Reykjavik
+Atlantic/South_Georgia
+Atlantic/St_Helena
+Atlantic/Stanley
+Australia/ACT
+Australia/Adelaide
+Australia/Brisbane
+Australia/Broken_Hill
+Australia/Canberra
+Australia/Currie
+Australia/Darwin
+Australia/Eucla
+Australia/Hobart
+Australia/LHI
+Australia/Lindeman
+Australia/Lord_Howe
+Australia/Melbourne
+Australia/NSW
+Australia/North
+Australia/Perth
+Australia/Queensland
+Australia/South
+Australia/Sydney
+Australia/Tasmania
+Australia/Victoria
+Australia/West
+Australia/Yancowinna
+BET
+BST
+Brazil/Acre
+Brazil/DeNoronha
+Brazil/East
+Brazil/West
+CAT
+CET
+CNT
+CST
+CST6CDT
+CTT
+Canada/Atlantic
+Canada/Central
+Canada/Eastern
+Canada/Mountain
+Canada/Newfoundland
+Canada/Pacific
+Canada/Saskatchewan
+Canada/Yukon
+Chile/Continental
+Chile/EasterIsland
+Cuba
+EAT
+ECT
+EET
+EST
+EST5EDT
+Egypt
+Eire
+Etc/GMT
+Etc/GMT+0
+Etc/GMT+1
+Etc/GMT+10
+Etc/GMT+11
+Etc/GMT+12
+Etc/GMT+2
+Etc/GMT+3
+Etc/GMT+4
+Etc/GMT+5
+Etc/GMT+6
+Etc/GMT+7
+Etc/GMT+8
+Etc/GMT+9
+Etc/GMT-0
+Etc/GMT-1
+Etc/GMT-10
+Etc/GMT-11
+Etc/GMT-12
+Etc/GMT-13
+Etc/GMT-14
+Etc/GMT-2
+Etc/GMT-3
+Etc/GMT-4
+Etc/GMT-5
+Etc/GMT-6
+Etc/GMT-7
+Etc/GMT-8
+Etc/GMT-9
+Etc/GMT0
+Etc/Greenwich
+Etc/UCT
+Etc/UTC
+Etc/Universal
+Etc/Zulu
+Europe/Amsterdam
+Europe/Andorra
+Europe/Astrakhan
+Europe/Athens
+Europe/Belfast
+Europe/Belgrade
+Europe/Berlin
+Europe/Bratislava
+Europe/Brussels
+Europe/Bucharest
+Europe/Budapest
+Europe/Busingen
+Europe/Chisinau
+Europe/Copenhagen
+Europe/Dublin
+Europe/Gibraltar
+Europe/Guernsey
+Europe/Helsinki
+Europe/Isle_of_Man
+Europe/Istanbul
+Europe/Jersey
+Europe/Kaliningrad
+Europe/Kiev
+Europe/Kirov
+Europe/Lisbon
+Europe/Ljubljana
+Europe/London
+Europe/Luxembourg
+Europe/Madrid
+Europe/Malta
+Europe/Mariehamn
+Europe/Minsk
+Europe/Monaco
+Europe/Moscow
+Europe/Nicosia
+Europe/Oslo
+Europe/Paris
+Europe/Podgorica
+Europe/Prague
+Europe/Riga
+Europe/Rome
+Europe/Samara
+Europe/San_Marino
+Europe/Sarajevo
+Europe/Saratov
+Europe/Simferopol
+Europe/Skopje
+Europe/Sofia
+Europe/Stockholm
+Europe/Tallinn
+Europe/Tirane
+Europe/Tiraspol
+Europe/Ulyanovsk
+Europe/Uzhgorod
+Europe/Vaduz
+Europe/Vatican
+Europe/Vienna
+Europe/Vilnius
+Europe/Volgograd
+Europe/Warsaw
+Europe/Zagreb
+Europe/Zaporozhye
+Europe/Zurich
+GB
+GB-Eire
+GMT
+GMT0
+Greenwich
+HST
+Hongkong
+IET
+IST
+Iceland
+Indian/Antananarivo
+Indian/Chagos
+Indian/Christmas
+Indian/Cocos
+Indian/Comoro
+Indian/Kerguelen
+Indian/Mahe
+Indian/Maldives
+Indian/Mauritius
+Indian/Mayotte
+Indian/Reunion
+Iran
+Israel
+JST
+Jamaica
+Japan
+Kwajalein
+Libya
+MET
+MIT
+MST
+MST7MDT
+Mexico/BajaNorte
+Mexico/BajaSur
+Mexico/General
+NET
+NST
+NZ
+NZ-CHAT
+Navajo
+PLT
+PNT
+PRC
+PRT
+PST
+PST8PDT
+Pacific/Apia
+Pacific/Auckland
+Pacific/Bougainville
+Pacific/Chatham
+Pacific/Chuuk
+Pacific/Easter
+Pacific/Efate
+Pacific/Enderbury
+Pacific/Fakaofo
+Pacific/Fiji
+Pacific/Funafuti
+Pacific/Galapagos
+Pacific/Gambier
+Pacific/Guadalcanal
+Pacific/Guam
+Pacific/Honolulu
+Pacific/Johnston
+Pacific/Kiritimati
+Pacific/Kosrae
+Pacific/Kwajalein
+Pacific/Majuro
+Pacific/Marquesas
+Pacific/Midway
+Pacific/Nauru
+Pacific/Niue
+Pacific/Norfolk
+Pacific/Noumea
+Pacific/Pago_Pago
+Pacific/Palau
+Pacific/Pitcairn
+Pacific/Pohnpei
+Pacific/Ponape
+Pacific/Port_Moresby
+Pacific/Rarotonga
+Pacific/Saipan
+Pacific/Samoa
+Pacific/Tahiti
+Pacific/Tarawa
+Pacific/Tongatapu
+Pacific/Truk
+Pacific/Wake
+Pacific/Wallis
+Pacific/Yap
+Poland
+Portugal
+ROK
+SST
+Singapore
+SystemV/AST4
+SystemV/AST4ADT
+SystemV/CST6
+SystemV/CST6CDT
+SystemV/EST5
+SystemV/EST5EDT
+SystemV/HST10
+SystemV/MST7
+SystemV/MST7MDT
+SystemV/PST8
+SystemV/PST8PDT
+SystemV/YST9
+SystemV/YST9YDT
+Turkey
+UCT
+US/Alaska
+US/Aleutian
+US/Arizona
+US/Central
+US/East-Indiana
+US/Eastern
+US/Hawaii
+US/Indiana-Starke
+US/Michigan
+US/Mountain
+US/Pacific
+US/Samoa
+UTC
+Universal
+VST
+W-SU
+WET
+Zulu
+The continent with most time zones is America, having 139 time zones.
+
+--- Chapter 13 Exercise 11 ---------------------------------------------------------------------------------------------
+The given code involves unchecked concurrent read/write of shared memory. Results would be random.
+Character frequencies in this file, counted without parallelism:
+(
+  (
+ => 140),
+  (  => 1269),
+  (! => 2),
+  (" => 110),
+  ($ => 12),
+  (% => 3),
+  (( => 200),
+  () => 200),
+  (* => 13),
+  (+ => 31),
+  (, => 82),
+  (- => 24),
+  (. => 110),
+  (/ => 15),
+  (0 => 15),
+  (1 => 46),
+  (2 => 19),
+  (3 => 24),
+  (4 => 7),
+  (5 => 8),
+  (6 => 3),
+  (7 => 1),
+  (8 => 1),
+  (9 => 3),
+  (: => 45),
+  (; => 4),
+  (< => 9),
+  (= => 67),
+  (> => 45),
+  (A => 17),
+  (B => 15),
+  (C => 30),
+  (D => 12),
+  (E => 7),
+  (F => 8),
+  (H => 4),
+  (I => 31),
+  (K => 6),
+  (L => 18),
+  (M => 30),
+  (N => 15),
+  (O => 3),
+  (P => 4),
+  (R => 4),
+  (S => 38),
+  (T => 22),
+  (U => 5),
+  (V => 5),
+  (W => 2),
+  (Z => 8),
+  ([ => 35),
+  (\ => 36),
+  (] => 35),
+  (_ => 31),
+  (` => 2),
+  (a => 220),
+  (b => 34),
+  (c => 111),
+  (d => 78),
+  (e => 377),
+  (f => 60),
+  (g => 42),
+  (h => 68),
+  (i => 260),
+  (j => 15),
+  (k => 21),
+  (l => 177),
+  (m => 99),
+  (n => 258),
+  (o => 174),
+  (p => 149),
+  (q => 21),
+  (r => 258),
+  (s => 216),
+  (t => 346),
+  (u => 71),
+  (v => 34),
+  (w => 17),
+  (x => 40),
+  (y => 41),
+  (z => 9),
+  ({ => 36),
+  (} => 36)
+)
+<thread>
+<thread>
+<thread>
+<thread>
+<thread>
+<thread>
+<thread>
+<thread>
+<thread>
+<thread>
+<thread>
+<thread>
+<thread>
+<thread>
+<thread>
+<thread>
+<thread>
+<thread>
+<thread>
+<thread>
+<thread>
+<thread>
+<thread>
+<thread>
+Character frequencies in this file, counted with parallelism:
+(
+  (
+ => 140),
+  (  => 1269),
+  (! => 2),
+  (" => 110),
+  ($ => 12),
+  (% => 3),
+  (( => 200),
+  () => 200),
+  (* => 13),
+  (+ => 31),
+  (, => 82),
+  (- => 24),
+  (. => 110),
+  (/ => 15),
+  (0 => 15),
+  (1 => 46),
+  (2 => 19),
+  (3 => 24),
+  (4 => 7),
+  (5 => 8),
+  (6 => 3),
+  (7 => 1),
+  (8 => 1),
+  (9 => 3),
+  (: => 45),
+  (; => 4),
+  (< => 9),
+  (= => 67),
+  (> => 45),
+  (A => 17),
+  (B => 15),
+  (C => 30),
+  (D => 12),
+  (E => 7),
+  (F => 8),
+  (H => 4),
+  (I => 31),
+  (K => 6),
+  (L => 18),
+  (M => 30),
+  (N => 15),
+  (O => 3),
+  (P => 4),
+  (R => 4),
+  (S => 38),
+  (T => 22),
+  (U => 5),
+  (V => 5),
+  (W => 2),
+  (Z => 8),
+  ([ => 35),
+  (\ => 36),
+  (] => 35),
+  (_ => 31),
+  (` => 2),
+  (a => 220),
+  (b => 34),
+  (c => 111),
+  (d => 78),
+  (e => 377),
+  (f => 60),
+  (g => 42),
+  (h => 68),
+  (i => 260),
+  (j => 15),
+  (k => 21),
+  (l => 177),
+  (m => 99),
+  (n => 258),
+  (o => 174),
+  (p => 149),
+  (q => 21),
+  (r => 258),
+  (s => 216),
+  (t => 346),
+  (u => 71),
+  (v => 34),
+  (w => 17),
+  (x => 40),
+  (y => 41),
+  (z => 9),
+  ({ => 36),
+  (} => 36)
+)
+
 
 
 ========================================================================================================================

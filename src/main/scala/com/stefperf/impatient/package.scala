@@ -11,6 +11,9 @@ package object impatient {
 
   def seq2line[T](seq: Iterable[T]): String = seq.iterator.map(_.toString).mkString(start = "(", sep = ", ", end = ")")
 
+  def arr2dToString[T](arr2d: Array[Array[T]], rowSep: String = ",\n "): String =
+    s"[[${arr2d.map(arr1d => seq2line(arr1d.toSeq)).mkString(s"]$rowSep[")}]]"
+
   def printseqline[T](seq: Iterable[T], start: String = "", end: String = "\n"): Unit =
     print(start + seq2line(seq) + end)
 
