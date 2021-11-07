@@ -5,7 +5,7 @@ import com.stefperf.impatient._
 import scala.collection.immutable.SortedMap
 
 object Chapter13 extends Chapter(13, "Collections") {
-  override def exercises(): Unit = {
+  override def exercises() {
     exercise(1) {
       import scala.collection.mutable
       def indexes(str: String): mutable.SortedMap[Char, mutable.Set[Int]] = {

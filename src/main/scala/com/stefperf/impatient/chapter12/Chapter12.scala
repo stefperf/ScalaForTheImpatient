@@ -3,7 +3,7 @@ package com.stefperf.impatient.chapter12
 import com.stefperf.impatient._
 
 object Chapter12 extends Chapter(12, "Higher-Order Functions") {
-  override def exercises(): Unit = {
+  override def exercises() {
 
     exercise(1) {
       def values(fun: (Int) => Int, low: Int, high: Int): Seq[(Int, Int)] = (low to high).map(i => (i, fun(i)))

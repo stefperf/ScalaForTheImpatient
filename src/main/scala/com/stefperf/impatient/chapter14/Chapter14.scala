@@ -3,7 +3,7 @@ package com.stefperf.impatient.chapter14
 import com.stefperf.impatient._
 
 object Chapter14 extends Chapter(14, "Pattern Matching and Case Classes") {
-  override def exercises(): Unit = {
+  override def exercises() {
     exercise(1) {
       "Skipped, as it is no programming exercise."
     }
@@ -147,9 +147,14 @@ object Chapter14 extends Chapter(14, "Pattern Matching and Case Classes") {
     }
 
     exercise(9) {
-      def sum(ois: List[Option[Int]]): Int = ois.flatten.sum
-      Seq(List(Some(1), None, Some(2)), List(None, None), List()).foreach{ ois =>
-        println(s"sum($ois) = ${sum(ois)}")
+      def sumVersion0(ois: List[Option[Int]]): Int = ois.flatten.sum
+      def sumVersion1(ois: List[Option[Int]]): Int = ois.collect{ case Some(i) => i }.sum
+      val funs = Map[String, List[Option[Int]] => Int]("sumVersion0" -> sumVersion0, "sumVersion1" -> sumVersion1)
+      val args = Seq(List(Some(1), None, Some(2)), List(None, None), List())
+      funs.foreach{ case (funName, fun) =>
+        println(s"With $funName:")
+        args.foreach{ ois => println(s"$funName($ois) = ${fun(ois)}") }
+        println()
       }
     }
 
