@@ -13,6 +13,7 @@ import com.stefperf.impatient.chapter10.Chapter10
 import com.stefperf.impatient.chapter11.Chapter11
 import com.stefperf.impatient.chapter12.Chapter12
 import com.stefperf.impatient.chapter13.Chapter13
+import com.stefperf.impatient.chapter14.Chapter14
 
 import scala.collection.mutable.ArrayBuffer
 import util.control.Breaks._
@@ -20,19 +21,8 @@ import util.control.Breaks._
 //execute only the chapters requested as command line arguments, or all chapters sequentially if no argument is given
 object AllBook extends App {
   // force all objects to be initialized and available
-  Chapter01.forceInit()
-  Chapter02.forceInit()
-  Chapter03.forceInit()
-  Chapter04.forceInit()
-  Chapter05.forceInit()
-  Chapter06.forceInit()
-  Chapter07.forceInit()
-  Chapter08.forceInit()
-  Chapter09.forceInit()
-  Chapter10.forceInit()
-  Chapter11.forceInit()
-  Chapter12.forceInit()
-  Chapter13.forceInit()
+  Seq(Chapter01, Chapter02, Chapter03, Chapter04, Chapter05, Chapter06, Chapter07,
+    Chapter08, Chapter09, Chapter10, Chapter11, Chapter12, Chapter13, Chapter14).foreach{ _.forceInit() }
 
   val requestedChapters = ArrayBuffer[Int]()
   breakable {

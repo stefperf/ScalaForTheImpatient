@@ -1,4 +1,4 @@
-/Library/Java/JavaVirtualMachines/temurin-11.jdk/Contents/Home/bin/java -javaagent:/Applications/IntelliJ IDEA CE.app/Contents/lib/idea_rt.jar=63528:/Applications/IntelliJ IDEA CE.app/Contents/bin -Dfile.encoding=UTF-8 -classpath /Users/Stefano/Documents/GitHub/ScalaForTheImpatient/target/scala-2.12/classes:/Users/Stefano/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/scala-library/2.12.14/scala-library-2.12.14.jar com.stefperf.impatient.AllBook
+/Library/Java/JavaVirtualMachines/temurin-11.jdk/Contents/Home/bin/java -javaagent:/Applications/IntelliJ IDEA CE.app/Contents/lib/idea_rt.jar=51757:/Applications/IntelliJ IDEA CE.app/Contents/bin -Dfile.encoding=UTF-8 -classpath /Users/Stefano/Documents/GitHub/ScalaForTheImpatient/target/scala-2.12/classes:/Users/Stefano/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/scala-library/2.12.14/scala-library-2.12.14.jar com.stefperf.impatient.AllBook
 ========================================================================================================================
 === Chapter 1. The Basics ==============================================================================================
 
@@ -11,10 +11,10 @@ Most exercises of this chapter are skipped here as they are just theory question
 2 ^1024 = 179769313486231590772930519078902473361797697894230657273430081157732675805500963132708477322407536021120113879871393357658789768814416622492847430639474124377767893424865485276302219601246094119453082952085005768838150682342462881473913110540827237163350510684586298239947245938479716304835356329624224137216
 
 --- Chapter 1 Exercise 7 -----------------------------------------------------------------------------------------------
-877363105440682925622826833319
+818316541127909254683125965489
 
 --- Chapter 1 Exercise 8 -----------------------------------------------------------------------------------------------
-10 random charachers in range [a-z0-9]: qrui5o1akb
+10 random charachers in range [a-z0-9]: 11tga4slm0
 
 --- Chapter 1 Exercise 9 -----------------------------------------------------------------------------------------------
 First and last characters of string 'Hello!': 'H', '!'
@@ -62,8 +62,8 @@ First and last characters of string 'Hello!': 'H', '!'
 === Chapter 3. Working with Arrays =====================================================================================
 
 --- Chapter 3 Exercise 1 -----------------------------------------------------------------------------------------------
-(0, 1, 2)
-(7, 2, 2, 7, 3, 6, 7, 1)
+(0, 2, 1)
+(0, 2, 3, 1, 3, 1, 7, 0)
 
 --- Chapter 3 Exercise 2 -----------------------------------------------------------------------------------------------
 (2, 1, 4, 3, 5)
@@ -85,8 +85,8 @@ First and last characters of string 'Hello!': 'H', '!'
 (5, 4, 3, 2, 1)
 
 --- Chapter 3 Exercise 7 -----------------------------------------------------------------------------------------------
-(4, 1, 3, 0, 5, 5, 3, 2, 5, 3, 1, 0, 4, 0, 4, 3, 5, 5, 0, 5)
-(4, 1, 3, 0, 5, 2)
+(4, 5, 0, 4, 1, 1, 1, 5, 4, 0, 5, 4, 4, 3, 4, 2, 4, 5, 5, 4)
+(4, 5, 0, 1, 3, 2)
 
 --- Chapter 3 Exercise 8 -----------------------------------------------------------------------------------------------
 (4, 2, -3, -6, 6, 7, -5)
@@ -1094,7 +1094,7 @@ Image sources on page https://horstmann.com/scala:
 - http://ad.linksynergy.com/fs-bin/show?id=R/ODEl37NHE&amp;bids=163217.2476823&amp;type=2&amp;subid=0
 
 --- Chapter 9 Exercise 9 -----------------------------------------------------------------------------------------------
-32 files with extension .scala were found in ./src/main/scala.
+33 files with extension .scala were found in ./src/main/scala.
 
 --- Chapter 9 Exercise 10 ----------------------------------------------------------------------------------------------
 - Before serialization:
@@ -1455,8 +1455,8 @@ indexes("Mississippi") -> TreeMap(I -> Set(1, 10, 7, 4), M -> Set(0), P -> Set(9
 indexes("Mississippi") -> Map(I -> Set(1, 4, 7, 10), M -> Set(0), P -> Set(8, 9), S -> Set(2, 3, 5, 6))
 
 --- Chapter 13 Exercise 3 ----------------------------------------------------------------------------------------------
-halveByCopying(<integers from 1 to 50000>) took 2132 millisecs.
-halveByRemoving(<integers from 1 to 50000>) took 1773 millisecs.
+halveByCopying(<integers from 1 to 50000>) took 2270 millisecs.
+halveByRemoving(<integers from 1 to 50000>) took 1792 millisecs.
 
 --- Chapter 13 Exercise 4 ----------------------------------------------------------------------------------------------
 mapKeys(Array("Tom", "Fred", "Harry"), Map("Tom" -> 3, "Dick" -> 4, "Harry" -> 5)) -> (3, 5)
@@ -2240,6 +2240,7 @@ Character frequencies in this file, counted without parallelism:
 <thread>
 <thread>
 <thread>
+<thread>
 Character frequencies in this file, counted with parallelism:
 (
   (
@@ -2331,6 +2332,53 @@ Character frequencies in this file, counted with parallelism:
 
 
 ========================================================================================================================
+=== Chapter 14. Pattern Matching and Case Classes ======================================================================
+
+--- Chapter 14 Exercise 1 ----------------------------------------------------------------------------------------------
+
+--- Chapter 14 Exercise 2 ----------------------------------------------------------------------------------------------
+swap((1,2)) = (2,1)
+
+--- Chapter 14 Exercise 3 ----------------------------------------------------------------------------------------------
+swap(()) = ()
+swap((1)) = (1)
+swap((1, 2)) = (2, 1)
+swap((1, 2, 3)) = (2, 1, 3)
+
+--- Chapter 14 Exercise 4 ----------------------------------------------------------------------------------------------
+price(Bundle(bundle,3.0,WrappedArray(Article(pizza,16.0), Multiple(3,Article(French fries,4.0))))) = 25.0
+
+--- Chapter 14 Exercise 5 ----------------------------------------------------------------------------------------------
+leafSum(List(List(3, 8), 2, List(5))) = 18
+
+--- Chapter 14 Exercise 6 ----------------------------------------------------------------------------------------------
+leafSum(Node(Node(Leaf(3),Leaf(8)),Node(Leaf(2),Leaf(5)))) = 18
+
+--- Chapter 14 Exercise 7 ----------------------------------------------------------------------------------------------
+leafSum(Node(WrappedArray(Node(WrappedArray(Leaf(3), Leaf(8))), Leaf(2), Node(WrappedArray(Leaf(5)))))) = 18
+
+--- Chapter 14 Exercise 8 ----------------------------------------------------------------------------------------------
+eval(Op(+,WrappedArray(Op(*,WrappedArray(Leaf(3), Leaf(8))), Leaf(2), Op(-,WrappedArray(Leaf(5)))))) = 21
+
+eval(Op(+,WrappedArray(Op(!,WrappedArray(Op(%,WrappedArray(Leaf(8), Leaf(3))))), Op(*,WrappedArray(Leaf(2), Op(/,WrappedArray(Leaf(19), Leaf(3)))))))) = 14
+
+eval(Op(-,WrappedArray(Op(!,WrappedArray(Op(%,WrappedArray(Leaf(8), Leaf(3))))), Op(*,WrappedArray(Leaf(2), Op(/,WrappedArray(Leaf(19), Leaf(3))))), Leaf(1)))) caused this error:
+  java.lang.IllegalArgumentException: Operation '-' with 3 arguments is not supported
+
+
+--- Chapter 14 Exercise 9 ----------------------------------------------------------------------------------------------
+sum(List(Some(1), None, Some(2))) = 3
+sum(List(None, None)) = 0
+sum(List()) = 0
+
+--- Chapter 14 Exercise 10 ---------------------------------------------------------------------------------------------
+h(2) = Some(1.0)
+h(1) = None
+h(0) = None
+
+
+
+========================================================================================================================
 === Chapters executed: =================================================================================================
 Chapter 1. The Basics
 Chapter 2. Control Structures and Functions
@@ -2345,5 +2393,6 @@ Chapter 10. Traits
 Chapter 11. Operators
 Chapter 12. Higher-Order Functions
 Chapter 13. Collections
+Chapter 14. Pattern Matching and Case Classes
 
 Process finished with exit code 0
