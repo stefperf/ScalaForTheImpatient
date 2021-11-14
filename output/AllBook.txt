@@ -1,4 +1,4 @@
-/Library/Java/JavaVirtualMachines/temurin-11.jdk/Contents/Home/bin/java -javaagent:/Applications/IntelliJ IDEA CE.app/Contents/lib/idea_rt.jar=51915:/Applications/IntelliJ IDEA CE.app/Contents/bin -Dfile.encoding=UTF-8 -classpath /Users/Stefano/Documents/GitHub/ScalaForTheImpatient/target/scala-2.12/classes:/Users/Stefano/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/scala-library/2.12.14/scala-library-2.12.14.jar com.stefperf.impatient.AllBook
+/Library/Java/JavaVirtualMachines/temurin-11.jdk/Contents/Home/bin/java -javaagent:/Applications/IntelliJ IDEA CE.app/Contents/lib/idea_rt.jar=58634:/Applications/IntelliJ IDEA CE.app/Contents/bin -Dfile.encoding=UTF-8 -classpath /Users/Stefano/Documents/GitHub/ScalaForTheImpatient/target/scala-2.12/classes:/Users/Stefano/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/scala-library/2.12.14/scala-library-2.12.14.jar:/Users/Stefano/Documents/GitHub/ScalaForTheImpatient/lib/hamcrest-core-1.3-javadoc.jar:/Users/Stefano/Documents/GitHub/ScalaForTheImpatient/lib/hamcrest-core-1.3-sources.jar:/Users/Stefano/Documents/GitHub/ScalaForTheImpatient/lib/hamcrest-core-1.3.jar:/Users/Stefano/Documents/GitHub/ScalaForTheImpatient/lib/junit-4.12-javadoc.jar:/Users/Stefano/Documents/GitHub/ScalaForTheImpatient/lib/junit-4.12-sources.jar:/Users/Stefano/Documents/GitHub/ScalaForTheImpatient/lib/junit-4.12.jar com.stefperf.impatient.AllBook
 ========================================================================================================================
 === Chapter 1. The Basics ==============================================================================================
 
@@ -11,10 +11,10 @@ Most exercises of this chapter are skipped here as they are just theory question
 2 ^1024 = 179769313486231590772930519078902473361797697894230657273430081157732675805500963132708477322407536021120113879871393357658789768814416622492847430639474124377767893424865485276302219601246094119453082952085005768838150682342462881473913110540827237163350510684586298239947245938479716304835356329624224137216
 
 --- Chapter 1 Exercise 7 -----------------------------------------------------------------------------------------------
-1183146222660699388204671338387
+923160189137134746019820901649
 
 --- Chapter 1 Exercise 8 -----------------------------------------------------------------------------------------------
-10 random charachers in range [a-z0-9]: ri5cgsdmp7
+10 random charachers in range [a-z0-9]: pxi8d6cjhd
 
 --- Chapter 1 Exercise 9 -----------------------------------------------------------------------------------------------
 First and last characters of string 'Hello!': 'H', '!'
@@ -62,8 +62,8 @@ First and last characters of string 'Hello!': 'H', '!'
 === Chapter 3. Working with Arrays =====================================================================================
 
 --- Chapter 3 Exercise 1 -----------------------------------------------------------------------------------------------
-(1, 2, 1)
-(6, 2, 4, 4, 7, 5, 6, 4)
+(1, 1, 2)
+(6, 5, 5, 1, 5, 6, 0, 0)
 
 --- Chapter 3 Exercise 2 -----------------------------------------------------------------------------------------------
 (2, 1, 4, 3, 5)
@@ -85,8 +85,8 @@ First and last characters of string 'Hello!': 'H', '!'
 (5, 4, 3, 2, 1)
 
 --- Chapter 3 Exercise 7 -----------------------------------------------------------------------------------------------
-(3, 5, 4, 3, 4, 2, 1, 1, 3, 0, 2, 0, 3, 2, 5, 0, 1, 2, 3, 4)
-(3, 5, 4, 2, 1, 0)
+(2, 1, 1, 1, 1, 2, 4, 3, 5, 5, 3, 0, 2, 5, 0, 1, 2, 1, 0, 3)
+(2, 1, 4, 3, 5, 0)
 
 --- Chapter 3 Exercise 8 -----------------------------------------------------------------------------------------------
 (4, 2, -3, -6, 6, 7, -5)
@@ -716,7 +716,7 @@ gopherProxySet                  | false
 http.nonProxyHosts              | local|*.local|169.254/16|*.169.254/16
 java.awt.graphicsenv            | sun.awt.CGraphicsEnvironment
 java.awt.printerjob             | sun.lwawt.macosx.CPrinterJob
-java.class.path                 | /Users/Stefano/Documents/GitHub/ScalaForTheImpatient/target/scala-2.12/classes:/Users/Stefano/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/scala-library/2.12.14/scala-library-2.12.14.jar
+java.class.path                 | /Users/Stefano/Documents/GitHub/ScalaForTheImpatient/target/scala-2.12/classes:/Users/Stefano/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/scala-library/2.12.14/scala-library-2.12.14.jar:/Users/Stefano/Documents/GitHub/ScalaForTheImpatient/lib/hamcrest-core-1.3-javadoc.jar:/Users/Stefano/Documents/GitHub/ScalaForTheImpatient/lib/hamcrest-core-1.3-sources.jar:/Users/Stefano/Documents/GitHub/ScalaForTheImpatient/lib/hamcrest-core-1.3.jar:/Users/Stefano/Documents/GitHub/ScalaForTheImpatient/lib/junit-4.12-javadoc.jar:/Users/Stefano/Documents/GitHub/ScalaForTheImpatient/lib/junit-4.12-sources.jar:/Users/Stefano/Documents/GitHub/ScalaForTheImpatient/lib/junit-4.12.jar
 java.class.version              | 55.0
 java.home                       | /Library/Java/JavaVirtualMachines/temurin-11.jdk/Contents/Home
 java.io.tmpdir                  | /var/folders/vt/xh6vj3q915s06wdh7kvwf3f40000gn/T/
@@ -1094,7 +1094,7 @@ Image sources on page https://horstmann.com/scala:
 - http://ad.linksynergy.com/fs-bin/show?id=R/ODEl37NHE&amp;bids=163217.2476823&amp;type=2&amp;subid=0
 
 --- Chapter 9 Exercise 9 -----------------------------------------------------------------------------------------------
-34 files with extension .scala were found in ./src/main/scala.
+40 files with extension .scala were found in ./src/main/scala.
 
 --- Chapter 9 Exercise 10 ----------------------------------------------------------------------------------------------
 - Before serialization:
@@ -1455,8 +1455,8 @@ indexes("Mississippi") -> TreeMap(I -> Set(1, 10, 7, 4), M -> Set(0), P -> Set(9
 indexes("Mississippi") -> Map(I -> Set(1, 4, 7, 10), M -> Set(0), P -> Set(8, 9), S -> Set(2, 3, 5, 6))
 
 --- Chapter 13 Exercise 3 ----------------------------------------------------------------------------------------------
-halveByCopying(<integers from 1 to 50000>) took 1645 millisecs.
-halveByRemoving(<integers from 1 to 50000>) took 1579 millisecs.
+halveByCopying(<integers from 1 to 50000>) took 2078 millisecs.
+halveByRemoving(<integers from 1 to 50000>) took 2046 millisecs.
 
 --- Chapter 13 Exercise 4 ----------------------------------------------------------------------------------------------
 mapKeys(Array("Tom", "Fred", "Harry"), Map("Tom" -> 3, "Dick" -> 4, "Harry" -> 5)) -> (3, 5)
@@ -2384,7 +2384,157 @@ h(0) = None
 
 
 ========================================================================================================================
-=== Chapter 15. Annotations ============================================================================================
+=== Chapter 17. Futures ================================================================================================
+
+--- Chapter 17 Exercise 1 ----------------------------------------------------------------------------------------------
+-- Demonstrating behavior of given for loop:
+thread 22 @ 19:47:30.522 with retval = 2 starting
+thread 22 @ 19:47:30.558 with retval = 2 ending after about 30 millisecs
+thread 22 @ 19:47:30.559 with retval = 40 starting
+
+thread 23 @ 19:47:30.588 with retval = 2 starting
+thread 22 @ 19:47:30.591 with retval = 40 ending after about 30 millisecs
+thread 22 @ 19:47:30.592: total = 42
+thread 23 @ 19:47:30.623 with retval = 2 ending after about 30 millisecs
+thread 22 @ 19:47:30.624 with retval = 40 starting
+thread 22 @ 19:47:30.654 with retval = 40 ending after about 30 millisecs
+thread 22 @ 19:47:30.655: total = 42
+
+thread 22 @ 19:47:30.679 with retval = 2 starting
+thread 22 @ 19:47:30.710 with retval = 2 ending after about 30 millisecs
+thread 23 @ 19:47:30.712 with retval = 40 starting
+thread 23 @ 19:47:30.745 with retval = 40 ending after about 30 millisecs
+thread 23 @ 19:47:30.745: total = 42
+
+thread 23 @ 19:47:30.769 with retval = 2 starting
+thread 23 @ 19:47:30.803 with retval = 2 ending after about 30 millisecs
+thread 22 @ 19:47:30.803 with retval = 40 starting
+thread 22 @ 19:47:30.837 with retval = 40 ending after about 30 millisecs
+thread 22 @ 19:47:30.838: total = 42
+
+thread 22 @ 19:47:30.863 with retval = 2 starting
+thread 22 @ 19:47:30.895 with retval = 2 ending after about 30 millisecs
+thread 22 @ 19:47:30.896 with retval = 40 starting
+thread 22 @ 19:47:30.928 with retval = 40 ending after about 30 millisecs
+thread 22 @ 19:47:30.928: total = 42
+
+thread 22 @ 19:47:30.956 with retval = 2 starting
+thread 22 @ 19:47:30.987 with retval = 2 ending after about 30 millisecs
+thread 22 @ 19:47:30.988 with retval = 40 starting
+thread 22 @ 19:47:31.023 with retval = 40 ending after about 30 millisecs
+thread 22 @ 19:47:31.023: total = 42
+
+thread 22 @ 19:47:31.049 with retval = 2 starting
+thread 22 @ 19:47:31.084 with retval = 2 ending after about 30 millisecs
+thread 25 @ 19:47:31.085 with retval = 40 starting
+thread 25 @ 19:47:31.116 with retval = 40 ending after about 30 millisecs
+thread 25 @ 19:47:31.117: total = 42
+
+thread 25 @ 19:47:31.143 with retval = 2 starting
+thread 25 @ 19:47:31.177 with retval = 2 ending after about 30 millisecs
+thread 25 @ 19:47:31.177 with retval = 40 starting
+thread 25 @ 19:47:31.208 with retval = 40 ending after about 30 millisecs
+thread 25 @ 19:47:31.209: total = 42
+
+thread 25 @ 19:47:31.238 with retval = 2 starting
+thread 25 @ 19:47:31.271 with retval = 2 ending after about 30 millisecs
+thread 25 @ 19:47:31.271 with retval = 40 starting
+thread 25 @ 19:47:31.302 with retval = 40 ending after about 30 millisecs
+thread 25 @ 19:47:31.302: total = 42
+
+thread 25 @ 19:47:31.328 with retval = 2 starting
+thread 25 @ 19:47:31.358 with retval = 2 ending after about 30 millisecs
+thread 22 @ 19:47:31.359 with retval = 40 starting
+thread 22 @ 19:47:31.391 with retval = 40 ending after about 30 millisecs
+thread 22 @ 19:47:31.391: total = 42
+
+-- Demonstrating behavior of translation with flatMap and map:
+thread 25 @ 19:47:31.419 with retval = 2 starting
+thread 25 @ 19:47:31.454 with retval = 2 ending after about 30 millisecs
+thread 22 @ 19:47:31.455 with retval = 40 starting
+thread 22 @ 19:47:31.491 with retval = 40 ending after about 30 millisecs
+thread 22 @ 19:47:31.491: total = 42
+
+thread 22 @ 19:47:31.517 with retval = 2 starting
+thread 22 @ 19:47:31.552 with retval = 2 ending after about 30 millisecs
+thread 25 @ 19:47:31.552 with retval = 40 starting
+thread 25 @ 19:47:31.586 with retval = 40 ending after about 30 millisecs
+thread 25 @ 19:47:31.588: total = 42
+
+thread 25 @ 19:47:31.609 with retval = 2 starting
+thread 25 @ 19:47:31.643 with retval = 2 ending after about 30 millisecs
+thread 22 @ 19:47:31.644 with retval = 40 starting
+thread 22 @ 19:47:31.678 with retval = 40 ending after about 30 millisecs
+thread 22 @ 19:47:31.679: total = 42
+
+thread 22 @ 19:47:31.702 with retval = 2 starting
+thread 22 @ 19:47:31.735 with retval = 2 ending after about 30 millisecs
+thread 25 @ 19:47:31.736 with retval = 40 starting
+thread 25 @ 19:47:31.769 with retval = 40 ending after about 30 millisecs
+thread 25 @ 19:47:31.769: total = 42
+
+thread 25 @ 19:47:31.795 with retval = 2 starting
+thread 25 @ 19:47:31.828 with retval = 2 ending after about 30 millisecs
+thread 22 @ 19:47:31.829 with retval = 40 starting
+thread 22 @ 19:47:31.859 with retval = 40 ending after about 30 millisecs
+thread 22 @ 19:47:31.859: total = 42
+
+thread 22 @ 19:47:31.890 with retval = 2 starting
+thread 22 @ 19:47:31.925 with retval = 2 ending after about 30 millisecs
+thread 25 @ 19:47:31.926 with retval = 40 starting
+thread 25 @ 19:47:31.958 with retval = 40 ending after about 30 millisecs
+thread 25 @ 19:47:31.959: total = 42
+
+thread 25 @ 19:47:31.981 with retval = 2 starting
+thread 25 @ 19:47:32.012 with retval = 2 ending after about 30 millisecs
+thread 22 @ 19:47:32.013 with retval = 40 starting
+thread 22 @ 19:47:32.046 with retval = 40 ending after about 30 millisecs
+thread 22 @ 19:47:32.046: total = 42
+
+thread 22 @ 19:47:32.072 with retval = 2 starting
+thread 22 @ 19:47:32.107 with retval = 2 ending after about 30 millisecs
+thread 25 @ 19:47:32.107 with retval = 40 starting
+thread 25 @ 19:47:32.142 with retval = 40 ending after about 30 millisecs
+thread 25 @ 19:47:32.143: total = 42
+
+thread 25 @ 19:47:32.167 with retval = 2 starting
+thread 25 @ 19:47:32.202 with retval = 2 ending after about 30 millisecs
+thread 22 @ 19:47:32.203 with retval = 40 starting
+thread 22 @ 19:47:32.234 with retval = 40 ending after about 30 millisecs
+thread 22 @ 19:47:32.234: total = 42
+
+thread 22 @ 19:47:32.260 with retval = 2 starting
+thread 22 @ 19:47:32.295 with retval = 2 ending after about 30 millisecs
+thread 25 @ 19:47:32.295 with retval = 40 starting
+thread 25 @ 19:47:32.330 with retval = 40 ending after about 30 millisecs
+thread 25 @ 19:47:32.331: total = 42
+
+The two futures and the combination of their results are executed sequentially in 3 different threads.
+
+--- Chapter 17 Exercises 2, 3 together ---------------------------------------------------------------------------------
+Await.result(doInOrder(delay((_: String).length), delay((_: Int) * 2))("TEST"), waitDur) = 8
+Await.result(chainFutures(delay((_: Int) + 3), delay(100 % (_: Int)), delay((i: Int) => i * i))(10), waitDur) = 81
+Await.result(chainFutures(Seq(delay((_: Int) + 3), delay(100 % (_: Int)), delay((i: Int) => i * i)): _*)(10), waitDur) = 81
+
+--- Chapter 17 Exercise 4 ----------------------------------------------------------------------------------------------
+Await.result(doTogether(delay((_: String).length), delay((_: String) * 2))("TEST"), waitDur) = (4,TESTTEST)
+
+--- Chapter 17 Exercise 5 ----------------------------------------------------------------------------------------------
+Await.result(parallelFutures(delayed(1), delayed(2), delayed(3)), waitDur) = ArrayBuffer(1, 2, 3)
+Await.result(parallelFutures(Seq(delayed(1), delayed(2), delayed(3)): _*), waitDur) = List(1, 2, 3)
+
+--- Chapter 17 Exercise 6 ----------------------------------------------------------------------------------------------
+password: > secr
+password: > secre
+password: > secret
+You have found the correct password 'secret'.
+
+--- Chapter 17 Exercise 7 ----------------------------------------------------------------------------------------------
+thread 23 @ 19:47:46.634: NumericRange 27 to 52 => count = 6
+thread 22 @ 19:47:46.634: NumericRange 79 to 103 => count = 6
+thread 24 @ 19:47:46.635: NumericRange 1 to 26 => count = 9
+thread 25 @ 19:47:46.636: NumericRange 53 to 78 => count = 6
+Among the first 103 integers, 27 are probably primes.
 
 WORK IN PROGRESS
 
@@ -2405,6 +2555,6 @@ Chapter 11. Operators
 Chapter 12. Higher-Order Functions
 Chapter 13. Collections
 Chapter 14. Pattern Matching and Case Classes
-Chapter 15. Annotations
+Chapter 17. Futures
 
 Process finished with exit code 0

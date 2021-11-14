@@ -1,5 +1,7 @@
 package com.stefperf
 
+import java.time.format.DateTimeFormatter
+import java.time.LocalDateTime
 import scala.collection.mutable.ArrayBuffer
 
 package object impatient {
@@ -30,6 +32,9 @@ package object impatient {
     val millisecs = (System.nanoTime - t0) / divisor
     println(s"$name took $millisecs millisecs.")
   }
+
+  def threadAndTime: String = s"thread ${Thread.currentThread.getId} @ " +
+    s"${DateTimeFormatter.ofPattern("HH:mm:ss.SSS").format(LocalDateTime.now)}"
 
   abstract class Chapter(val chapterNumber: Int, title: String) {
     Chapter.chaptersByNumber(chapterNumber) = this  // register this chapter

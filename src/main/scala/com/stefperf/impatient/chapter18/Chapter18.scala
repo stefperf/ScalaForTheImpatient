@@ -1,9 +1,9 @@
-package com.stefperf.impatient.chapter15
+package com.stefperf.impatient.chapter18
 
 import com.stefperf.impatient._
 
 
-object Chapter15 extends Chapter(15, "Annotations") {
+object Chapter18 extends Chapter(18, "Type Parameters") {
 
   override def exercises() {
 
