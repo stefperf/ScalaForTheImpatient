@@ -40,7 +40,7 @@ package object impatient {
     Chapter.chaptersByNumber(chapterNumber) = this  // register this chapter
     def header: String = Chapter.header(chapterNumber, title)
 
-    def main(args: Array[String]): Unit = Chapter.frameBody(chapterNumber, title, exercises)
+    def main(args: Array[String] = Array.empty): Unit = Chapter.frameBody(chapterNumber, title, exercises)
 
     def forceInit(): Unit = {}  // just trigger construction execution
 

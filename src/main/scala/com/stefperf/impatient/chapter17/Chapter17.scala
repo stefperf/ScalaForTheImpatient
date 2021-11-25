@@ -1,15 +1,15 @@
 package com.stefperf.impatient.chapter17
 
 import com.stefperf.impatient._
+import Chapter17MiscUtils._
 
 import scala.annotation.tailrec
-import scala.concurrent.ExecutionContext.Implicits.global
 import scala.concurrent._
 import scala.concurrent.duration._
-import scala.util.{Failure, Success, Try}
-
 
 object Chapter17 extends Chapter(17, "Futures") {
+  import scala.concurrent.ExecutionContext.Implicits.global
+
   val waitFutMsecs = 30  // default delay used in one future for all these exercises
 
   // compute fun within a future with given delay
@@ -108,11 +108,11 @@ object Chapter17 extends Chapter(17, "Futures") {
     exercise(7) {
 
       def countPrimes(upToN: BigInt, certainty: Int): Int = {
-        val cores = Runtime.getRuntime.availableProcessors
-        val (quotient, remainder) = upToN /% cores
+        val nCores = Runtime.getRuntime.availableProcessors
+        val (quotient, remainder) = upToN /% nCores
         val intsPerCore: BigInt = if (remainder == 0) quotient else quotient + 1
         var futureList = List[Future[Int]]()
-        for (c <- 0 until cores) {
+        for (c <- 0 until nCores) {
           val base = intsPerCore * c
           val range = (base + 1) to ((base + intsPerCore) min upToN)
           futureList = Future {
@@ -131,92 +131,25 @@ object Chapter17 extends Chapter(17, "Futures") {
     }
 
     exercise(8, 9) {
-      import java.net.URL
-      import scala.io.Source
-
-      @tailrec def inputUrl(): URL = {
-        print("enter URL: > ")
-        val input = scala.io.StdIn.readLine()
-        val urlTry = Try{ new URL(input) }
-        urlTry match {
-          case Success(url) => url
-          case _ =>
-            println(s"'$input' is not a valid URL. Please try again.")
-            inputUrl()
-        }
-      }
-
-      def readWebPage(url: URL): String = {
-        try {
-          Source.fromURL(url).mkString
-        }
-        catch {
-          case ex =>  // intentionally catching all throwables
-            println(s"It was not possible to read the webpage at address '$url' due to this error:\n$ex")
-            ""
-        }
-      }
-
-      def extractAbsoluteHyperlinks(html: String): List[URL] = {
-        val absoluteLinkPattern = """<.*? href=["'](http.*?)["'].*?>""".r("href")
-        (for (anchor <- absoluteLinkPattern.findAllMatchIn(html); link = anchor.group("href").toLowerCase)
-          yield Try{ new URL(link)}.toOption
-        ).toList.flatten
-      }
-
-      def getValidAbsoluteHyperlinks(maxDuration: Duration): Option[List[URL]] = {
-        val futureUrlList = Future{ inputUrl() }.flatMap(
-          url => Future{ readWebPage(url) }).flatMap(
-          html => Future{ Option(extractAbsoluteHyperlinks(html)) }).recover{
-          case ex =>
-            println(s"It was not possible to complete the operation due to this error:\n$ex")
-            None
-        }
-        Await.result(futureUrlList, maxDuration)
-      }
-
-      def getServer(url: URL): Option[String] =
-        Try{ Option(url.openConnection().getHeaderField("Server")) }.fold[Option[String]](_ => None, os => os)
-
-      val maxSecondsOp1 = 60
-      println(s"In the next $maxSecondsOp1 seconds, we will try to read and process a URL from the user.")
-      val result = getValidAbsoluteHyperlinks(Duration(maxSecondsOp1, SECONDS))
-      result match {
-        case None =>
-        case Some(Nil) => println("No valid absolute hyperlinks were found in the given webpage.")
-        case Some(urls) =>
-          val uniqueUrls = urls.distinct
-          println("-- List of valid absolute hyperlinks found in the given webpage:")
-          for (url <- uniqueUrls.sortBy(_.toString)) {
-            println(s"- $url")
-          }
-          println("-- End of list.")
-          println()
-          val maxSecondsOp2 = 30
-          println(s"In the next $maxSecondsOp2 seconds, we will try to compile a list of all server headers at those links.")
-          val futureServers = Future.sequence(
-            uniqueUrls.map(
-              url => Future { getServer(url) }.recover{ case _ => None }
-            )
-          )
-          Await.ready(futureServers, Duration(maxSecondsOp2, SECONDS))
-          val Some(result) = futureServers.value
-          result match {
-            case Failure(exception) => println(s"The operation failed with error:\n$exception")
-            case Success(seq) =>
-              val servers = seq.flatten.distinct.sorted
-              if (servers.isEmpty)
-                println("No server headers were found.")
-                else {
-                  println("-- List of server headers found:")
-                for (server <- servers) println(s"- $server")
-                  println("-- End of list.")
-                }
-          }
-      }
+      analyzeUrlServers(collectServerStats)
     }
 
-    println("WORK IN PROGRESS")
+    exercise(10) {
+      analyzeUrlServers(collectServerStatsUsingTrieMap)
     }
+
+    exercise(11) {
+      Chapter17Exercise11.main(Array.empty)
+    }
+
+    exercise(12) {
+      Chapter17Exercise12.main(Array.empty)
+    }
+
+    exercise(13) {
+      Chapter17Exercise13.main(Array.empty)
+    }
+
+  }
 
 }

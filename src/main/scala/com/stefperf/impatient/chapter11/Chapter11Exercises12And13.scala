@@ -1,7 +1,5 @@
 package com.stefperf.impatient.chapter11
 
-import com.stefperf.impatient._
-
 import scala.collection.mutable
 import scala.language.dynamics
 
@@ -75,7 +73,7 @@ class XMLBuilder extends Dynamic {
 }
 
 
-object Chapter11Exercises12_13 extends App {
+object Chapter11Exercises12And13 extends App {
   println("(This exercise is a simplistic implementation for didactic purposes)")
   val builder = new XMLBuilder()
   val rootElement = builder.rootElement()

@@ -1,4 +1,4 @@
-/Library/Java/JavaVirtualMachines/temurin-11.jdk/Contents/Home/bin/java -javaagent:/Applications/IntelliJ IDEA CE.app/Contents/lib/idea_rt.jar=52240:/Applications/IntelliJ IDEA CE.app/Contents/bin -Dfile.encoding=UTF-8 -classpath /Users/Stefano/Documents/GitHub/ScalaForTheImpatient/target/scala-2.12/classes:/Users/Stefano/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/scala-library/2.12.14/scala-library-2.12.14.jar:/Users/Stefano/Documents/GitHub/ScalaForTheImpatient/lib/hamcrest-core-1.3-javadoc.jar:/Users/Stefano/Documents/GitHub/ScalaForTheImpatient/lib/hamcrest-core-1.3-sources.jar:/Users/Stefano/Documents/GitHub/ScalaForTheImpatient/lib/hamcrest-core-1.3.jar:/Users/Stefano/Documents/GitHub/ScalaForTheImpatient/lib/junit-4.12-javadoc.jar:/Users/Stefano/Documents/GitHub/ScalaForTheImpatient/lib/junit-4.12-sources.jar:/Users/Stefano/Documents/GitHub/ScalaForTheImpatient/lib/junit-4.12.jar com.stefperf.impatient.AllBook
+/Library/Java/JavaVirtualMachines/temurin-11.jdk/Contents/Home/bin/java -javaagent:/Applications/IntelliJ IDEA CE.app/Contents/lib/idea_rt.jar=56334:/Applications/IntelliJ IDEA CE.app/Contents/bin -Dfile.encoding=UTF-8 -classpath /Users/Stefano/Documents/GitHub/ScalaForTheImpatient/target/scala-2.12/classes:/Users/Stefano/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/scala-library/2.12.14/scala-library-2.12.14.jar:/Users/Stefano/Documents/GitHub/ScalaForTheImpatient/lib/hamcrest-core-1.3-javadoc.jar:/Users/Stefano/Documents/GitHub/ScalaForTheImpatient/lib/hamcrest-core-1.3-sources.jar:/Users/Stefano/Documents/GitHub/ScalaForTheImpatient/lib/hamcrest-core-1.3.jar:/Users/Stefano/Documents/GitHub/ScalaForTheImpatient/lib/junit-4.12-javadoc.jar:/Users/Stefano/Documents/GitHub/ScalaForTheImpatient/lib/junit-4.12-sources.jar:/Users/Stefano/Documents/GitHub/ScalaForTheImpatient/lib/junit-4.12.jar com.stefperf.impatient.AllBook
 ========================================================================================================================
 === Chapter 1. The Basics ==============================================================================================
 
@@ -11,10 +11,10 @@ Most exercises of this chapter are skipped here as they are just theory question
 2 ^1024 = 179769313486231590772930519078902473361797697894230657273430081157732675805500963132708477322407536021120113879871393357658789768814416622492847430639474124377767893424865485276302219601246094119453082952085005768838150682342462881473913110540827237163350510684586298239947245938479716304835356329624224137216
 
 --- Chapter 1 Exercise 7 -----------------------------------------------------------------------------------------------
-1216310832384127602760440978811
+1228375848389635327776213172253
 
 --- Chapter 1 Exercise 8 -----------------------------------------------------------------------------------------------
-10 random charachers in range [a-z0-9]: zbndjv744v
+10 random charachers in range [a-z0-9]: xzz938hvkz
 
 --- Chapter 1 Exercise 9 -----------------------------------------------------------------------------------------------
 First and last characters of string 'Hello!': 'H', '!'
@@ -62,8 +62,8 @@ First and last characters of string 'Hello!': 'H', '!'
 === Chapter 3. Working with Arrays =====================================================================================
 
 --- Chapter 3 Exercise 1 -----------------------------------------------------------------------------------------------
-(2, 2, 0)
-(4, 1, 1, 0, 5, 2, 0, 0)
+(1, 1, 0)
+(2, 6, 1, 0, 6, 4, 5, 1)
 
 --- Chapter 3 Exercise 2 -----------------------------------------------------------------------------------------------
 (2, 1, 4, 3, 5)
@@ -85,8 +85,8 @@ First and last characters of string 'Hello!': 'H', '!'
 (5, 4, 3, 2, 1)
 
 --- Chapter 3 Exercise 7 -----------------------------------------------------------------------------------------------
-(0, 4, 5, 5, 5, 0, 2, 5, 2, 3, 1, 3, 1, 3, 2, 3, 0, 4, 2, 1)
-(0, 4, 5, 2, 3, 1)
+(5, 2, 5, 5, 3, 3, 5, 2, 3, 0, 5, 2, 3, 3, 0, 5, 5, 1, 4, 2)
+(5, 2, 3, 0, 1, 4)
 
 --- Chapter 3 Exercise 8 -----------------------------------------------------------------------------------------------
 (4, 2, -3, -6, 6, 7, -5)
@@ -1094,7 +1094,7 @@ Image sources on page https://horstmann.com/scala:
 - http://ad.linksynergy.com/fs-bin/show?id=R/ODEl37NHE&amp;bids=163217.2476823&amp;type=2&amp;subid=0
 
 --- Chapter 9 Exercise 9 -----------------------------------------------------------------------------------------------
-40 files with extension .scala were found in ./src/main/scala.
+44 files with extension .scala were found in ./src/main/scala.
 
 --- Chapter 9 Exercise 10 ----------------------------------------------------------------------------------------------
 - Before serialization:
@@ -1455,8 +1455,8 @@ indexes("Mississippi") -> TreeMap(I -> Set(1, 10, 7, 4), M -> Set(0), P -> Set(9
 indexes("Mississippi") -> Map(I -> Set(1, 4, 7, 10), M -> Set(0), P -> Set(8, 9), S -> Set(2, 3, 5, 6))
 
 --- Chapter 13 Exercise 3 ----------------------------------------------------------------------------------------------
-halveByCopying(<integers from 1 to 50000>) took 1815 millisecs.
-halveByRemoving(<integers from 1 to 50000>) took 1740 millisecs.
+halveByCopying(<integers from 1 to 50000>) took 1919 millisecs.
+halveByRemoving(<integers from 1 to 50000>) took 1887 millisecs.
 
 --- Chapter 13 Exercise 4 ----------------------------------------------------------------------------------------------
 mapKeys(Array("Tom", "Fred", "Harry"), Map("Tom" -> 3, "Dick" -> 4, "Harry" -> 5)) -> (3, 5)
@@ -2235,6 +2235,8 @@ Character frequencies in this file, counted without parallelism:
 <thread>
 <thread>
 <thread>
+<thread>
+<thread>
 Character frequencies in this file, counted with parallelism:
 (
   (
@@ -2384,126 +2386,126 @@ h(0) = None
 
 --- Chapter 17 Exercise 1 ----------------------------------------------------------------------------------------------
 -- Demonstrating behavior of given for loop:
-thread 21 @ 20:02:20.856 with retval = 2 starting
-thread 21 @ 20:02:20.893 with retval = 2 ending after about 30 millisecs
-thread 21 @ 20:02:20.894 with retval = 40 starting
+thread 13 @ 00:16:23.929 with retval = 2 starting
+thread 13 @ 00:16:23.968 with retval = 2 ending after about 30 millisecs
+thread 14 @ 00:16:23.971 with retval = 40 starting
 
-thread 24 @ 20:02:20.911 with retval = 2 starting
-thread 21 @ 20:02:20.930 with retval = 40 ending after about 30 millisecs
-thread 21 @ 20:02:20.930: total = 42
-thread 24 @ 20:02:20.946 with retval = 2 ending after about 30 millisecs
-thread 21 @ 20:02:20.947 with retval = 40 starting
-thread 21 @ 20:02:20.980 with retval = 40 ending after about 30 millisecs
-thread 21 @ 20:02:20.981: total = 42
+thread 13 @ 00:16:23.994 with retval = 2 starting
+thread 14 @ 00:16:24.003 with retval = 40 ending after about 30 millisecs
+thread 14 @ 00:16:24.004: total = 42
+thread 13 @ 00:16:24.027 with retval = 2 ending after about 30 millisecs
+thread 14 @ 00:16:24.027 with retval = 40 starting
+thread 14 @ 00:16:24.058 with retval = 40 ending after about 30 millisecs
+thread 14 @ 00:16:24.058: total = 42
 
-thread 21 @ 20:02:21.002 with retval = 2 starting
-thread 21 @ 20:02:21.034 with retval = 2 ending after about 30 millisecs
-thread 24 @ 20:02:21.035 with retval = 40 starting
-thread 24 @ 20:02:21.066 with retval = 40 ending after about 30 millisecs
-thread 24 @ 20:02:21.066: total = 42
+thread 14 @ 00:16:24.086 with retval = 2 starting
+thread 14 @ 00:16:24.118 with retval = 2 ending after about 30 millisecs
+thread 13 @ 00:16:24.118 with retval = 40 starting
+thread 13 @ 00:16:24.150 with retval = 40 ending after about 30 millisecs
+thread 13 @ 00:16:24.151: total = 42
 
-thread 24 @ 20:02:21.097 with retval = 2 starting
-thread 24 @ 20:02:21.127 with retval = 2 ending after about 30 millisecs
-thread 24 @ 20:02:21.128 with retval = 40 starting
-thread 24 @ 20:02:21.163 with retval = 40 ending after about 30 millisecs
-thread 24 @ 20:02:21.163: total = 42
+thread 13 @ 00:16:24.180 with retval = 2 starting
+thread 13 @ 00:16:24.213 with retval = 2 ending after about 30 millisecs
+thread 14 @ 00:16:24.213 with retval = 40 starting
+thread 14 @ 00:16:24.246 with retval = 40 ending after about 30 millisecs
+thread 14 @ 00:16:24.246: total = 42
 
-thread 24 @ 20:02:21.187 with retval = 2 starting
-thread 24 @ 20:02:21.218 with retval = 2 ending after about 30 millisecs
-thread 22 @ 20:02:21.218 with retval = 40 starting
-thread 22 @ 20:02:21.253 with retval = 40 ending after about 30 millisecs
-thread 22 @ 20:02:21.254: total = 42
+thread 13 @ 00:16:24.270 with retval = 2 starting
+thread 13 @ 00:16:24.304 with retval = 2 ending after about 30 millisecs
+thread 13 @ 00:16:24.304 with retval = 40 starting
+thread 13 @ 00:16:24.339 with retval = 40 ending after about 30 millisecs
+thread 13 @ 00:16:24.339: total = 42
 
-thread 22 @ 20:02:21.280 with retval = 2 starting
-thread 22 @ 20:02:21.313 with retval = 2 ending after about 30 millisecs
-thread 22 @ 20:02:21.314 with retval = 40 starting
-thread 22 @ 20:02:21.348 with retval = 40 ending after about 30 millisecs
-thread 22 @ 20:02:21.349: total = 42
+thread 15 @ 00:16:24.362 with retval = 2 starting
+thread 15 @ 00:16:24.394 with retval = 2 ending after about 30 millisecs
+thread 15 @ 00:16:24.394 with retval = 40 starting
+thread 15 @ 00:16:24.426 with retval = 40 ending after about 30 millisecs
+thread 15 @ 00:16:24.426: total = 42
 
-thread 22 @ 20:02:21.371 with retval = 2 starting
-thread 22 @ 20:02:21.404 with retval = 2 ending after about 30 millisecs
-thread 22 @ 20:02:21.405 with retval = 40 starting
-thread 22 @ 20:02:21.437 with retval = 40 ending after about 30 millisecs
-thread 22 @ 20:02:21.437: total = 42
+thread 15 @ 00:16:24.455 with retval = 2 starting
+thread 15 @ 00:16:24.485 with retval = 2 ending after about 30 millisecs
+thread 14 @ 00:16:24.485 with retval = 40 starting
+thread 14 @ 00:16:24.520 with retval = 40 ending after about 30 millisecs
+thread 14 @ 00:16:24.520: total = 42
 
-thread 22 @ 20:02:21.465 with retval = 2 starting
-thread 22 @ 20:02:21.497 with retval = 2 ending after about 30 millisecs
-thread 24 @ 20:02:21.497 with retval = 40 starting
-thread 24 @ 20:02:21.530 with retval = 40 ending after about 30 millisecs
-thread 24 @ 20:02:21.530: total = 42
+thread 14 @ 00:16:24.546 with retval = 2 starting
+thread 14 @ 00:16:24.579 with retval = 2 ending after about 30 millisecs
+thread 13 @ 00:16:24.579 with retval = 40 starting
+thread 13 @ 00:16:24.611 with retval = 40 ending after about 30 millisecs
+thread 13 @ 00:16:24.611: total = 42
 
-thread 24 @ 20:02:21.555 with retval = 2 starting
-thread 24 @ 20:02:21.588 with retval = 2 ending after about 30 millisecs
-thread 24 @ 20:02:21.588 with retval = 40 starting
-thread 24 @ 20:02:21.621 with retval = 40 ending after about 30 millisecs
-thread 24 @ 20:02:21.622: total = 42
+thread 13 @ 00:16:24.638 with retval = 2 starting
+thread 13 @ 00:16:24.669 with retval = 2 ending after about 30 millisecs
+thread 13 @ 00:16:24.671 with retval = 40 starting
+thread 13 @ 00:16:24.707 with retval = 40 ending after about 30 millisecs
+thread 13 @ 00:16:24.707: total = 42
 
-thread 24 @ 20:02:21.646 with retval = 2 starting
-thread 24 @ 20:02:21.677 with retval = 2 ending after about 30 millisecs
-thread 22 @ 20:02:21.678 with retval = 40 starting
-thread 22 @ 20:02:21.709 with retval = 40 ending after about 30 millisecs
-thread 22 @ 20:02:21.710: total = 42
+thread 13 @ 00:16:24.732 with retval = 2 starting
+thread 13 @ 00:16:24.763 with retval = 2 ending after about 30 millisecs
+thread 15 @ 00:16:24.764 with retval = 40 starting
+thread 15 @ 00:16:24.796 with retval = 40 ending after about 30 millisecs
+thread 15 @ 00:16:24.797: total = 42
 
 -- Demonstrating behavior of translation with flatMap and map:
-thread 22 @ 20:02:21.740 with retval = 2 starting
-thread 22 @ 20:02:21.774 with retval = 2 ending after about 30 millisecs
-thread 24 @ 20:02:21.775 with retval = 40 starting
-thread 24 @ 20:02:21.809 with retval = 40 ending after about 30 millisecs
-thread 24 @ 20:02:21.809: total = 42
+thread 15 @ 00:16:24.825 with retval = 2 starting
+thread 15 @ 00:16:24.858 with retval = 2 ending after about 30 millisecs
+thread 13 @ 00:16:24.861 with retval = 40 starting
+thread 13 @ 00:16:24.893 with retval = 40 ending after about 30 millisecs
+thread 13 @ 00:16:24.893: total = 42
 
-thread 24 @ 20:02:21.834 with retval = 2 starting
-thread 24 @ 20:02:21.868 with retval = 2 ending after about 30 millisecs
-thread 24 @ 20:02:21.868 with retval = 40 starting
-thread 24 @ 20:02:21.903 with retval = 40 ending after about 30 millisecs
-thread 24 @ 20:02:21.903: total = 42
+thread 13 @ 00:16:24.921 with retval = 2 starting
+thread 13 @ 00:16:24.951 with retval = 2 ending after about 30 millisecs
+thread 15 @ 00:16:24.952 with retval = 40 starting
+thread 15 @ 00:16:24.984 with retval = 40 ending after about 30 millisecs
+thread 15 @ 00:16:24.985: total = 42
 
-thread 24 @ 20:02:21.925 with retval = 2 starting
-thread 24 @ 20:02:21.958 with retval = 2 ending after about 30 millisecs
-thread 22 @ 20:02:21.958 with retval = 40 starting
-thread 22 @ 20:02:21.989 with retval = 40 ending after about 30 millisecs
-thread 22 @ 20:02:21.989: total = 42
+thread 15 @ 00:16:25.016 with retval = 2 starting
+thread 15 @ 00:16:25.048 with retval = 2 ending after about 30 millisecs
+thread 13 @ 00:16:25.048 with retval = 40 starting
+thread 13 @ 00:16:25.080 with retval = 40 ending after about 30 millisecs
+thread 13 @ 00:16:25.080: total = 42
 
-thread 22 @ 20:02:22.019 with retval = 2 starting
-thread 22 @ 20:02:22.051 with retval = 2 ending after about 30 millisecs
-thread 24 @ 20:02:22.051 with retval = 40 starting
-thread 24 @ 20:02:22.082 with retval = 40 ending after about 30 millisecs
-thread 24 @ 20:02:22.083: total = 42
+thread 13 @ 00:16:25.110 with retval = 2 starting
+thread 13 @ 00:16:25.142 with retval = 2 ending after about 30 millisecs
+thread 15 @ 00:16:25.142 with retval = 40 starting
+thread 15 @ 00:16:25.175 with retval = 40 ending after about 30 millisecs
+thread 15 @ 00:16:25.176: total = 42
 
-thread 24 @ 20:02:22.112 with retval = 2 starting
-thread 24 @ 20:02:22.143 with retval = 2 ending after about 30 millisecs
-thread 22 @ 20:02:22.145 with retval = 40 starting
-thread 22 @ 20:02:22.178 with retval = 40 ending after about 30 millisecs
-thread 22 @ 20:02:22.178: total = 42
+thread 15 @ 00:16:25.201 with retval = 2 starting
+thread 15 @ 00:16:25.232 with retval = 2 ending after about 30 millisecs
+thread 13 @ 00:16:25.233 with retval = 40 starting
+thread 13 @ 00:16:25.264 with retval = 40 ending after about 30 millisecs
+thread 13 @ 00:16:25.264: total = 42
 
-thread 22 @ 20:02:22.206 with retval = 2 starting
-thread 22 @ 20:02:22.240 with retval = 2 ending after about 30 millisecs
-thread 22 @ 20:02:22.241 with retval = 40 starting
-thread 22 @ 20:02:22.273 with retval = 40 ending after about 30 millisecs
-thread 22 @ 20:02:22.273: total = 42
+thread 13 @ 00:16:25.291 with retval = 2 starting
+thread 13 @ 00:16:25.321 with retval = 2 ending after about 30 millisecs
+thread 15 @ 00:16:25.322 with retval = 40 starting
+thread 15 @ 00:16:25.353 with retval = 40 ending after about 30 millisecs
+thread 15 @ 00:16:25.353: total = 42
 
-thread 22 @ 20:02:22.297 with retval = 2 starting
-thread 22 @ 20:02:22.331 with retval = 2 ending after about 30 millisecs
-thread 24 @ 20:02:22.332 with retval = 40 starting
-thread 24 @ 20:02:22.367 with retval = 40 ending after about 30 millisecs
-thread 24 @ 20:02:22.367: total = 42
+thread 15 @ 00:16:25.383 with retval = 2 starting
+thread 15 @ 00:16:25.415 with retval = 2 ending after about 30 millisecs
+thread 13 @ 00:16:25.416 with retval = 40 starting
+thread 13 @ 00:16:25.449 with retval = 40 ending after about 30 millisecs
+thread 13 @ 00:16:25.449: total = 42
 
-thread 24 @ 20:02:22.391 with retval = 2 starting
-thread 24 @ 20:02:22.423 with retval = 2 ending after about 30 millisecs
-thread 24 @ 20:02:22.424 with retval = 40 starting
-thread 24 @ 20:02:22.457 with retval = 40 ending after about 30 millisecs
-thread 24 @ 20:02:22.457: total = 42
+thread 13 @ 00:16:25.473 with retval = 2 starting
+thread 13 @ 00:16:25.505 with retval = 2 ending after about 30 millisecs
+thread 15 @ 00:16:25.506 with retval = 40 starting
+thread 15 @ 00:16:25.538 with retval = 40 ending after about 30 millisecs
+thread 15 @ 00:16:25.539: total = 42
 
-thread 24 @ 20:02:22.481 with retval = 2 starting
-thread 24 @ 20:02:22.515 with retval = 2 ending after about 30 millisecs
-thread 24 @ 20:02:22.515 with retval = 40 starting
-thread 24 @ 20:02:22.546 with retval = 40 ending after about 30 millisecs
-thread 24 @ 20:02:22.547: total = 42
+thread 15 @ 00:16:25.564 with retval = 2 starting
+thread 15 @ 00:16:25.596 with retval = 2 ending after about 30 millisecs
+thread 13 @ 00:16:25.596 with retval = 40 starting
+thread 13 @ 00:16:25.627 with retval = 40 ending after about 30 millisecs
+thread 13 @ 00:16:25.627: total = 42
 
-thread 24 @ 20:02:22.574 with retval = 2 starting
-thread 24 @ 20:02:22.607 with retval = 2 ending after about 30 millisecs
-thread 22 @ 20:02:22.608 with retval = 40 starting
-thread 22 @ 20:02:22.641 with retval = 40 ending after about 30 millisecs
-thread 22 @ 20:02:22.641: total = 42
+thread 13 @ 00:16:25.658 with retval = 2 starting
+thread 13 @ 00:16:25.690 with retval = 2 ending after about 30 millisecs
+thread 15 @ 00:16:25.690 with retval = 40 starting
+thread 15 @ 00:16:25.721 with retval = 40 ending after about 30 millisecs
+thread 15 @ 00:16:25.721: total = 42
 
 The two futures and the combination of their results are executed sequentially in 3 different threads.
 
@@ -2520,18 +2522,19 @@ Await.result(parallelFutures(delayed(1), delayed(2), delayed(3)), waitDur) = Arr
 Await.result(parallelFutures(Seq(delayed(1), delayed(2), delayed(3)): _*), waitDur) = List(1, 2, 3)
 
 --- Chapter 17 Exercise 6 ----------------------------------------------------------------------------------------------
+enter password: > secre
 enter password: > secret
 You have found the correct password 'secret'.
 
 --- Chapter 17 Exercise 7 ----------------------------------------------------------------------------------------------
-thread 23 @ 20:02:26.533: NumericRange 27 to 52 => count = 6
-thread 22 @ 20:02:26.533: NumericRange 53 to 78 => count = 6
-thread 24 @ 20:02:26.533: NumericRange 1 to 26 => count = 9
-thread 21 @ 20:02:26.533: NumericRange 79 to 103 => count = 6
+thread 15 @ 00:16:34.047: NumericRange 1 to 26 => count = 9
+thread 16 @ 00:16:34.048: NumericRange 79 to 103 => count = 6
+thread 14 @ 00:16:34.051: NumericRange 27 to 52 => count = 6
+thread 13 @ 00:16:34.051: NumericRange 53 to 78 => count = 6
 Among the first 103 integers, 27 are probably primes with certainty 10.
 
 --- Chapter 17 Exercises 8, 9 together ---------------------------------------------------------------------------------
-In the next 60 seconds, we will try to read and process a URL from the user.
+In the next 60 nSeconds, we will try to read and process a URL from the user.
 enter URL: > https://horstmann.com/
 -- List of valid absolute hyperlinks found in the given webpage:
 - http://gridworld.info
@@ -2546,16 +2549,240 @@ enter URL: > https://horstmann.com/
 - https://horstmann.com/javascript-impatient/
 -- End of list.
 
-In the next 30 seconds, we will try to compile a list of all server headers at those links.
+In the next 30 nSeconds, we will try to compile a list of all server headers at those links.
 -- List of server headers found:
-- Apache
-- Apache/2.4.34 (Red Hat)
-- Varnish
-- mw1397.eqiad.wmnet
-- nginx
+- 6 occurrences of Apache
+- 1 occurrences of Apache/2.4.34 (Red Hat)
+- 1 occurrences of Varnish
+- 1 occurrences of mw1370.eqiad.wmnet
+- 1 occurrences of nginx
 -- End of list.
 
-WORK IN PROGRESS
+--- Chapter 17 Exercise 10 ---------------------------------------------------------------------------------------------
+In the next 60 nSeconds, we will try to read and process a URL from the user.
+enter URL: > https://horstmann.com/
+-- List of valid absolute hyperlinks found in the given webpage:
+- http://gridworld.info
+- http://horstmann.com/caypubkey.txt
+- http://sjsu.edu/
+- http://www.kiel.de/
+- http://www.syr.edu/
+- http://www.umich.edu/
+- http://www.uni-kiel.de/
+- https://codecheck.io
+- https://en.wikipedia.org/wiki/chiwriter
+- https://horstmann.com/javascript-impatient/
+-- End of list.
+
+In the next 30 nSeconds, we will try to compile a list of all server headers at those links.
+-- List of server headers found:
+- 6 occurrences of Apache
+- 1 occurrences of Apache/2.4.34 (Red Hat)
+- 1 occurrences of Varnish
+- 1 occurrences of mw1370.eqiad.wmnet
+- 1 occurrences of nginx
+-- End of list.
+
+--- Chapter 17 Exercise 11 ---------------------------------------------------------------------------------------------
+4 threads each lasting 1.5 seconds in the global thread pool:
+Thread # 4 finished @ 1.000
+Thread # 1 finished @ 1.000
+Thread # 2 finished @ 1.000
+Thread # 3 finished @ 1.000
+
+20 threads each lasting 1.5 seconds in the global thread pool:
+Thread # 1 finished @ 1.000
+Thread # 2 finished @ 1.000
+Thread # 4 finished @ 1.000
+Thread # 3 finished @ 1.000
+Thread # 7 finished @ 3.000
+Thread # 8 finished @ 3.000
+Thread # 5 finished @ 3.000
+Thread # 6 finished @ 3.000
+Thread # 10 finished @ 4.000
+Thread # 9 finished @ 4.000
+Thread # 11 finished @ 4.000
+Thread # 12 finished @ 4.000
+Thread # 13 finished @ 6.000
+Thread # 14 finished @ 6.000
+Thread # 15 finished @ 6.000
+Thread # 16 finished @ 6.000
+Thread # 18 finished @ 7.000
+Thread # 19 finished @ 7.000
+Thread # 17 finished @ 7.000
+Thread # 20 finished @ 7.000
+
+The bottleneck of having only 4 cores throttles the execution of these threads.
+
+
+4 threads each lasting 1.5 seconds in a dedicated thread pool:
+Thread # 4 finished @ 1.000
+Thread # 2 finished @ 1.000
+Thread # 1 finished @ 1.000
+Thread # 3 finished @ 1.000
+
+20 threads each lasting 1.5 seconds in a dedicated thread pool:
+Thread # 1 finished @ 1.000
+Thread # 3 finished @ 1.000
+Thread # 5 finished @ 1.000
+Thread # 2 finished @ 1.000
+Thread # 4 finished @ 1.000
+Thread # 6 finished @ 1.000
+Thread # 8 finished @ 1.000
+Thread # 9 finished @ 1.000
+Thread # 10 finished @ 1.000
+Thread # 7 finished @ 1.000
+Thread # 12 finished @ 1.000
+Thread # 11 finished @ 1.000
+Thread # 13 finished @ 1.000
+Thread # 16 finished @ 1.000
+Thread # 15 finished @ 1.000
+Thread # 17 finished @ 1.000
+Thread # 14 finished @ 1.000
+Thread # 19 finished @ 1.000
+Thread # 18 finished @ 1.000
+Thread # 20 finished @ 1.000
+
+These threads can all be executed at the same time.
+
+--- Chapter 17 Exercise 12 ---------------------------------------------------------------------------------------------
+Checking whether all links included in webpage 'https://horstmann.com' are reachable within 2 seconds...
+- http://horstmann.com/caypubkey.txt could be reached
+- http://www.uni-kiel.de/ could be reached
+- http://www.kiel.de/ could be reached
+- http://www.syr.edu/ could be reached
+- http://www.umich.edu/ could be reached
+- http://sjsu.edu/ could be reached
+- https://horstmann.com/javascript-impatient/ could be reached
+- https://codecheck.io could be reached
+- http://gridworld.info could be reached
+- https://en.wikipedia.org/wiki/chiwriter could be reached
+Returning a sequence of promises would give way too much power to the caller of this function.
+
+--- Chapter 17 Exercise 13 ---------------------------------------------------------------------------------------------
+Looking for a palindromic number in [102, 110]...
+Core # 1 is checking 105...
+Core # 2 is checking 108...
+Core # 0 is checking 102...
+Core # 0 is checking 103...
+Core # 1 is checking 106...
+Core # 2 is checking 109...
+Core # 1 is checking 107...
+Core # 0 is checking 104...
+Core # 2 is checking 110...
+No palindromic number could be found in [102, 110].
+
+Looking for a palindromic number in [1234, 2345]...
+Core # 0 is checking 1234...
+Core # 0 is checking 1235...
+Core # 0 is checking 1236...
+Core # 0 is checking 1237...
+Core # 0 is checking 1238...
+Core # 0 is checking 1239...
+Core # 0 is checking 1240...
+Core # 1 is checking 1512...
+Core # 0 is checking 1241...
+Core # 1 is checking 1513...
+Core # 2 is checking 1790...
+Core # 1 is checking 1514...
+Core # 0 is checking 1242...
+Core # 2 is checking 1791...
+Core # 1 is checking 1515...
+Core # 2 is checking 1792...
+Core # 1 is checking 1516...
+Core # 3 is checking 2068...
+Core # 3 is checking 2069...
+Core # 0 is checking 1243...
+Core # 0 is checking 1244...
+Core # 3 is checking 2070...
+Core # 0 is checking 1245...
+Core # 3 is checking 2071...
+Core # 0 is checking 1246...
+Core # 3 is checking 2072...
+Core # 0 is checking 1247...
+Core # 3 is checking 2073...
+Core # 0 is checking 1248...
+Core # 3 is checking 2074...
+Core # 3 is checking 2075...
+Core # 1 is checking 1517...
+Core # 2 is checking 1793...
+Core # 1 is checking 1518...
+Core # 2 is checking 1794...
+Core # 3 is checking 2076...
+Core # 2 is checking 1795...
+Core # 0 is checking 1249...
+Core # 3 is checking 2077...
+Core # 2 is checking 1796...
+Core # 3 is checking 2078...
+Core # 2 is checking 1797...
+Core # 0 is checking 1250...
+Core # 2 is checking 1798...
+Core # 1 is checking 1519...
+Core # 0 is checking 1251...
+Core # 2 is checking 1799...
+Core # 1 is checking 1520...
+Core # 0 is checking 1252...
+Core # 1 is checking 1521...
+Core # 0 is checking 1253...
+Core # 1 is checking 1522...
+Core # 0 is checking 1254...
+Core # 1 is checking 1523...
+Core # 0 is checking 1255...
+Core # 1 is checking 1524...
+Core # 0 is checking 1256...
+Core # 3 is checking 2079...
+Core # 0 is checking 1257...
+Core # 3 is checking 2080...
+Core # 3 is checking 2081...
+Core # 1 is checking 1525...
+Core # 1 is checking 1526...
+Core # 2 is checking 1800...
+Core # 2 is checking 1801...
+Core # 2 is checking 1802...
+Core # 2 is checking 1803...
+Core # 1 is checking 1527...
+Core # 2 is checking 1804...
+Core # 1 is checking 1528...
+Core # 2 is checking 1805...
+Core # 1 is checking 1529...
+Core # 2 is checking 1806...
+Core # 1 is checking 1530...
+Core # 2 is checking 1807...
+Core # 1 is checking 1531...
+Core # 2 is checking 1808...
+Core # 1 is checking 1532...
+Core # 2 is checking 1809...
+Core # 1 is checking 1533...
+Core # 2 is checking 1810...
+Core # 1 is checking 1534...
+Core # 2 is checking 1811...
+Core # 1 is checking 1535...
+Core # 2 is checking 1812...
+Core # 1 is checking 1536...
+Core # 2 is checking 1813...
+Core # 1 is checking 1537...
+Core # 2 is checking 1814...
+Core # 1 is checking 1538...
+Core # 3 is checking 2082...
+Core # 1 is checking 1539...
+Core # 1 is checking 1540...
+Core # 1 is checking 1541...
+Core # 1 is checking 1542...
+Core # 1 is checking 1543...
+Core # 1 is checking 1544...
+Core # 1 is checking 1545...
+Core # 1 is checking 1546...
+Core # 1 is checking 1547...
+Core # 1 is checking 1548...
+Core # 1 is checking 1549...
+Core # 1 is checking 1550...
+Core # 0 is checking 1258...
+Core # 1 is checking 1551...
+Core # 3 is checking 2083...
+Core # 2 is checking 1815...
+The first palindromic found in [1234, 2345] was 1551.
+
+
 
 
 ========================================================================================================================
@@ -2575,5 +2802,3 @@ Chapter 12. Higher-Order Functions
 Chapter 13. Collections
 Chapter 14. Pattern Matching and Case Classes
 Chapter 17. Futures
-
-Process finished with exit code 0

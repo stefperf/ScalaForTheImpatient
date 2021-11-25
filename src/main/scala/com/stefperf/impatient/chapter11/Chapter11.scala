@@ -92,7 +92,7 @@ object Chapter11 extends Chapter(11, "Operators") {
     }
 
     exercise(12, 13) {
-      Chapter11Exercises12_13.main(Array.empty)
+      Chapter11Exercises12And13.main(Array.empty)
     }
 
   }
