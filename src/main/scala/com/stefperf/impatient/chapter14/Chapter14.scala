@@ -2,7 +2,7 @@ package com.stefperf.impatient.chapter14
 
 import com.stefperf.impatient._
 
-object Chapter14 extends Chapter(14, "Pattern Matching and Case Classes") {
+object Chapter14 extends Chapter(14, "Pattern Matching and Case Classes", Level.A2) {
   override def exercises() {
     exercise(1) {
       "Skipped, as it is no programming exercise."

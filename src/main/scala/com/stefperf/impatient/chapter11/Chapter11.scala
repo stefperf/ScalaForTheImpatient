@@ -2,7 +2,7 @@ package com.stefperf.impatient.chapter11
 
 import com.stefperf.impatient._
 
-object Chapter11 extends Chapter(11, "Operators") {
+object Chapter11 extends Chapter(11, "Operators", Level.L1) {
   override def exercises() {
     exercise(1) {
       println(s"3 + 4 -> 5 == (3 + 4) -> 5 == ${3 + 4 -> 5}, " +

@@ -2,7 +2,7 @@ package com.stefperf.impatient.chapter07
 
 import com.stefperf.impatient._
 
-object Chapter07 extends Chapter(7, "Packages and Imports") {
+object Chapter07 extends Chapter(7, "Packages and Imports", Level.A1) {
   override def exercises() {
     exercise(1) {
       import _root_.com.horstmann.impatient.{Chapter7Exercise1A, Chapter7Exercise1B}

@@ -2,7 +2,7 @@ package com.stefperf.impatient.chapter10
 
 import com.stefperf.impatient._
 
-object Chapter10 extends Chapter(10, "Traits") {
+object Chapter10 extends Chapter(10, "Traits", Level.L1) {
   override def exercises() {
     exercise(1) {
       trait RectangleLike {

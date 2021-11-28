@@ -2,7 +2,7 @@ package com.stefperf.impatient.chapter02
 
 import com.stefperf.impatient._
 
-object Chapter02 extends Chapter(2, "Control Structures and Functions") {
+object Chapter02 extends Chapter(2, "Control Structures and Functions", Level.A1) {
 
   override def exercises() {
     exercise(1) {

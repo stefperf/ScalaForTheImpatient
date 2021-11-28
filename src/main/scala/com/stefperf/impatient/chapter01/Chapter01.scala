@@ -2,7 +2,7 @@ package com.stefperf.impatient.chapter01
 
 import com.stefperf.impatient._
 
-object Chapter01 extends Chapter(1, "The Basics") {
+object Chapter01 extends Chapter(1, "The Basics", Level.A1) {
   override def exercises() {
     println("Most exercises of this chapter are skipped here as they are just theory questions or REPL exercises.")
     println()

@@ -2,7 +2,7 @@ package com.stefperf.impatient.chapter12
 
 import com.stefperf.impatient._
 
-object Chapter12 extends Chapter(12, "Higher-Order Functions") {
+object Chapter12 extends Chapter(12, "Higher-Order Functions", Level.L1) {
   override def exercises() {
 
     exercise(1) {

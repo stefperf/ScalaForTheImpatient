@@ -4,7 +4,7 @@ import com.stefperf.impatient._
 
 import scala.collection.immutable.SortedMap
 
-object Chapter13 extends Chapter(13, "Collections") {
+object Chapter13 extends Chapter(13, "Collections", Level.A2) {
   override def exercises() {
     exercise(1) {
       import scala.collection.mutable

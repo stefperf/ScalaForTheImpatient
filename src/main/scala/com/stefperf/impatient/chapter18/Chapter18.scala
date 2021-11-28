@@ -2,7 +2,7 @@ package com.stefperf.impatient.chapter18
 
 import com.stefperf.impatient._
 
-object Chapter18 extends Chapter(18, "Type Parameters") {
+object Chapter18 extends Chapter(18, "Type Parameters", Level.L2) {
 
   override def exercises() {
 

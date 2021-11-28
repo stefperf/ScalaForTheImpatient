@@ -5,7 +5,7 @@ import scala.io.Source
 
 import com.stefperf.impatient._
 
-object Chapter09 extends Chapter(9, "Files and Regular Expressions") {
+object Chapter09 extends Chapter(9, "Files and Regular Expressions", Level.A1) {
   override def exercises() {
 
     exercise(1) {

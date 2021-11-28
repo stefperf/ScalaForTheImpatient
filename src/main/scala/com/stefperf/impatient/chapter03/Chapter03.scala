@@ -7,7 +7,7 @@ import scala.collection.mutable.ArrayBuffer
 import scala.reflect.ClassTag
 import scala.util.Random
 
-object Chapter03 extends Chapter(3, "Working with Arrays") {
+object Chapter03 extends Chapter(3, "Working with Arrays", Level.A1) {
 
   override def exercises() {
     exercise(1) {

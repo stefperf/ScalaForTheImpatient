@@ -36,11 +36,23 @@ package object impatient {
   def threadAndTime: String = s"thread ${Thread.currentThread.getId} @ " +
     s"${DateTimeFormatter.ofPattern("HH:mm:ss.SSS").format(LocalDateTime.now)}"
 
-  abstract class Chapter(val chapterNumber: Int, title: String) {
-    Chapter.chaptersByNumber(chapterNumber) = this  // register this chapter
-    def header: String = Chapter.header(chapterNumber, title)
+  object Level extends Enumeration {
+    type Level = Value
+    val A1 = Value("A1")
+    val A2 = Value("A2")
+    val A3 = Value("A3")
+    val L1 = Value("L1")
+    val L2 = Value("L2")
+    val L3 = Value("L3")
+    val UNKNOWN = Value("UNKNOWN")
+  }
+  import Level._
 
-    def main(args: Array[String] = Array.empty): Unit = Chapter.frameBody(chapterNumber, title, exercises)
+  abstract class Chapter(val chapterNumber: Int, val title: String, val level: Level) {
+    Chapter.chaptersByNumber(chapterNumber) = this  // register this chapter
+    def header: String = Chapter.header(chapterNumber, title, level)
+
+    def main(args: Array[String] = Array.empty): Unit = Chapter.frameBody(chapterNumber, title, level, exercises)
 
     def forceInit(): Unit = {}  // just trigger construction execution
 
@@ -63,11 +75,11 @@ package object impatient {
     private val FillCh = "="
     private val chaptersByNumber = scala.collection.mutable.LinkedHashMap[Int, Chapter]()
 
-    protected def header(number: Int, title: String) = f"Chapter $number. $title"
+    protected def header(number: Int, title: String, level: Level) = f"Chapter $number. $title - $level"
 
-    protected def frameBody(number: Int, title: String, body: () => Unit): Unit = {
+    protected def frameBody(number: Int, title: String, level: Level, body: () => Unit): Unit = {
       println(FillCh * LineLength)
-      println(fillLine(f"${FillCh * 3} ${header(number, title)} ", FillCh))
+      println(fillLine(f"${FillCh * 3} ${header(number, title, level)} ", FillCh))
       println()
       body()
       println()
@@ -83,7 +95,7 @@ package object impatient {
           chapter.main(Array.empty)
           headersExecuted += chapter.header
         }
-        else frameBody(num, "", () => {println("not isImplemented")})
+        else frameBody(num, "", Level.UNKNOWN, () => {println("not isImplemented")})
       }
       if (headersExecuted.nonEmpty) {
         println(FillCh * LineLength)

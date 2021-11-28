@@ -1,6 +1,6 @@
-/Library/Java/JavaVirtualMachines/temurin-11.jdk/Contents/Home/bin/java -javaagent:/Applications/IntelliJ IDEA CE.app/Contents/lib/idea_rt.jar=59241:/Applications/IntelliJ IDEA CE.app/Contents/bin -Dfile.encoding=UTF-8 -classpath /Users/Stefano/Documents/GitHub/ScalaForTheImpatient/target/scala-2.12/classes:/Users/Stefano/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/scala-library/2.12.14/scala-library-2.12.14.jar:/Users/Stefano/Documents/GitHub/ScalaForTheImpatient/lib/hamcrest-core-1.3-javadoc.jar:/Users/Stefano/Documents/GitHub/ScalaForTheImpatient/lib/hamcrest-core-1.3-sources.jar:/Users/Stefano/Documents/GitHub/ScalaForTheImpatient/lib/hamcrest-core-1.3.jar:/Users/Stefano/Documents/GitHub/ScalaForTheImpatient/lib/junit-4.12-javadoc.jar:/Users/Stefano/Documents/GitHub/ScalaForTheImpatient/lib/junit-4.12-sources.jar:/Users/Stefano/Documents/GitHub/ScalaForTheImpatient/lib/junit-4.12.jar com.stefperf.impatient.AllBook
+/Library/Java/JavaVirtualMachines/temurin-11.jdk/Contents/Home/bin/java -javaagent:/Applications/IntelliJ IDEA CE.app/Contents/lib/idea_rt.jar=59344:/Applications/IntelliJ IDEA CE.app/Contents/bin -Dfile.encoding=UTF-8 -classpath /Users/Stefano/Documents/GitHub/ScalaForTheImpatient/target/scala-2.12/classes:/Users/Stefano/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/scala-library/2.12.14/scala-library-2.12.14.jar:/Users/Stefano/Documents/GitHub/ScalaForTheImpatient/lib/hamcrest-core-1.3-javadoc.jar:/Users/Stefano/Documents/GitHub/ScalaForTheImpatient/lib/hamcrest-core-1.3-sources.jar:/Users/Stefano/Documents/GitHub/ScalaForTheImpatient/lib/hamcrest-core-1.3.jar:/Users/Stefano/Documents/GitHub/ScalaForTheImpatient/lib/junit-4.12-javadoc.jar:/Users/Stefano/Documents/GitHub/ScalaForTheImpatient/lib/junit-4.12-sources.jar:/Users/Stefano/Documents/GitHub/ScalaForTheImpatient/lib/junit-4.12.jar com.stefperf.impatient.AllBook
 ========================================================================================================================
-=== Chapter 1. The Basics ==============================================================================================
+=== Chapter 1. The Basics - A1 =========================================================================================
 
 Most exercises of this chapter are skipped here as they are just theory questions or REPL exercises.
 
@@ -11,10 +11,10 @@ Most exercises of this chapter are skipped here as they are just theory question
 2 ^1024 = 179769313486231590772930519078902473361797697894230657273430081157732675805500963132708477322407536021120113879871393357658789768814416622492847430639474124377767893424865485276302219601246094119453082952085005768838150682342462881473913110540827237163350510684586298239947245938479716304835356329624224137216
 
 --- Chapter 1 Exercise 7 -----------------------------------------------------------------------------------------------
-933343661018077329562920479051
+984147045582296781240889506047
 
 --- Chapter 1 Exercise 8 -----------------------------------------------------------------------------------------------
-10 random charachers in range [a-z0-9]: 148jwwd6f8
+10 random charachers in range [a-z0-9]: 13m0ivof63
 
 --- Chapter 1 Exercise 9 -----------------------------------------------------------------------------------------------
 First and last characters of string 'Hello!': 'H', '!'
@@ -22,7 +22,7 @@ First and last characters of string 'Hello!': 'H', '!'
 
 
 ========================================================================================================================
-=== Chapter 2. Control Structures and Functions ========================================================================
+=== Chapter 2. Control Structures and Functions - A1 ===================================================================
 
 --- Chapter 2 Exercise 1 -----------------------------------------------------------------------------------------------
 0
@@ -59,11 +59,11 @@ First and last characters of string 'Hello!': 'H', '!'
 
 
 ========================================================================================================================
-=== Chapter 3. Working with Arrays =====================================================================================
+=== Chapter 3. Working with Arrays - A1 ================================================================================
 
 --- Chapter 3 Exercise 1 -----------------------------------------------------------------------------------------------
-(0, 1, 2)
-(3, 4, 4, 6, 2, 2, 5, 4)
+(2, 2, 1)
+(6, 2, 1, 3, 3, 2, 1, 1)
 
 --- Chapter 3 Exercise 2 -----------------------------------------------------------------------------------------------
 (2, 1, 4, 3, 5)
@@ -85,8 +85,8 @@ First and last characters of string 'Hello!': 'H', '!'
 (5, 4, 3, 2, 1)
 
 --- Chapter 3 Exercise 7 -----------------------------------------------------------------------------------------------
-(5, 0, 5, 1, 0, 2, 0, 2, 2, 4, 5, 4, 2, 5, 4, 0, 4, 2, 5, 5)
-(5, 0, 1, 2, 4)
+(5, 0, 4, 5, 2, 4, 5, 2, 4, 5, 3, 0, 1, 3, 3, 5, 0, 2, 2, 1)
+(5, 0, 4, 2, 3, 1)
 
 --- Chapter 3 Exercise 8 -----------------------------------------------------------------------------------------------
 (4, 2, -3, -6, 6, 7, -5)
@@ -289,7 +289,7 @@ val nativesForImageFlavor = Map[DataFlavor, String](
 
 
 ========================================================================================================================
-=== Chapter 4. Maps and Tuples =========================================================================================
+=== Chapter 4. Maps and Tuples - A1 ====================================================================================
 
 --- Chapter 4 Exercise 1 -----------------------------------------------------------------------------------------------
 discountedPRices =
@@ -322,6 +322,7 @@ Top 5 most frequent 'words' in this file:
 
 --- Chapter 4 Exercise 4 -----------------------------------------------------------------------------------------------
 (
+  (A => 1),
   (Array => 4),
   (Boolean => 2),
   (Calendar => 8),
@@ -334,6 +335,7 @@ Top 5 most frequent 'words' in this file:
   (Hello => 4),
   (Int => 15),
   (JavaConverters => 2),
+  (Level => 1),
   (LinkedHashMap => 1),
   (ListMap => 2),
   (MONDAY => 1),
@@ -510,6 +512,7 @@ Top 5 most frequent 'words' in this file:
 
 --- Chapter 4 Exercise 5 -----------------------------------------------------------------------------------------------
 (
+  (A => 1),
   (Array => 4),
   (Boolean => 2),
   (Calendar => 8),
@@ -522,6 +525,7 @@ Top 5 most frequent 'words' in this file:
   (Hello => 4),
   (Int => 15),
   (JavaConverters => 2),
+  (Level => 1),
   (LinkedHashMap => 1),
   (ListMap => 2),
   (MONDAY => 1),
@@ -794,7 +798,7 @@ Words 'Hello' and 'hollow' have these same-position, same-case letter overlaps:
 
 
 ========================================================================================================================
-=== Chapter 5. Classes =================================================================================================
+=== Chapter 5. Classes - A1 ============================================================================================
 
 --- Chapter 5 Exercise 1 -----------------------------------------------------------------------------------------------
 saferCounter.increment() threw: 'integer overflow prevented'
@@ -832,7 +836,7 @@ e: name = Stefano, salary = 10000.0
 
 
 ========================================================================================================================
-=== Chapter 6. Objects =================================================================================================
+=== Chapter 6. Objects - A1 ============================================================================================
 
 --- Chapter 6 Exercise 1 -----------------------------------------------------------------------------------------------
 100.0 mile = 160.934 kilometer
@@ -879,7 +883,7 @@ white, 0xffffff
 
 
 ========================================================================================================================
-=== Chapter 7. Packages and Imports ====================================================================================
+=== Chapter 7. Packages and Imports - A1 ===============================================================================
 
 --- Chapter 7 Exercise 1 -----------------------------------------------------------------------------------------------
 Object Chapter7Exercise1A can see both com.horstmann and com.horstmann.impatient members:
@@ -945,7 +949,7 @@ Source: https://docs.google.com/spreadsheets/d/1xyToGau13ZEQXTQh1sgbPUJNc3-NBYcr
 
 
 ========================================================================================================================
-=== Chapter 8. Inheritance =============================================================================================
+=== Chapter 8. Inheritance - A1 ========================================================================================
 
 --- Chapter 8 Exercise 1 -----------------------------------------------------------------------------------------------
 After 3 operations:
@@ -993,7 +997,7 @@ Point(x = 5, y = 2)
 
 
 ========================================================================================================================
-=== Chapter 9. Files and Regular Expressions ===========================================================================
+=== Chapter 9. Files and Regular Expressions - A1 ======================================================================
 
 --- Chapter 9 Exercise 1 -----------------------------------------------------------------------------------------------
 -- File Chapter09Exercise01.txt contains:
@@ -1109,7 +1113,7 @@ Carlo's friends: Boris.
 
 
 ========================================================================================================================
-=== Chapter 10. Traits =================================================================================================
+=== Chapter 10. Traits - L1 ============================================================================================
 
 --- Chapter 10 Exercise 1 ----------------------------------------------------------------------------------------------
 - Behavior of java.awt.Rectangle ---
@@ -1227,7 +1231,7 @@ Skipped as it is not a coding exercise.
 
 
 ========================================================================================================================
-=== Chapter 11. Operators ==============================================================================================
+=== Chapter 11. Operators - L1 =========================================================================================
 
 --- Chapter 11 Exercise 1 ----------------------------------------------------------------------------------------------
 3 + 4 -> 5 == (3 + 4) -> 5 == (7,5), from left to right, because both operators have the same precedence.
@@ -1373,7 +1377,7 @@ XMLElement(name='ul', text='', 2 attributes, 0 _children)
 
 
 ========================================================================================================================
-=== Chapter 12. Higher-Order Functions =================================================================================
+=== Chapter 12. Higher-Order Functions - L1 ============================================================================
 
 --- Chapter 12 Exercise 1 ----------------------------------------------------------------------------------------------
 values(x => x * x, -5, 5):
@@ -1446,7 +1450,7 @@ For example:
 
 
 ========================================================================================================================
-=== Chapter 13. Collections ============================================================================================
+=== Chapter 13. Collections - A2 =======================================================================================
 
 --- Chapter 13 Exercise 1 ----------------------------------------------------------------------------------------------
 indexes("Mississippi") -> TreeMap(I -> Set(1, 10, 7, 4), M -> Set(0), P -> Set(9, 8), S -> Set(5, 2, 6, 3))
@@ -1455,8 +1459,8 @@ indexes("Mississippi") -> TreeMap(I -> Set(1, 10, 7, 4), M -> Set(0), P -> Set(9
 indexes("Mississippi") -> Map(I -> Set(1, 4, 7, 10), M -> Set(0), P -> Set(8, 9), S -> Set(2, 3, 5, 6))
 
 --- Chapter 13 Exercise 3 ----------------------------------------------------------------------------------------------
-halveByCopying(<integers from 1 to 50000>) took 1688 millisecs.
-halveByRemoving(<integers from 1 to 50000>) took 1638 millisecs.
+halveByCopying(<integers from 1 to 50000>) took 1667 millisecs.
+halveByRemoving(<integers from 1 to 50000>) took 1581 millisecs.
 
 --- Chapter 13 Exercise 4 ----------------------------------------------------------------------------------------------
 mapKeys(Array("Tom", "Fred", "Harry"), Map("Tom" -> 3, "Dick" -> 4, "Harry" -> 5)) -> (3, 5)
@@ -2133,7 +2137,7 @@ Character frequencies in this file, counted without parallelism:
 (
   (
  => 140),
-  (  => 1267),
+  (  => 1268),
   (! => 2),
   (" => 110),
   ($ => 12),
@@ -2142,13 +2146,13 @@ Character frequencies in this file, counted without parallelism:
   () => 200),
   (* => 13),
   (+ => 31),
-  (, => 82),
+  (, => 83),
   (- => 24),
-  (. => 110),
+  (. => 111),
   (/ => 15),
   (0 => 15),
   (1 => 46),
-  (2 => 19),
+  (2 => 20),
   (3 => 24),
   (4 => 7),
   (5 => 8),
@@ -2161,7 +2165,7 @@ Character frequencies in this file, counted without parallelism:
   (< => 9),
   (= => 66),
   (> => 45),
-  (A => 17),
+  (A => 18),
   (B => 15),
   (C => 30),
   (D => 12),
@@ -2170,7 +2174,7 @@ Character frequencies in this file, counted without parallelism:
   (H => 4),
   (I => 31),
   (K => 6),
-  (L => 18),
+  (L => 19),
   (M => 30),
   (N => 15),
   (O => 3),
@@ -2191,14 +2195,14 @@ Character frequencies in this file, counted without parallelism:
   (b => 34),
   (c => 111),
   (d => 78),
-  (e => 377),
+  (e => 379),
   (f => 60),
   (g => 42),
   (h => 68),
   (i => 259),
   (j => 15),
   (k => 21),
-  (l => 177),
+  (l => 178),
   (m => 99),
   (n => 257),
   (o => 174),
@@ -2208,7 +2212,7 @@ Character frequencies in this file, counted without parallelism:
   (s => 216),
   (t => 345),
   (u => 71),
-  (v => 34),
+  (v => 35),
   (w => 17),
   (x => 40),
   (y => 41),
@@ -2245,7 +2249,7 @@ Character frequencies in this file, counted with parallelism:
 (
   (
  => 140),
-  (  => 1267),
+  (  => 1268),
   (! => 2),
   (" => 110),
   ($ => 12),
@@ -2254,13 +2258,13 @@ Character frequencies in this file, counted with parallelism:
   () => 200),
   (* => 13),
   (+ => 31),
-  (, => 82),
+  (, => 83),
   (- => 24),
-  (. => 110),
+  (. => 111),
   (/ => 15),
   (0 => 15),
   (1 => 46),
-  (2 => 19),
+  (2 => 20),
   (3 => 24),
   (4 => 7),
   (5 => 8),
@@ -2273,7 +2277,7 @@ Character frequencies in this file, counted with parallelism:
   (< => 9),
   (= => 66),
   (> => 45),
-  (A => 17),
+  (A => 18),
   (B => 15),
   (C => 30),
   (D => 12),
@@ -2282,7 +2286,7 @@ Character frequencies in this file, counted with parallelism:
   (H => 4),
   (I => 31),
   (K => 6),
-  (L => 18),
+  (L => 19),
   (M => 30),
   (N => 15),
   (O => 3),
@@ -2303,14 +2307,14 @@ Character frequencies in this file, counted with parallelism:
   (b => 34),
   (c => 111),
   (d => 78),
-  (e => 377),
+  (e => 379),
   (f => 60),
   (g => 42),
   (h => 68),
   (i => 259),
   (j => 15),
   (k => 21),
-  (l => 177),
+  (l => 178),
   (m => 99),
   (n => 257),
   (o => 174),
@@ -2320,7 +2324,7 @@ Character frequencies in this file, counted with parallelism:
   (s => 216),
   (t => 345),
   (u => 71),
-  (v => 34),
+  (v => 35),
   (w => 17),
   (x => 40),
   (y => 41),
@@ -2332,7 +2336,7 @@ Character frequencies in this file, counted with parallelism:
 
 
 ========================================================================================================================
-=== Chapter 14. Pattern Matching and Case Classes ======================================================================
+=== Chapter 14. Pattern Matching and Case Classes - A2 =================================================================
 
 --- Chapter 14 Exercise 1 ----------------------------------------------------------------------------------------------
 
@@ -2386,130 +2390,130 @@ h(0) = None
 
 
 ========================================================================================================================
-=== Chapter 17. Futures ================================================================================================
+=== Chapter 17. Futures - A2 ===========================================================================================
 
 --- Chapter 17 Exercise 1 ----------------------------------------------------------------------------------------------
 -- Demonstrating behavior of given for loop:
-thread 21 @ 00:33:33.068 with retval = 2 starting
-thread 21 @ 00:33:33.106 with retval = 2 ending after about 30 millisecs
-thread 21 @ 00:33:33.109 with retval = 40 starting
+thread 20 @ 01:00:08.226 with retval = 2 starting
+thread 20 @ 01:00:08.263 with retval = 2 ending after about 30 millisecs
+thread 20 @ 01:00:08.264 with retval = 40 starting
 
-thread 22 @ 00:33:33.137 with retval = 2 starting
-thread 21 @ 00:33:33.144 with retval = 40 ending after about 30 millisecs
-thread 23 @ 00:33:33.144: total = 42
-thread 22 @ 00:33:33.168 with retval = 2 ending after about 30 millisecs
-thread 22 @ 00:33:33.168 with retval = 40 starting
-thread 22 @ 00:33:33.202 with retval = 40 ending after about 30 millisecs
-thread 22 @ 00:33:33.203: total = 42
+thread 22 @ 01:00:08.294 with retval = 2 starting
+thread 20 @ 01:00:08.295 with retval = 40 ending after about 30 millisecs
+thread 20 @ 01:00:08.297: total = 42
+thread 22 @ 01:00:08.327 with retval = 2 ending after about 30 millisecs
+thread 22 @ 01:00:08.327 with retval = 40 starting
+thread 22 @ 01:00:08.360 with retval = 40 ending after about 30 millisecs
+thread 22 @ 01:00:08.360: total = 42
 
-thread 22 @ 00:33:33.228 with retval = 2 starting
-thread 22 @ 00:33:33.262 with retval = 2 ending after about 30 millisecs
-thread 23 @ 00:33:33.262 with retval = 40 starting
-thread 23 @ 00:33:33.298 with retval = 40 ending after about 30 millisecs
-thread 23 @ 00:33:33.298: total = 42
+thread 22 @ 01:00:08.389 with retval = 2 starting
+thread 22 @ 01:00:08.422 with retval = 2 ending after about 30 millisecs
+thread 20 @ 01:00:08.423 with retval = 40 starting
+thread 20 @ 01:00:08.456 with retval = 40 ending after about 30 millisecs
+thread 20 @ 01:00:08.457: total = 42
 
-thread 23 @ 00:33:33.323 with retval = 2 starting
-thread 23 @ 00:33:33.356 with retval = 2 ending after about 30 millisecs
-thread 22 @ 00:33:33.356 with retval = 40 starting
-thread 22 @ 00:33:33.392 with retval = 40 ending after about 30 millisecs
-thread 22 @ 00:33:33.392: total = 42
+thread 20 @ 01:00:08.480 with retval = 2 starting
+thread 20 @ 01:00:08.513 with retval = 2 ending after about 30 millisecs
+thread 22 @ 01:00:08.513 with retval = 40 starting
+thread 22 @ 01:00:08.548 with retval = 40 ending after about 30 millisecs
+thread 22 @ 01:00:08.548: total = 42
 
-thread 22 @ 00:33:33.415 with retval = 2 starting
-thread 22 @ 00:33:33.448 with retval = 2 ending after about 30 millisecs
-thread 23 @ 00:33:33.448 with retval = 40 starting
-thread 23 @ 00:33:33.482 with retval = 40 ending after about 30 millisecs
-thread 22 @ 00:33:33.483: total = 42
+thread 22 @ 01:00:08.572 with retval = 2 starting
+thread 22 @ 01:00:08.607 with retval = 2 ending after about 30 millisecs
+thread 23 @ 01:00:08.607 with retval = 40 starting
+thread 23 @ 01:00:08.641 with retval = 40 ending after about 30 millisecs
+thread 23 @ 01:00:08.641: total = 42
 
-thread 22 @ 00:33:33.508 with retval = 2 starting
-thread 22 @ 00:33:33.541 with retval = 2 ending after about 30 millisecs
-thread 23 @ 00:33:33.542 with retval = 40 starting
-thread 23 @ 00:33:33.576 with retval = 40 ending after about 30 millisecs
-thread 23 @ 00:33:33.576: total = 42
+thread 23 @ 01:00:08.667 with retval = 2 starting
+thread 23 @ 01:00:08.702 with retval = 2 ending after about 30 millisecs
+thread 22 @ 01:00:08.703 with retval = 40 starting
+thread 22 @ 01:00:08.736 with retval = 40 ending after about 30 millisecs
+thread 22 @ 01:00:08.736: total = 42
 
-thread 23 @ 00:33:33.604 with retval = 2 starting
-thread 23 @ 00:33:33.639 with retval = 2 ending after about 30 millisecs
-thread 22 @ 00:33:33.640 with retval = 40 starting
-thread 22 @ 00:33:33.670 with retval = 40 ending after about 30 millisecs
-thread 22 @ 00:33:33.671: total = 42
+thread 22 @ 01:00:08.760 with retval = 2 starting
+thread 22 @ 01:00:08.793 with retval = 2 ending after about 30 millisecs
+thread 22 @ 01:00:08.794 with retval = 40 starting
+thread 22 @ 01:00:08.827 with retval = 40 ending after about 30 millisecs
+thread 22 @ 01:00:08.827: total = 42
 
-thread 22 @ 00:33:33.698 with retval = 2 starting
-thread 22 @ 00:33:33.733 with retval = 2 ending after about 30 millisecs
-thread 22 @ 00:33:33.733 with retval = 40 starting
-thread 22 @ 00:33:33.765 with retval = 40 ending after about 30 millisecs
-thread 22 @ 00:33:33.766: total = 42
+thread 22 @ 01:00:08.853 with retval = 2 starting
+thread 22 @ 01:00:08.887 with retval = 2 ending after about 30 millisecs
+thread 23 @ 01:00:08.889 with retval = 40 starting
+thread 23 @ 01:00:08.924 with retval = 40 ending after about 30 millisecs
+thread 23 @ 01:00:08.926: total = 42
 
-thread 22 @ 00:33:33.789 with retval = 2 starting
-thread 22 @ 00:33:33.820 with retval = 2 ending after about 30 millisecs
-thread 23 @ 00:33:33.820 with retval = 40 starting
-thread 23 @ 00:33:33.851 with retval = 40 ending after about 30 millisecs
-thread 23 @ 00:33:33.852: total = 42
+thread 23 @ 01:00:08.945 with retval = 2 starting
+thread 23 @ 01:00:08.978 with retval = 2 ending after about 30 millisecs
+thread 23 @ 01:00:08.979 with retval = 40 starting
+thread 23 @ 01:00:09.011 with retval = 40 ending after about 30 millisecs
+thread 23 @ 01:00:09.012: total = 42
 
-thread 23 @ 00:33:33.879 with retval = 2 starting
-thread 23 @ 00:33:33.911 with retval = 2 ending after about 30 millisecs
-thread 22 @ 00:33:33.912 with retval = 40 starting
-thread 22 @ 00:33:33.945 with retval = 40 ending after about 30 millisecs
-thread 22 @ 00:33:33.946: total = 42
+thread 23 @ 01:00:09.040 with retval = 2 starting
+thread 23 @ 01:00:09.071 with retval = 2 ending after about 30 millisecs
+thread 22 @ 01:00:09.071 with retval = 40 starting
+thread 22 @ 01:00:09.105 with retval = 40 ending after about 30 millisecs
+thread 22 @ 01:00:09.106: total = 42
 
 -- Demonstrating behavior of translation with flatMap and map:
-thread 22 @ 00:33:33.975 with retval = 2 starting
-thread 22 @ 00:33:34.006 with retval = 2 ending after about 30 millisecs
-thread 23 @ 00:33:34.008 with retval = 40 starting
-thread 23 @ 00:33:34.041 with retval = 40 ending after about 30 millisecs
-thread 23 @ 00:33:34.041: total = 42
+thread 22 @ 01:00:09.132 with retval = 2 starting
+thread 22 @ 01:00:09.168 with retval = 2 ending after about 30 millisecs
+thread 23 @ 01:00:09.169 with retval = 40 starting
+thread 23 @ 01:00:09.200 with retval = 40 ending after about 30 millisecs
+thread 23 @ 01:00:09.200: total = 42
 
-thread 23 @ 00:33:34.067 with retval = 2 starting
-thread 23 @ 00:33:34.099 with retval = 2 ending after about 30 millisecs
-thread 22 @ 00:33:34.100 with retval = 40 starting
-thread 22 @ 00:33:34.135 with retval = 40 ending after about 30 millisecs
-thread 22 @ 00:33:34.135: total = 42
+thread 23 @ 01:00:09.231 with retval = 2 starting
+thread 23 @ 01:00:09.266 with retval = 2 ending after about 30 millisecs
+thread 22 @ 01:00:09.266 with retval = 40 starting
+thread 22 @ 01:00:09.298 with retval = 40 ending after about 30 millisecs
+thread 22 @ 01:00:09.298: total = 42
 
-thread 22 @ 00:33:34.158 with retval = 2 starting
-thread 22 @ 00:33:34.189 with retval = 2 ending after about 30 millisecs
-thread 21 @ 00:33:34.190 with retval = 40 starting
-thread 21 @ 00:33:34.220 with retval = 40 ending after about 30 millisecs
-thread 21 @ 00:33:34.221: total = 42
+thread 22 @ 01:00:09.326 with retval = 2 starting
+thread 22 @ 01:00:09.359 with retval = 2 ending after about 30 millisecs
+thread 23 @ 01:00:09.359 with retval = 40 starting
+thread 23 @ 01:00:09.391 with retval = 40 ending after about 30 millisecs
+thread 23 @ 01:00:09.391: total = 42
 
-thread 21 @ 00:33:34.252 with retval = 2 starting
-thread 21 @ 00:33:34.283 with retval = 2 ending after about 30 millisecs
-thread 22 @ 00:33:34.283 with retval = 40 starting
-thread 22 @ 00:33:34.315 with retval = 40 ending after about 30 millisecs
-thread 22 @ 00:33:34.315: total = 42
+thread 23 @ 01:00:09.420 with retval = 2 starting
+thread 23 @ 01:00:09.452 with retval = 2 ending after about 30 millisecs
+thread 23 @ 01:00:09.452 with retval = 40 starting
+thread 23 @ 01:00:09.486 with retval = 40 ending after about 30 millisecs
+thread 23 @ 01:00:09.486: total = 42
 
-thread 22 @ 00:33:34.346 with retval = 2 starting
-thread 22 @ 00:33:34.381 with retval = 2 ending after about 30 millisecs
-thread 21 @ 00:33:34.381 with retval = 40 starting
-thread 21 @ 00:33:34.412 with retval = 40 ending after about 30 millisecs
-thread 21 @ 00:33:34.412: total = 42
+thread 23 @ 01:00:09.512 with retval = 2 starting
+thread 23 @ 01:00:09.545 with retval = 2 ending after about 30 millisecs
+thread 20 @ 01:00:09.545 with retval = 40 starting
+thread 20 @ 01:00:09.577 with retval = 40 ending after about 30 millisecs
+thread 20 @ 01:00:09.577: total = 42
 
-thread 21 @ 00:33:34.436 with retval = 2 starting
-thread 21 @ 00:33:34.471 with retval = 2 ending after about 30 millisecs
-thread 21 @ 00:33:34.473 with retval = 40 starting
-thread 21 @ 00:33:34.508 with retval = 40 ending after about 30 millisecs
-thread 21 @ 00:33:34.508: total = 42
+thread 20 @ 01:00:09.602 with retval = 2 starting
+thread 20 @ 01:00:09.633 with retval = 2 ending after about 30 millisecs
+thread 20 @ 01:00:09.634 with retval = 40 starting
+thread 20 @ 01:00:09.670 with retval = 40 ending after about 30 millisecs
+thread 20 @ 01:00:09.670: total = 42
 
-thread 21 @ 00:33:34.527 with retval = 2 starting
-thread 21 @ 00:33:34.560 with retval = 2 ending after about 30 millisecs
-thread 22 @ 00:33:34.560 with retval = 40 starting
-thread 22 @ 00:33:34.592 with retval = 40 ending after about 30 millisecs
-thread 22 @ 00:33:34.592: total = 42
+thread 20 @ 01:00:09.697 with retval = 2 starting
+thread 20 @ 01:00:09.730 with retval = 2 ending after about 30 millisecs
+thread 23 @ 01:00:09.730 with retval = 40 starting
+thread 23 @ 01:00:09.763 with retval = 40 ending after about 30 millisecs
+thread 20 @ 01:00:09.763: total = 42
 
-thread 22 @ 00:33:34.622 with retval = 2 starting
-thread 22 @ 00:33:34.658 with retval = 2 ending after about 30 millisecs
-thread 21 @ 00:33:34.658 with retval = 40 starting
-thread 21 @ 00:33:34.692 with retval = 40 ending after about 30 millisecs
-thread 21 @ 00:33:34.693: total = 42
+thread 20 @ 01:00:09.790 with retval = 2 starting
+thread 20 @ 01:00:09.826 with retval = 2 ending after about 30 millisecs
+thread 23 @ 01:00:09.827 with retval = 40 starting
+thread 23 @ 01:00:09.861 with retval = 40 ending after about 30 millisecs
+thread 20 @ 01:00:09.862: total = 42
 
-thread 21 @ 00:33:34.713 with retval = 2 starting
-thread 21 @ 00:33:34.745 with retval = 2 ending after about 30 millisecs
-thread 22 @ 00:33:34.746 with retval = 40 starting
-thread 22 @ 00:33:34.780 with retval = 40 ending after about 30 millisecs
-thread 22 @ 00:33:34.780: total = 42
+thread 20 @ 01:00:09.885 with retval = 2 starting
+thread 20 @ 01:00:09.919 with retval = 2 ending after about 30 millisecs
+thread 23 @ 01:00:09.920 with retval = 40 starting
+thread 23 @ 01:00:09.953 with retval = 40 ending after about 30 millisecs
+thread 23 @ 01:00:09.953: total = 42
 
-thread 22 @ 00:33:34.808 with retval = 2 starting
-thread 22 @ 00:33:34.843 with retval = 2 ending after about 30 millisecs
-thread 21 @ 00:33:34.843 with retval = 40 starting
-thread 21 @ 00:33:34.876 with retval = 40 ending after about 30 millisecs
-thread 21 @ 00:33:34.877: total = 42
+thread 23 @ 01:00:09.977 with retval = 2 starting
+thread 23 @ 01:00:10.011 with retval = 2 ending after about 30 millisecs
+thread 20 @ 01:00:10.011 with retval = 40 starting
+thread 20 @ 01:00:10.043 with retval = 40 ending after about 30 millisecs
+thread 20 @ 01:00:10.043: total = 42
 
 The two futures and the combination of their results are executed sequentially in 3 different threads.
 
@@ -2531,10 +2535,10 @@ enter password: > secret
 You have found the correct password 'secret'.
 
 --- Chapter 17 Exercise 7 ----------------------------------------------------------------------------------------------
-thread 22 @ 00:33:42.311: NumericRange 27 to 52 => count = 6
-thread 24 @ 00:33:42.311: NumericRange 1 to 26 => count = 9
-thread 23 @ 00:33:42.312: NumericRange 53 to 78 => count = 6
-thread 21 @ 00:33:42.312: NumericRange 79 to 103 => count = 6
+thread 23 @ 01:00:18.658: NumericRange 1 to 26 => count = 9
+thread 20 @ 01:00:18.658: NumericRange 53 to 78 => count = 6
+thread 21 @ 01:00:18.658: NumericRange 79 to 103 => count = 6
+thread 22 @ 01:00:18.660: NumericRange 27 to 52 => count = 6
 Among the first 103 integers, 27 are probably primes with certainty 10.
 
 --- Chapter 17 Exercises 8, 9 together ---------------------------------------------------------------------------------
@@ -2583,69 +2587,69 @@ In the next 30 nSeconds, we will try to compile a list of all server headers at 
 - 6 occurrences of Apache
 - 1 occurrences of Apache/2.4.34 (Red Hat)
 - 1 occurrences of Varnish
-- 1 occurrences of mw1326.eqiad.wmnet
+- 1 occurrences of mw1403.eqiad.wmnet
 - 1 occurrences of nginx
 -- End of list.
 
 --- Chapter 17 Exercise 11 ---------------------------------------------------------------------------------------------
 4 threads each lasting 1.5 seconds in the global thread pool:
-Thread # 1 finished @ 1.000
+Thread # 3 finished @ 1.000
 Thread # 4 finished @ 1.000
 Thread # 2 finished @ 1.000
-Thread # 3 finished @ 1.000
+Thread # 1 finished @ 1.000
 
 20 threads each lasting 1.5 seconds in the global thread pool:
 Thread # 2 finished @ 1.000
 Thread # 1 finished @ 1.000
 Thread # 3 finished @ 1.000
 Thread # 4 finished @ 1.000
-Thread # 6 finished @ 3.000
-Thread # 7 finished @ 3.000
 Thread # 5 finished @ 3.000
 Thread # 8 finished @ 3.000
+Thread # 7 finished @ 3.000
+Thread # 6 finished @ 3.000
 Thread # 11 finished @ 4.000
-Thread # 9 finished @ 4.000
 Thread # 10 finished @ 4.000
+Thread # 9 finished @ 4.000
 Thread # 12 finished @ 4.000
-Thread # 15 finished @ 6.000
 Thread # 13 finished @ 6.000
+Thread # 15 finished @ 6.000
 Thread # 14 finished @ 6.000
 Thread # 16 finished @ 6.000
-Thread # 17 finished @ 7.000
 Thread # 19 finished @ 7.000
-Thread # 18 finished @ 7.000
+Thread # 17 finished @ 7.000
 Thread # 20 finished @ 7.000
+Thread # 18 finished @ 7.000
 
 The bottleneck of having only 4 cores throttles the execution of these threads.
 
 
 4 threads each lasting 1.5 seconds in a dedicated thread pool:
-Thread # 1 finished @ 1.000
-Thread # 3 finished @ 1.000
-Thread # 4 finished @ 1.000
 Thread # 2 finished @ 1.000
+Thread # 3 finished @ 1.000
+Thread # 1 finished @ 1.000
+Thread # 4 finished @ 1.000
 
 20 threads each lasting 1.5 seconds in a dedicated thread pool:
-Thread # 4 finished @ 1.000
-Thread # 11 finished @ 1.000
 Thread # 2 finished @ 1.000
-Thread # 1 finished @ 1.000
 Thread # 6 finished @ 1.000
-Thread # 5 finished @ 1.000
-Thread # 3 finished @ 1.000
-Thread # 8 finished @ 1.000
-Thread # 10 finished @ 1.000
-Thread # 7 finished @ 1.000
 Thread # 9 finished @ 1.000
+Thread # 10 finished @ 1.000
+Thread # 11 finished @ 1.000
+Thread # 7 finished @ 1.000
+Thread # 4 finished @ 1.000
+Thread # 1 finished @ 1.000
+Thread # 3 finished @ 1.000
 Thread # 12 finished @ 1.000
+Thread # 8 finished @ 1.000
+Thread # 5 finished @ 1.000
 Thread # 13 finished @ 1.000
-Thread # 14 finished @ 1.000
 Thread # 15 finished @ 1.000
-Thread # 18 finished @ 1.000
+Thread # 14 finished @ 1.000
 Thread # 17 finished @ 1.000
-Thread # 16 finished @ 1.000
 Thread # 19 finished @ 1.000
+Thread # 18 finished @ 1.000
 Thread # 20 finished @ 1.000
+Thread # 16 finished @ 1.000
 
 These threads can all be executed at the same time.
 
@@ -2665,13 +2669,13 @@ Returning a sequence of promises would give way too much power to the caller of 
 
 --- Chapter 17 Exercise 13 ---------------------------------------------------------------------------------------------
 Looking for a palindromic number in [102, 110]...
-Core # 0 is checking 102...
 Core # 1 is checking 105...
-Core # 2 is checking 108...
+Core # 0 is checking 102...
 Core # 0 is checking 103...
 Core # 0 is checking 104...
 Core # 1 is checking 106...
 Core # 1 is checking 107...
+Core # 2 is checking 108...
 Core # 2 is checking 109...
 Core # 2 is checking 110...
 No palindromic number could be found in [102, 110].
@@ -2679,130 +2683,167 @@ No palindromic number could be found in [102, 110].
 Looking for a palindromic number in [1234, 2345]...
 Core # 1 is checking 1512...
 Core # 0 is checking 1234...
-Core # 2 is checking 1790...
-Core # 0 is checking 1235...
-Core # 3 is checking 2068...
-Core # 2 is checking 1791...
 Core # 1 is checking 1513...
-Core # 3 is checking 2069...
-Core # 2 is checking 1792...
-Core # 0 is checking 1236...
-Core # 2 is checking 1793...
-Core # 3 is checking 2070...
-Core # 0 is checking 1237...
 Core # 1 is checking 1514...
-Core # 2 is checking 1794...
-Core # 3 is checking 2071...
 Core # 1 is checking 1515...
-Core # 3 is checking 2072...
+Core # 0 is checking 1235...
 Core # 1 is checking 1516...
+Core # 1 is checking 1517...
+Core # 2 is checking 1790...
+Core # 0 is checking 1236...
+Core # 1 is checking 1518...
+Core # 2 is checking 1791...
+Core # 1 is checking 1519...
+Core # 2 is checking 1792...
+Core # 1 is checking 1520...
+Core # 2 is checking 1793...
+Core # 1 is checking 1521...
+Core # 2 is checking 1794...
+Core # 1 is checking 1522...
+Core # 2 is checking 1795...
+Core # 1 is checking 1523...
+Core # 2 is checking 1796...
+Core # 1 is checking 1524...
+Core # 2 is checking 1797...
+Core # 1 is checking 1525...
+Core # 2 is checking 1798...
+Core # 1 is checking 1526...
+Core # 2 is checking 1799...
+Core # 1 is checking 1527...
+Core # 2 is checking 1800...
+Core # 0 is checking 1237...
+Core # 2 is checking 1801...
+Core # 0 is checking 1238...
+Core # 2 is checking 1802...
+Core # 0 is checking 1239...
+Core # 2 is checking 1803...
+Core # 0 is checking 1240...
+Core # 2 is checking 1804...
+Core # 0 is checking 1241...
+Core # 2 is checking 1805...
+Core # 0 is checking 1242...
+Core # 2 is checking 1806...
+Core # 0 is checking 1243...
+Core # 2 is checking 1807...
+Core # 3 is checking 2068...
+Core # 2 is checking 1808...
+Core # 3 is checking 2069...
+Core # 3 is checking 2070...
+Core # 3 is checking 2071...
+Core # 0 is checking 1244...
+Core # 1 is checking 1528...
+Core # 0 is checking 1245...
+Core # 3 is checking 2072...
+Core # 0 is checking 1246...
+Core # 1 is checking 1529...
+Core # 0 is checking 1247...
+Core # 1 is checking 1530...
+Core # 0 is checking 1248...
+Core # 1 is checking 1531...
+Core # 0 is checking 1249...
+Core # 1 is checking 1532...
+Core # 0 is checking 1250...
+Core # 1 is checking 1533...
 Core # 3 is checking 2073...
 Core # 3 is checking 2074...
-Core # 0 is checking 1238...
+Core # 2 is checking 1809...
 Core # 3 is checking 2075...
-Core # 0 is checking 1239...
-Core # 3 is checking 2076...
-Core # 2 is checking 1795...
-Core # 3 is checking 2077...
-Core # 1 is checking 1517...
-Core # 2 is checking 1796...
-Core # 2 is checking 1797...
-Core # 0 is checking 1240...
-Core # 2 is checking 1798...
-Core # 0 is checking 1241...
-Core # 1 is checking 1518...
-Core # 3 is checking 2078...
-Core # 2 is checking 1799...
-Core # 0 is checking 1242...
-Core # 3 is checking 2079...
-Core # 0 is checking 1243...
-Core # 2 is checking 1800...
-Core # 3 is checking 2080...
-Core # 0 is checking 1244...
-Core # 3 is checking 2081...
-Core # 0 is checking 1245...
-Core # 1 is checking 1519...
-Core # 0 is checking 1246...
-Core # 1 is checking 1520...
-Core # 3 is checking 2082...
-Core # 1 is checking 1521...
-Core # 2 is checking 1801...
-Core # 1 is checking 1522...
-Core # 3 is checking 2083...
-Core # 1 is checking 1523...
-Core # 3 is checking 2084...
-Core # 1 is checking 1524...
-Core # 3 is checking 2085...
-Core # 1 is checking 1525...
-Core # 3 is checking 2086...
-Core # 1 is checking 1526...
-Core # 3 is checking 2087...
-Core # 1 is checking 1527...
-Core # 3 is checking 2088...
-Core # 1 is checking 1528...
-Core # 3 is checking 2089...
-Core # 1 is checking 1529...
-Core # 3 is checking 2090...
-Core # 1 is checking 1530...
-Core # 3 is checking 2091...
-Core # 1 is checking 1531...
-Core # 3 is checking 2092...
-Core # 1 is checking 1532...
-Core # 3 is checking 2093...
-Core # 1 is checking 1533...
-Core # 3 is checking 2094...
+Core # 2 is checking 1810...
+Core # 2 is checking 1811...
 Core # 1 is checking 1534...
-Core # 3 is checking 2095...
+Core # 2 is checking 1812...
+Core # 2 is checking 1813...
+Core # 0 is checking 1251...
+Core # 2 is checking 1814...
 Core # 1 is checking 1535...
-Core # 3 is checking 2096...
+Core # 2 is checking 1815...
+Core # 3 is checking 2076...
+Core # 2 is checking 1816...
 Core # 1 is checking 1536...
-Core # 3 is checking 2097...
+Core # 3 is checking 2077...
+Core # 3 is checking 2078...
+Core # 3 is checking 2079...
 Core # 1 is checking 1537...
+Core # 3 is checking 2080...
 Core # 1 is checking 1538...
+Core # 3 is checking 2081...
 Core # 1 is checking 1539...
+Core # 3 is checking 2082...
 Core # 1 is checking 1540...
-Core # 0 is checking 1247...
-Core # 0 is checking 1248...
+Core # 3 is checking 2083...
 Core # 1 is checking 1541...
-Core # 2 is checking 1802...
-Core # 2 is checking 1803...
-Core # 3 is checking 2098...
-Core # 2 is checking 1804...
-Core # 3 is checking 2099...
-Core # 3 is checking 2100...
+Core # 3 is checking 2084...
 Core # 1 is checking 1542...
-Core # 3 is checking 2101...
-Core # 2 is checking 1805...
-Core # 3 is checking 2102...
-Core # 2 is checking 1806...
-Core # 3 is checking 2103...
-Core # 3 is checking 2104...
+Core # 3 is checking 2085...
 Core # 1 is checking 1543...
-Core # 3 is checking 2105...
+Core # 3 is checking 2086...
 Core # 1 is checking 1544...
-Core # 3 is checking 2106...
+Core # 3 is checking 2087...
 Core # 1 is checking 1545...
-Core # 3 is checking 2107...
+Core # 0 is checking 1252...
+Core # 3 is checking 2088...
 Core # 1 is checking 1546...
-Core # 3 is checking 2108...
+Core # 3 is checking 2089...
+Core # 3 is checking 2090...
+Core # 3 is checking 2091...
+Core # 2 is checking 1817...
+Core # 2 is checking 1818...
+Core # 2 is checking 1819...
+Core # 3 is checking 2092...
+Core # 2 is checking 1820...
+Core # 2 is checking 1821...
+Core # 2 is checking 1822...
+Core # 3 is checking 2093...
+Core # 2 is checking 1823...
+Core # 3 is checking 2094...
+Core # 2 is checking 1824...
+Core # 3 is checking 2095...
+Core # 2 is checking 1825...
+Core # 3 is checking 2096...
+Core # 0 is checking 1253...
+Core # 0 is checking 1254...
 Core # 1 is checking 1547...
+Core # 0 is checking 1255...
+Core # 3 is checking 2097...
+Core # 0 is checking 1256...
+Core # 3 is checking 2098...
+Core # 0 is checking 1257...
+Core # 3 is checking 2099...
+Core # 0 is checking 1258...
+Core # 3 is checking 2100...
+Core # 0 is checking 1259...
+Core # 3 is checking 2101...
+Core # 0 is checking 1260...
+Core # 3 is checking 2102...
+Core # 0 is checking 1261...
+Core # 3 is checking 2103...
+Core # 0 is checking 1262...
+Core # 3 is checking 2104...
+Core # 0 is checking 1263...
+Core # 3 is checking 2105...
+Core # 0 is checking 1264...
+Core # 3 is checking 2106...
+Core # 0 is checking 1265...
+Core # 3 is checking 2107...
+Core # 0 is checking 1266...
+Core # 3 is checking 2108...
+Core # 0 is checking 1267...
 Core # 3 is checking 2109...
-Core # 1 is checking 1548...
+Core # 0 is checking 1268...
 Core # 3 is checking 2110...
-Core # 1 is checking 1549...
+Core # 0 is checking 1269...
 Core # 3 is checking 2111...
-Core # 1 is checking 1550...
+Core # 0 is checking 1270...
 Core # 3 is checking 2112...
-Core # 1 is checking 1551...
-Core # 0 is checking 1249...
-Core # 2 is checking 1807...
+Core # 0 is checking 1271...
+Core # 2 is checking 1826...
 The first palindromic found in [1234, 2345] was 2112.
 
 
 
 
 ========================================================================================================================
-=== Chapter 18. Type Parameters ========================================================================================
+=== Chapter 18. Type Parameters - L2 ===================================================================================
 
 --- Chapter 18 Exercise 1 ----------------------------------------------------------------------------------------------
 pair = <pair, 1.0>, pair.swap = <1.0, pair>
@@ -2815,8 +2856,8 @@ pair after pair.swap():  <2, 1>
 pair = <pair, 1.0>, swap(pair) = <1.0, pair>
 
 --- Chapter 18 Exercise 4 ----------------------------------------------------------------------------------------------
-personPair before personPair.replaceFirst(studentStefano) = Pair(com.stefperf.impatient.chapter18.Chapter18$Person$1@770d4269,com.stefperf.impatient.chapter18.Chapter18$Person$1@4a8ab068)
-personPair after personPair.replaceFirst(studentStefano) =  Pair(com.stefperf.impatient.chapter18.Chapter18$Person$1@770d4269,com.stefperf.impatient.chapter18.Chapter18$Person$1@4a8ab068)
+personPair before personPair.replaceFirst(studentStefano) = Pair(com.stefperf.impatient.chapter18.Chapter18$Person$1@11acdc30,com.stefperf.impatient.chapter18.Chapter18$Person$1@770d4269)
+personPair after personPair.replaceFirst(studentStefano) =  Pair(com.stefperf.impatient.chapter18.Chapter18$Person$1@11acdc30,com.stefperf.impatient.chapter18.Chapter18$Person$1@770d4269)
 This replacement causes no issues because a Student is a (subclass of) Person.
 
 --- Chapter 18 Exercise 5 ----------------------------------------------------------------------------------------------
@@ -2855,19 +2896,21 @@ pair after swap =  <2.718, 3.14>
 
 ========================================================================================================================
 === Chapters executed: =================================================================================================
-Chapter 1. The Basics
-Chapter 2. Control Structures and Functions
-Chapter 3. Working with Arrays
-Chapter 4. Maps and Tuples
-Chapter 5. Classes
-Chapter 6. Objects
-Chapter 7. Packages and Imports
-Chapter 8. Inheritance
-Chapter 9. Files and Regular Expressions
-Chapter 10. Traits
-Chapter 11. Operators
-Chapter 12. Higher-Order Functions
-Chapter 13. Collections
-Chapter 14. Pattern Matching and Case Classes
-Chapter 17. Futures
-Chapter 18. Type Parameters
+Chapter 1. The Basics - A1
+Chapter 2. Control Structures and Functions - A1
+Chapter 3. Working with Arrays - A1
+Chapter 4. Maps and Tuples - A1
+Chapter 5. Classes - A1
+Chapter 6. Objects - A1
+Chapter 7. Packages and Imports - A1
+Chapter 8. Inheritance - A1
+Chapter 9. Files and Regular Expressions - A1
+Chapter 10. Traits - L1
+Chapter 11. Operators - L1
+Chapter 12. Higher-Order Functions - L1
+Chapter 13. Collections - A2
+Chapter 14. Pattern Matching and Case Classes - A2
+Chapter 17. Futures - A2
+Chapter 18. Type Parameters - L2
+
+Process finished with exit code 0

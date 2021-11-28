@@ -7,7 +7,7 @@ import scala.annotation.tailrec
 import scala.concurrent._
 import scala.concurrent.duration._
 
-object Chapter17 extends Chapter(17, "Futures") {
+object Chapter17 extends Chapter(17, "Futures", Level.A2) {
   import scala.concurrent.ExecutionContext.Implicits.global
 
   val waitFutMsecs = 30  // default delay used in one future for all these exercises

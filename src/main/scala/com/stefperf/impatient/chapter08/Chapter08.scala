@@ -2,7 +2,7 @@ package com.stefperf.impatient.chapter08
 
 import com.stefperf.impatient._
 
-object Chapter08 extends Chapter(8, "Inheritance") {
+object Chapter08 extends Chapter(8, "Inheritance", Level.A1) {
   override def exercises() {
     exercise(1) {
       class BankAccount(initialBalance: Double) {

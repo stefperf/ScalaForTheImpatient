@@ -4,7 +4,7 @@ import com.stefperf.impatient._
 
 import scala.collection.{immutable, mutable}
 
-object Chapter04 extends Chapter(4, "Maps and Tuples") {
+object Chapter04 extends Chapter(4, "Maps and Tuples", Level.A1) {
   override def exercises() {
 
     exercise(1) {

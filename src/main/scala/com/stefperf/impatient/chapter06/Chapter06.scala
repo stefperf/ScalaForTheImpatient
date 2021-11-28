@@ -2,7 +2,7 @@ package com.stefperf.impatient.chapter06
 
 import com.stefperf.impatient._
 
-object Chapter06 extends Chapter(6, "Objects") {
+object Chapter06 extends Chapter(6, "Objects", Level.A1) {
 
   override def exercises() {
     exercise(1) {
