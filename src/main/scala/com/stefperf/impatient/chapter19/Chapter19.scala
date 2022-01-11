@@ -2,8 +2,6 @@ package com.stefperf.impatient.chapter19
 
 import com.stefperf.impatient._
 
-import java.lang.reflect.Member
-
 
 object Chapter19 extends Chapter(19, "Advanced Types", Level.L2) {
 
@@ -90,35 +88,96 @@ object Chapter19 extends Chapter(19, "Advanced Types", Level.L2) {
       println(book)
     }
 
+    import scala.collection.mutable.ArrayBuffer
+    class Network {
+      private var _id = Network.getUniqueId
+      def id: Int = _id
+
+      class Member(val name: String, val network: Network) {
+        val contacts = new ArrayBuffer[Member]
+
+        final override def equals(obj: Any): Boolean = obj match {
+          case other: Member => this.name == other.name
+          case _ => false
+        }
+
+        override def toString: String = s"network_${network.id}.${name}"
+      }
+
+      private val members = new ArrayBuffer[Member]
+      def join(name: String): Member = {
+        val m = new Member(name, this)
+        members += m
+        m
+      }
+
+      override def toString: String = s"network_${id}"
+    }
+
+    object Network {
+      private var _count = 0
+
+      private def getUniqueId: Int = {
+        val id = _count
+        _count += 1
+        id
+      }
+    }
+
+    val tvitter = new Network
+    val facebuk = new Network
+    val stefanoOnTvitter = tvitter.join("Stefano")
+    val stefanoOnTvitter2 = stefanoOnTvitter
+    val stefanoOnFacebuk = facebuk.join("Stefano")
+    val rileyOnFacebuk = facebuk.join("Riley")
+
     exercise(4) {
+      println(s"$stefanoOnTvitter == $stefanoOnFacebuk: ${stefanoOnTvitter == stefanoOnFacebuk}")
+      println(s"$stefanoOnTvitter == $stefanoOnTvitter2: ${stefanoOnTvitter == stefanoOnTvitter2}")
+    }
 
-      import scala.collection.mutable.ArrayBuffer
-      class Network {
-        class Member(val name: String) {
-          val contacts = new ArrayBuffer[Member]
+    exercise(5) {
+      type NetworkMember = n.Member forSome { val n: Network }
 
-          final override def equals(obj: Any): Boolean = obj match {
-            case other: Member => this.name == other.name
-            case _ => false
+      def process(m1: NetworkMember, m2: NetworkMember): (NetworkMember, NetworkMember) = (m1, m2)
+
+      val pairFromDifferentNetworks = process(stefanoOnTvitter, rileyOnFacebuk)
+      println(s"In this case, function process works also for members of distinct networks, " +
+        s"such as ${stefanoOnTvitter} and ${rileyOnFacebuk}.")
+    }
+
+    exercise(6) {
+      type ExactMatchIndex = Int
+      type ClosestMatchIndex = Int
+
+      // expects a sorted array, but does not check for sortedness
+      def indexOfClosestElement(uncheckedAscendingElements: Array[Int], elementToSearch: Int): ClosestMatchIndex Either ExactMatchIndex =
+        if (uncheckedAscendingElements.isEmpty) Left(-1)
+        else {
+          val maybeFirstLargerOrEqualElemAndIndex = uncheckedAscendingElements.zipWithIndex.find(_._1 >= elementToSearch)
+          if (maybeFirstLargerOrEqualElemAndIndex.isEmpty) Left(uncheckedAscendingElements.indices.last)
+          else {
+            val (firstLargerOrEqualElem, firstLargerOrEqualIndex) = maybeFirstLargerOrEqualElemAndIndex.get
+            if (firstLargerOrEqualElem == elementToSearch) Right(firstLargerOrEqualIndex)
+            else if (firstLargerOrEqualIndex == 0) Left(0)
+            else {
+              val firstLowerIndex = firstLargerOrEqualIndex - 1
+              val firstLowerElem = uncheckedAscendingElements(firstLowerIndex)
+              if (elementToSearch - firstLowerElem <= firstLargerOrEqualElem - elementToSearch) Left(firstLowerIndex)
+              else Left(firstLargerOrEqualIndex)
+            }
           }
         }
 
-        private val members = new ArrayBuffer[Member]
-        def join(name: String): Member = {
-          val m = new Member(name)
-          members += m
-          m
+      val sortedNumbers = Array(1, 4, 6)
+      println(s"Searching for the closest position within array (${sortedNumbers.mkString(", ")}):")
+      for (numberToSearch <- Seq(0, 3, 4, 5, 7)) {
+        val closestIndex = indexOfClosestElement(sortedNumbers, numberToSearch)
+        closestIndex match {
+          case Right(exactMatchIndex) => println(s"$numberToSearch is found in position $exactMatchIndex")
+          case Left(closestMatchIndex) => println(s"$numberToSearch is closest to position $closestMatchIndex")
         }
       }
-
-      val tvitter = new Network
-      val facebuk = new Network
-      val stefanoOnTvitter = tvitter.join("Stefano")
-      val stefanoOnTvitter2 = stefanoOnTvitter
-      val stefanoOnFacebuk = facebuk.join("Stefano")
-      println(s"stefanoOnTvitter == stefanoOnFacebuk: ${stefanoOnTvitter == stefanoOnFacebuk}")
-      println(s"stefanoOnTvitter == stefanoOnTvitter2: ${stefanoOnTvitter == stefanoOnTvitter2}")
-
     }
 
     println("COMING SOON")
