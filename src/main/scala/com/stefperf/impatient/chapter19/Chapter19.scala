@@ -1,7 +1,7 @@
 package com.stefperf.impatient.chapter19
 
 import com.stefperf.impatient._
-
+import scala.language.existentials
 
 object Chapter19 extends Chapter(19, "Advanced Types", Level.L2) {
 
@@ -65,14 +65,20 @@ object Chapter19 extends Chapter(19, "Advanced Types", Level.L2) {
         private var useNextArgAs: Any = null
 
         private var _title: String = _
+
         def title: String = _title
 
         private var _author: String = _
+
         def author: String = _author
 
-        def set(obj: Title.type): this.type = { useNextArgAs = obj; this }
+        def set(obj: Title.type): this.type = {
+          useNextArgAs = obj; this
+        }
 
-        def set(obj: Author.type): this.type = { useNextArgAs = obj; this }
+        def set(obj: Author.type): this.type = {
+          useNextArgAs = obj; this
+        }
 
         def to(arg: String): this.type = {
           if (useNextArgAs == Title) _title = arg
@@ -91,6 +97,7 @@ object Chapter19 extends Chapter(19, "Advanced Types", Level.L2) {
     import scala.collection.mutable.ArrayBuffer
     class Network {
       private var _id = Network.getUniqueId
+
       def id: Int = _id
 
       class Member(val name: String, val network: Network) {
@@ -105,6 +112,7 @@ object Chapter19 extends Chapter(19, "Advanced Types", Level.L2) {
       }
 
       private val members = new ArrayBuffer[Member]
+
       def join(name: String): Member = {
         val m = new Member(name, this)
         members += m
@@ -137,7 +145,7 @@ object Chapter19 extends Chapter(19, "Advanced Types", Level.L2) {
     }
 
     exercise(5) {
-      type NetworkMember = n.Member forSome { val n: Network }
+      type NetworkMember = n.Member forSome {val n: Network}
 
       def process(m1: NetworkMember, m2: NetworkMember): (NetworkMember, NetworkMember) = (m1, m2)
 
@@ -180,6 +188,101 @@ object Chapter19 extends Chapter(19, "Advanced Types", Level.L2) {
       }
     }
 
-    println("COMING SOON")
+    exercise(7) {
+      import scala.io.{Source, BufferedSource}
+
+      def processAndThenClose[T](closable: {def close(): Unit}, process: Any => T): Either[Throwable, T] = {
+        try {
+          val result = process(closable)
+          Right(result)
+        }
+        catch {
+          case t: Throwable => Left(t)
+        }
+        finally {
+          closable.close()
+          println("The closable object was closed.")
+        }
+      }
+
+      val filePathname = "./src/main/scala/com/stefperf/impatient/chapter19/Chapter19.scala"
+      val file = Source.fromFile(filePathname)
+      val first10Chars = processAndThenClose(file, (aFile: Any) => {
+        val file = aFile.asInstanceOf[BufferedSource]
+        val nchars = 10
+        val cbuf = new Array[Char](nchars)
+        file.reader().read(cbuf, 0, nchars)
+        cbuf.mkString
+      })
+      println(s"first 10 characters = '$first10Chars'")
+      val deliberateFailure = processAndThenClose(file, (aFile: Any) => {
+        val file = aFile.asInstanceOf[BufferedSource]
+        val nchars = 10000
+        val cbuf = new Array[Char](nchars)
+        file.reader().read(cbuf, 0, nchars)
+        cbuf.mkString
+      })
+      println(s"deliberate failure = '$deliberateFailure'")
+    }
+
+    exercise(8) {
+      type ApplicableInt = {def apply(i: Int): Int}
+
+      val printValues: (ApplicableInt, Int, Int) => Unit =
+        (f: ApplicableInt, from: Int, to: Int) => {
+          Range(from, to).foreach(i => print(s"${f(i)} "))
+        }
+      val integers = Seq(0, 1, 2, 3, 4, 5)
+      printValues(integers, 2, 4)
+    }
+
+    exercise(9) {
+      abstract class Dim[T](val value: Double, val name: String) {
+        this: T =>
+        protected def create(v: Double): T
+
+        def +(other: Dim[T]) = create(value + other.value)
+
+        override def toString() = s"$value $name"
+      }
+
+      class Seconds(v: Double) extends Dim[Seconds](v, "s") {
+        this: Dim[Seconds] =>
+        override def create(v: Double) = new Seconds(v)
+      }
+
+      println("Self type 'this: T =>' in the BaseClass Dim enforces " +
+        "the type parameter to be the same as the subclass in each subclass.")
+    }
+
+    exercise(10) {
+      trait TraitPrintingSomething {
+        println("Initializing TraitPrintingSomething...")
+
+        def printSomething(): Unit = println("Printing something...")
+      }
+
+      abstract class ClassWithSelfTypeTraitPrintingSomething { this: TraitPrintingSomething =>
+        println("Initializing ClassWithSelfTypeTraitPrintingSomething...")
+        printSomething()
+      }
+
+      new ClassWithSelfTypeTraitPrintingSomething with TraitPrintingSomething
+      println()
+
+      class ClassPrintingSomething {
+        println("Initializing ClassPrintingSomething...")
+
+        def printSomething(): Unit = println("Printing something...")
+      }
+
+      trait TraitExtendingClassPrintingSomething extends ClassPrintingSomething {
+        println("Initializing TraitExtendingClassPrintingSomething...")
+        printSomething()
+      }
+
+      new ClassPrintingSomething() with TraitExtendingClassPrintingSomething()
+      println()
+    }
   }
 }

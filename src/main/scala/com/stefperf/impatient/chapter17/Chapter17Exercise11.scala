@@ -8,7 +8,7 @@ object Chapter17Exercise11 extends App {
   def elapsedSecs(startMsecs: Long): Double = (System.currentTimeMillis - startMsecs) / 1000
 
   val nCores = Runtime.getRuntime.availableProcessors
-  val nSeconds = 1.5
+  val nSeconds = 1
   val nsThreads = List(4, 20)
 
   for (nThreads <- nsThreads) {
