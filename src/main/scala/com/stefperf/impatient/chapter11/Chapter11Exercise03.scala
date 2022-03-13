@@ -3,7 +3,7 @@ package com.stefperf.impatient.chapter11
 import scala.annotation.tailrec
 
 // this class could be improved by implementing interoperability with Int's
-class Fraction(n: Int, d: Int) {
+case class Fraction(n: Int, d: Int) {
   require(d != 0, "the denominator cannot be zero")
   def this(n: Int) = this(n, 1)
   import Fraction.{gcd, mcm}

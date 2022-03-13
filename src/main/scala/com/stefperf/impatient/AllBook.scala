@@ -20,7 +20,7 @@ import com.stefperf.impatient.chapter17.Chapter17
 import com.stefperf.impatient.chapter18.Chapter18
 import com.stefperf.impatient.chapter19.Chapter19
 // import com.stefperf.impatient.chapter20.Chapter20
-// import com.stefperf.impatient.chapter21.Chapter21
+import com.stefperf.impatient.chapter21.Chapter21
 
 import scala.collection.mutable.ArrayBuffer
 import scala.util.control.Breaks._
@@ -33,7 +33,8 @@ object AllBook extends App {
     Chapter08, Chapter09, Chapter10, Chapter11, Chapter12, Chapter13, Chapter14,
 //    Chapter15, Chapter16,
     Chapter17, Chapter18, Chapter19,
-    // Chapter20, Chapter21
+    // Chapter20,
+    Chapter21
   ).foreach{ _.forceInit() }
 
   val requestedChapters = ArrayBuffer[Int]()
